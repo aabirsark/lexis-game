@@ -1,0 +1,749 @@
+<title>Lexis Game</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+/* Layout: one haunted stage. A fixed night sky (moon, fog, bats, graveyard) sits behind a single column that swaps screens: name tombstone -> wheel of fate -> crypt (gallows + clue + board + keys). Single dark theme by choice. */
+:root {
+  --night: #0a0612;
+  --crypt: #160d27;
+  --stone: #2a2040;
+  --bone: #f2e8cf;
+  --ash: #a99cc0;
+  --pumpkin: #ff7a1a;
+  --ember: #ffb04a;
+  --slime: #9dff57;
+  --blood: #e0334a;
+  --violet: #7a4fd8;
+  --parch: #e8d9b0;
+  --ink: #2a190e;
+  --line: rgba(242, 232, 207, .16);
+  --f-display: 'Creepster', 'Impact', cursive;
+  --f-serif: 'IM Fell English', 'Georgia', serif;
+  --f-mono: 'Special Elite', 'Courier New', monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  background: var(--night);
+  color: var(--bone);
+  font-family: var(--f-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  padding-block: 14px 32px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--ember); outline-offset: 3px; }
+
+/* ---------- atmosphere ---------- */
+.sky {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+  background:
+    radial-gradient(55% 40% at 86% 8%, rgba(255, 176, 74, .24), transparent 70%),
+    radial-gradient(80% 55% at 8% 100%, rgba(122, 79, 216, .30), transparent 70%),
+    linear-gradient(180deg, #0a0612 0%, #130a22 58%, #1e0f2d 100%);
+}
+.moon {
+  position: absolute; top: 5%; right: 6%; width: clamp(72px, 12vw, 150px); aspect-ratio: 1; border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 34%, rgba(160, 110, 40, .35) 0 9%, transparent 10%),
+    radial-gradient(circle at 62% 56%, rgba(160, 110, 40, .30) 0 12%, transparent 13%),
+    radial-gradient(circle at 44% 78%, rgba(160, 110, 40, .28) 0 7%, transparent 8%),
+    radial-gradient(circle at 35% 35%, #fff3d1, #f7c873 62%, #d99a3d);
+  box-shadow: 0 0 60px 18px rgba(255, 176, 74, .32), 0 0 170px 60px rgba(255, 122, 26, .16);
+}
+.fog {
+  position: absolute; left: -25%; width: 150%; height: 38%; bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(176, 156, 230, .16), transparent 65%);
+  animation: drift 28s ease-in-out infinite alternate;
+}
+.fog.two { bottom: 8%; height: 30%; animation-duration: 36s; animation-direction: alternate-reverse; opacity: .8; }
+@keyframes drift { from { transform: translateX(-6%); } to { transform: translateX(6%); } }
+.graves { position: absolute; left: 0; bottom: 0; width: 100%; height: 26vh; min-height: 120px; }
+.bat { position: absolute; left: 0; top: var(--y); width: var(--s); animation: fly var(--d) linear infinite; animation-delay: var(--dl); }
+.bat svg { display: block; width: 100%; height: auto; fill: #030108; filter: drop-shadow(0 0 5px rgba(122, 79, 216, .7)); animation: flap .3s ease-in-out infinite alternate; }
+@keyframes fly {
+  from { transform: translate(-14vw, 0); }
+  50% { transform: translate(52vw, -7vh); }
+  to { transform: translate(116vw, 5vh); }
+}
+@keyframes flap { from { transform: scaleY(1); } to { transform: scaleY(.5); } }
+.ember {
+  position: absolute; bottom: -10px; left: var(--x); width: var(--z); height: var(--z); border-radius: 50%;
+  background: var(--ember); box-shadow: 0 0 8px 2px rgba(255, 122, 26, .7); opacity: 0;
+  animation: rise var(--t) ease-in infinite; animation-delay: var(--w);
+}
+@keyframes rise {
+  0% { transform: translate(0, 0); opacity: 0; }
+  15% { opacity: .9; }
+  100% { transform: translate(var(--dx), -85vh); opacity: 0; }
+}
+
+/* ---------- shell ---------- */
+.app { position: relative; z-index: 1; max-width: 1040px; margin-inline: auto; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 10px 16px; flex-wrap: wrap; margin-bottom: 14px; }
+.brand { font-family: var(--f-display); font-size: 1.9rem; letter-spacing: .06em; color: var(--pumpkin); text-shadow: 0 0 16px rgba(255, 122, 26, .55); line-height: 1; }
+.chips { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.chip {
+  font-family: var(--f-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+  padding: 5px 11px; border: 1px solid var(--line); border-radius: 999px; background: rgba(21, 12, 36, .7); color: var(--ash); white-space: nowrap;
+}
+.chip b { color: var(--bone); font-weight: 400; }
+.chip.who { color: var(--ember); border-color: rgba(255, 176, 74, .4); max-width: 46vw; overflow: hidden; text-overflow: ellipsis; }
+.icon-btn { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(21, 12, 36, .7); display: grid; place-items: center; padding: 0; color: var(--ash); }
+.icon-btn:hover { border-color: var(--ember); color: var(--ember); }
+.icon-btn[aria-pressed="true"] .wave { display: none; }
+.screen { animation: rise-in .6s ease both; }
+@keyframes rise-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+.btn {
+  font-family: var(--f-display); letter-spacing: .08em; font-size: 1.5rem; line-height: 1;
+  padding: 14px 28px 12px; border-radius: 999px; border: 2px solid var(--ember);
+  background: linear-gradient(180deg, #ff9a3c, var(--pumpkin)); color: #1a0b05;
+  box-shadow: 0 0 22px rgba(255, 122, 26, .45), inset 0 -3px 0 rgba(120, 40, 0, .35);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+.btn:hover:not(:disabled) { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 34px rgba(255, 122, 26, .7), inset 0 -3px 0 rgba(120, 40, 0, .35); }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { filter: grayscale(.7) brightness(.6); cursor: not-allowed; box-shadow: none; }
+.btn.ghost { background: transparent; color: var(--bone); border-color: var(--line); box-shadow: none; font-size: 1.15rem; padding: 12px 22px 10px; }
+.btn.ghost:hover { border-color: var(--ember); color: var(--ember); box-shadow: none; }
+
+/* ---------- screen 1: name ---------- */
+.intro { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px 40px; align-items: center; padding-top: clamp(8px, 4vh, 40px); }
+.intro > * { min-width: 0; }
+.eyebrow { font-family: var(--f-mono); letter-spacing: .22em; text-transform: uppercase; font-size: .8rem; color: var(--ash); margin: 0 0 8px; }
+h1.logo { margin: 0; font-family: var(--f-display); font-weight: 400; line-height: .88; font-size: clamp(4.4rem, 15vw, 9rem); color: var(--pumpkin); letter-spacing: .03em; text-shadow: 0 0 20px rgba(255, 122, 26, .6), 0 4px 0 #7a2c00, 0 8px 28px rgba(0, 0, 0, .7); }
+h1.logo small { display: block; font-size: .42em; color: var(--bone); letter-spacing: .32em; text-shadow: 0 0 14px rgba(242, 232, 207, .35); margin-top: .1em; padding-left: .08em; }
+.logo .flick { animation: flick 4.5s steps(1) infinite; display: inline-block; }
+@keyframes flick { 0%, 100% { opacity: 1; } 91% { opacity: .25; } 93% { opacity: 1; } 95% { opacity: .35; } 96% { opacity: 1; } }
+.lede { font-size: 1.2rem; max-width: 34ch; margin: 18px 0 14px; color: #e4d9bf; }
+.rules { font-family: var(--f-mono); font-size: .9rem; color: var(--ember); letter-spacing: .06em; margin: 0; }
+.stone {
+  position: relative; padding: 54px clamp(22px, 5vw, 38px) 34px;
+  border-radius: 999px 999px 18px 18px / 240px 240px 18px 18px;
+  background: radial-gradient(120% 70% at 50% 0%, #3d3158, var(--stone) 60%, #1b1430);
+  border: 2px solid #4b3d6b; box-shadow: 0 0 0 6px rgba(10, 6, 18, .6), 0 24px 60px rgba(0, 0, 0, .6), inset 0 0 40px rgba(0, 0, 0, .45);
+  text-align: center; max-width: 400px; justify-self: center; width: 100%;
+}
+.stone .rip { font-family: var(--f-display); font-size: 2.1rem; letter-spacing: .1em; color: #cfc3e6; text-shadow: 0 2px 0 #0e0818, 0 -1px 0 rgba(255, 255, 255, .2); margin: 0 0 4px; }
+.stone label { display: block; font-family: var(--f-mono); font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ash); margin-bottom: 8px; }
+.stone input {
+  width: 100%; padding: 13px 14px; border-radius: 10px; border: 2px solid #4b3d6b; background: #120b20; color: var(--bone);
+  font-family: var(--f-serif); font-size: 1.3rem; text-align: center; outline: none;
+}
+.stone input::placeholder { color: #6d6086; font-style: italic; }
+.stone input:focus { border-color: var(--ember); box-shadow: 0 0 0 3px rgba(255, 176, 74, .25); }
+.stone .err { min-height: 1.4em; margin: 8px 0 10px; color: var(--blood); font-family: var(--f-mono); font-size: .85rem; }
+.stone .btn { width: 100%; }
+
+/* ---------- screen 2: wheel ---------- */
+.fate { display: grid; justify-items: center; gap: 14px; text-align: center; }
+.fate h2 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(2rem, 6vw, 3.2rem); letter-spacing: .05em; color: var(--bone); text-shadow: 0 0 18px rgba(122, 79, 216, .7); overflow-wrap: anywhere; }
+.fate h2 em { font-style: normal; color: var(--pumpkin); }
+.fate p { margin: 0; color: var(--ash); max-width: 44ch; }
+.wheelbox { position: relative; width: min(84vw, 400px); aspect-ratio: 1 / 1; max-width: 100%; margin-top: 18px; }
+.wheel { width: 100%; height: 100%; display: block; filter: drop-shadow(0 0 30px rgba(255, 122, 26, .35)); }
+.pointer { position: absolute; left: 50%; top: -5%; width: 11%; transform: translateX(-50%); filter: drop-shadow(0 0 10px rgba(224, 51, 74, .8)); z-index: 2; }
+.wl { font-family: var(--f-display); font-size: 27px; fill: #fff7e0; letter-spacing: .02em; paint-order: stroke; stroke: rgba(0, 0, 0, .55); stroke-width: 3px; stroke-linejoin: round; }
+.stud { animation: blink 1.2s steps(1) infinite; }
+.stud:nth-child(even) { animation-delay: .6s; }
+@keyframes blink { 0% { fill: #ffb04a; } 50% { fill: #7a4a14; } }
+.legend { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 6px; font-family: var(--f-mono); font-size: .86rem; letter-spacing: .05em; color: var(--ash); }
+.legend li { display: flex; gap: 10px; align-items: baseline; justify-content: center; flex-wrap: wrap; padding: 3px 12px; border-radius: 999px; border: 1px solid transparent; transition: all .3s; }
+.legend li b { font-weight: 400; color: var(--bone); letter-spacing: .14em; text-transform: uppercase; }
+.legend li.pick { border-color: var(--ember); color: var(--ember); box-shadow: 0 0 18px rgba(255, 122, 26, .4); }
+.verdict { min-height: 1.6em; font-family: var(--f-display); font-size: 1.6rem; letter-spacing: .06em; color: var(--ember); text-shadow: 0 0 14px rgba(255, 122, 26, .6); }
+
+/* ---------- screen 3: crypt ---------- */
+.crypt { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr); gap: 20px 28px; align-items: start; }
+.crypt > * { min-width: 0; }
+.scene { position: relative; border: 1px solid var(--line); border-radius: 20px; overflow: hidden; background: radial-gradient(70% 50% at 70% 0%, rgba(255, 176, 74, .14), transparent 70%), linear-gradient(180deg, rgba(25, 14, 42, .88), rgba(10, 6, 18, .94)); }
+.scene.shake { animation: shake .6s ease; }
+@keyframes shake { 10%, 90% { transform: translateX(-3px); } 20%, 80% { transform: translateX(5px); } 30%, 50%, 70% { transform: translateX(-7px); } 40%, 60% { transform: translateX(7px); } }
+.scene .flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; mix-blend-mode: screen; }
+.scene.zap .flash { animation: zap .7s ease; }
+@keyframes zap { 0% { opacity: 0; } 8% { opacity: .75; } 16% { opacity: .05; } 26% { opacity: .55; } 100% { opacity: 0; } }
+.scene.hurt::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 60px rgba(224, 51, 74, .6); animation: hurt .5s ease forwards; pointer-events: none; }
+@keyframes hurt { from { opacity: 1; } to { opacity: 0; } }
+.scene-top { position: absolute; top: 12px; left: 14px; right: 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px; z-index: 2; }
+.lives { display: flex; gap: 4px; }
+.pk { width: 24px; height: 24px; transition: filter .4s, opacity .4s; filter: drop-shadow(0 0 5px rgba(255, 122, 26, .7)); }
+.pk.lost { filter: grayscale(1) brightness(.35); opacity: .6; animation: crumble .5s ease; }
+@keyframes crumble { 30% { transform: scale(1.4) rotate(12deg); } 100% { transform: scale(1) rotate(0); } }
+.tagline { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ash); }
+.gallows { display: block; width: 100%; height: auto; max-height: 62vh; margin-top: 10px; }
+
+#victim { transform-origin: 190px 54px; }
+#victim.sway { animation: sway 3s ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotate(calc(var(--sw, 1deg) * -1)); } to { transform: rotate(var(--sw, 1deg)); } }
+#victim.dead { animation: dead 1.7s ease-in-out infinite alternate; }
+@keyframes dead { from { transform: rotate(-9deg); } to { transform: rotate(9deg); } }
+#victim.saved { animation: release 1.8s ease-in forwards; }
+@keyframes release { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-130px) rotate(8deg); opacity: 0; } }
+#drop.jolt { animation: jolt .7s cubic-bezier(.3, 1.8, .5, 1); }
+@keyframes jolt { 0% { transform: translateY(-14px); } 35% { transform: translateY(18px); } 100% { transform: none; } }
+.part { visibility: hidden; }
+.part.show { visibility: visible; }
+.part .draw { stroke-dasharray: 1; stroke-dashoffset: 1; }
+.part.show .draw { animation: draw .7s ease forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.part .pop { transform-box: fill-box; transform-origin: 50% 0%; }
+.part.show .pop { animation: pop .65s cubic-bezier(.2, 1.7, .4, 1) both; }
+@keyframes pop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.eye { fill: #ffe9a0; filter: drop-shadow(0 0 3px #ffb04a); animation: glow 1.8s ease-in-out infinite alternate; }
+@keyframes glow { from { filter: drop-shadow(0 0 2px #ff7a1a); } to { filter: drop-shadow(0 0 7px #ffd36a); } }
+#victim.dead .eye { fill: #4a0c16; filter: none; animation: none; }
+#victim.dead .bone { stroke: #cdbfae; }
+.bone { stroke: var(--bone); stroke-width: 4; stroke-linecap: round; fill: none; filter: drop-shadow(0 0 3px rgba(242, 232, 207, .45)); }
+
+.play { display: grid; gap: 18px; }
+.parch {
+  position: relative; padding: 16px 20px 16px 22px; color: var(--ink); transform: rotate(-.5deg);
+  background: radial-gradient(120% 120% at 20% 0%, #f3e6c0, var(--parch) 55%, #cdb888);
+  border-radius: 6px 14px 8px 12px / 12px 6px 14px 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, .5), inset 0 0 40px rgba(120, 80, 20, .25);
+}
+.parch .k { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: #7a3b0c; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.parch p { margin: 6px 0 0; font-size: clamp(1.12rem, 2.6vw, 1.38rem); line-height: 1.35; font-style: italic; }
+.board { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 26px; padding: 6px 0; }
+.word { display: flex; gap: clamp(4px, 1.2vw, 8px); }
+.slot {
+  width: clamp(25px, 6.2vw, 44px); height: clamp(38px, 8.4vw, 58px); border-bottom: 3px solid var(--ash);
+  display: grid; place-items: end center; padding-bottom: 2px; font-family: var(--f-display); font-size: clamp(1.7rem, 5.2vw, 2.7rem); line-height: 1; color: transparent;
+}
+.slot.on { color: var(--ember); border-bottom-color: var(--ember); text-shadow: 0 0 14px rgba(255, 122, 26, .8); animation: slotpop .45s cubic-bezier(.2, 1.7, .4, 1); }
+.slot.doom { color: var(--blood); border-bottom-color: var(--blood); text-shadow: 0 0 12px rgba(224, 51, 74, .7); }
+.board.won .slot { color: var(--slime); border-bottom-color: var(--slime); text-shadow: 0 0 16px rgba(157, 255, 87, .8); }
+@keyframes slotpop { from { transform: translateY(-14px) scale(1.5); opacity: 0; } to { transform: none; opacity: 1; } }
+.cursed { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; min-height: 38px; }
+.cursed .lbl { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .18em; text-transform: uppercase; color: var(--blood); }
+.cursed .none { color: #7f7298; font-style: italic; font-size: .95rem; }
+.cursed .x { font-family: var(--f-display); font-size: 1.5rem; line-height: 1; padding: 3px 10px 1px; border: 1px solid rgba(224, 51, 74, .6); border-radius: 8px; color: var(--blood); text-decoration: line-through; text-decoration-thickness: 2px; background: rgba(224, 51, 74, .1); animation: slotpop .4s ease; }
+.keys { display: grid; gap: 7px; }
+.krow { display: flex; justify-content: center; gap: 6px; }
+.key {
+  flex: 1 1 0; min-width: 0; max-width: 52px; height: clamp(42px, 9vw, 54px); border-radius: 9px; border: 1px solid #4b3d6b;
+  background: linear-gradient(180deg, #382c56, #241a3d); font-family: var(--f-display); font-size: clamp(1.1rem, 3.4vw, 1.5rem); letter-spacing: .03em; padding: 3px 0 0;
+  box-shadow: 0 3px 0 #120b20; transition: transform .1s, border-color .15s, background .15s;
+}
+.key:hover:not(:disabled) { border-color: var(--ember); transform: translateY(-2px); }
+.key:active:not(:disabled) { transform: translateY(2px); box-shadow: 0 1px 0 #120b20; }
+.key.hit { background: linear-gradient(180deg, #1f4a22, #123016); border-color: var(--slime); color: var(--slime); box-shadow: 0 0 14px rgba(157, 255, 87, .45); cursor: default; }
+.key.miss { background: #4a0c16; border-color: var(--blood); color: var(--blood); animation: shatter .45s ease forwards; }
+.key.gone { visibility: hidden; }
+@keyframes shatter { 40% { transform: rotate(-12deg) scale(1.15); } 100% { transform: rotate(18deg) scale(.2); opacity: 0; } }
+
+/* ---------- result ---------- */
+.end { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: rgba(5, 3, 10, .8); backdrop-filter: blur(5px);
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); overflow-y: auto; }
+.end-card { width: min(100%, 460px); text-align: center; padding: 30px 24px 26px; border-radius: 22px; background: linear-gradient(180deg, #241a3d, #150d27); border: 2px solid var(--c, var(--ember)); box-shadow: 0 0 50px var(--g, rgba(255, 122, 26, .4)), 0 30px 70px rgba(0, 0, 0, .7); animation: card .6s cubic-bezier(.2, 1.4, .4, 1); }
+.end-card.win { --c: var(--slime); --g: rgba(157, 255, 87, .35); }
+.end-card.lose { --c: var(--blood); --g: rgba(224, 51, 74, .45); }
+@keyframes card { from { transform: scale(.7) translateY(30px); opacity: 0; } to { transform: none; opacity: 1; } }
+.end-card h2 { margin: 0; font-family: var(--f-display); font-weight: 400; font-size: clamp(2.2rem, 8vw, 3.2rem); letter-spacing: .05em; color: var(--c); text-shadow: 0 0 18px var(--g); line-height: 1; }
+.end-card .sub { margin: 10px 0 14px; color: var(--ash); }
+.end-card .the-word { font-family: var(--f-display); font-size: clamp(1.8rem, 7vw, 2.6rem); letter-spacing: .05em; color: var(--bone); overflow-wrap: anywhere; line-height: 1.05; margin: 0; }
+.end-card .stats { font-family: var(--f-mono); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ash); margin: 14px 0 20px; }
+.end-card .acts { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (max-width: 820px) {
+  .intro { grid-template-columns: 1fr; }
+  .stone { max-width: 420px; }
+  .crypt { grid-template-columns: minmax(0, 1fr); }
+  .gallows { max-height: 46vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+  .bat, .ember { display: none; }
+}
+</style>
+
+<!-- shared vector sprites -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="pk" viewBox="0 0 32 32">
+      <path d="M16 9 q-1 -5 4 -7" stroke="#6fb04a" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <ellipse cx="16" cy="19" rx="14" ry="11.5" fill="#ff7a1a"/>
+      <path d="M16 8 C9 12 9 26 16 30 M16 8 C23 12 23 26 16 30" stroke="#b53f05" stroke-width="1.6" fill="none"/>
+      <path d="M8 16 l5 0 -2.5 5z M19 16 l5 0 -2.5 5z" fill="#2a0f03"/>
+      <path d="M9 24 l3 -2 2 2 2 -2 2 2 2 -2 3 2 q-8 5 -14 0z" fill="#2a0f03"/>
+    </symbol>
+    <symbol id="bat" viewBox="-30 -14 60 28">
+      <path d="M0 -4 C-4 -10 -10 -12 -14 -8 C-18 -12 -24 -12 -30 -6 C-24 -4 -22 2 -18 6 C-14 2 -10 2 -6 6 C-4 4 -2 4 0 8 C2 4 4 4 6 6 C10 2 14 2 18 6 C22 2 24 -4 30 -6 C24 -12 18 -12 14 -8 C10 -12 4 -10 0 -4Z M-3 -4 L-2 -11 L0 -5 L2 -11 L3 -4Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="sky" aria-hidden="true">
+  <div class="moon"></div>
+  <div class="fog"></div><div class="fog two"></div>
+  <div class="bat" style="--y:9%;--s:52px;--d:19s;--dl:-3s"><svg viewBox="-30 -14 60 28"><use href="#bat"/></svg></div>
+  <div class="bat" style="--y:20%;--s:34px;--d:26s;--dl:-14s"><svg viewBox="-30 -14 60 28"><use href="#bat"/></svg></div>
+  <div class="bat" style="--y:30%;--s:42px;--d:22s;--dl:-9s"><svg viewBox="-30 -14 60 28"><use href="#bat"/></svg></div>
+  <div id="embers"></div>
+  <svg class="graves" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax slice">
+    <g fill="#05030a" stroke="#05030a">
+      <path d="M0 220 L0 172 Q150 150 300 176 T620 168 T900 178 T1200 160 L1200 220Z" stroke="none"/>
+      <path d="M110 182 v-46 a20 20 0 0 1 40 0 v46z" stroke="none"/>
+      <path d="M250 184 v-34 a15 15 0 0 1 30 0 v34z" stroke="none"/>
+      <path d="M430 178 v-58 h-18 v-14 h18 v-18 h14 v18 h18 v14 h-18 v58z" stroke="none"/>
+      <path d="M690 176 v-40 a18 18 0 0 1 36 0 v40z" stroke="none"/>
+      <path d="M800 182 v-52 h-14 v-12 h14 v-14 h12 v14 h14 v12 h-14 v52z" stroke="none"/>
+      <path d="M1010 182 L1016 90 M1014 124 L1062 84 M1013 106 L972 70 M1016 92 L1034 48 M1062 84 L1090 78 M972 70 L950 72" fill="none" stroke-width="9" stroke-linecap="round"/>
+      <path d="M1130 182 v-44 a20 20 0 0 1 40 0 v44z" stroke="none"/>
+    </g>
+  </svg>
+</div>
+
+<main class="app">
+  <header class="bar" id="topbar" hidden>
+    <div class="brand">Lexis Game</div>
+    <div class="chips">
+      <span class="chip who" id="chipName"></span>
+      <span class="chip">Wins <b id="chipWins">0</b></span>
+      <span class="chip">Streak <b id="chipStreak">0</b></span>
+      <button class="icon-btn" id="mute" type="button" aria-pressed="false" aria-label="Mute sound" title="Sound">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="wave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- 1. NAME -->
+  <section class="screen" id="s-name" aria-labelledby="logo">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Hangman after dark</p>
+        <h1 class="logo" id="logo">L<span class="flick">e</span>xis<small>Game</small></h1>
+        <p class="lede">Guess the word before the rope pulls tight. The graveyard keeps a long memory, and a short supply of pumpkins.</p>
+        <p class="rules">Three doors. Six lives. One rope.</p>
+      </div>
+      <form class="stone" id="nameForm" novalidate>
+        <p class="rip">Here lies</p>
+        <label for="nameInput">Carve your name</label>
+        <input id="nameInput" type="text" maxlength="18" autocomplete="off" spellcheck="false" placeholder="Your name, mortal">
+        <p class="err" id="nameErr" role="alert"></p>
+        <button class="btn" type="submit">Enter the crypt</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 2. WHEEL -->
+  <section class="screen" id="s-wheel" hidden aria-labelledby="fateTitle">
+    <div class="fate">
+      <h2 id="fateTitle">Welcome, <em id="fateName"></em></h2>
+      <p>Spin the wheel of fate. It decides which door you open tonight.</p>
+      <div class="wheelbox">
+        <svg class="pointer" viewBox="0 0 40 56" aria-hidden="true"><path d="M20 54 L4 14 A18 18 0 1 1 36 14Z" fill="#e0334a" stroke="#f2e8cf" stroke-width="2"/><circle cx="20" cy="16" r="6" fill="#0a0612"/></svg>
+        <svg class="wheel" id="wheel" viewBox="-200 -200 400 400" aria-hidden="true"></svg>
+      </div>
+      <button class="btn" id="spinBtn" type="button">Spin the wheel</button>
+      <div class="verdict" id="verdict" aria-live="polite"></div>
+      <ul class="legend" id="legend">
+        <li data-k="books"><b>Books</b> classics and horror</li>
+        <li data-k="characters"><b>Characters</b> fictional figures</li>
+        <li data-k="movies"><b>Movies</b> horror and sci-fi</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. CRYPT -->
+  <section class="screen" id="s-game" hidden aria-label="Hangman round">
+    <div class="crypt">
+      <div class="scene" id="scene">
+        <div class="scene-top">
+          <div class="lives" id="lives" role="img" aria-label="Lives remaining"></div>
+          <div class="tagline" id="catTag"></div>
+        </div>
+        <svg class="gallows" viewBox="0 0 320 340" role="img" aria-label="A gallows. A pumpkin-headed skeleton appears piece by piece with each wrong guess.">
+          <defs>
+            <linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#5a3e29"/><stop offset="1" stop-color="#2c1d14"/></linearGradient>
+            <radialGradient id="pump" cx=".4" cy=".35" r=".85"><stop offset="0" stop-color="#ffb04a"/><stop offset=".6" stop-color="#ff7a1a"/><stop offset="1" stop-color="#a73a04"/></radialGradient>
+          </defs>
+          <!-- ground & scenery -->
+          <path d="M0 330 L0 306 Q80 292 160 304 T320 298 L320 340 L0 340Z" fill="#05030a"/>
+          <path d="M248 306 v-44 a17 17 0 0 1 34 0 v44z" fill="#1c1430" stroke="#33274d" stroke-width="2"/>
+          <path d="M258 280 h14 M265 272 v16" stroke="#46386a" stroke-width="2"/>
+          <path d="M292 304 v-30 a12 12 0 0 1 24 0 v30z" fill="#171028" stroke="#2e2347" stroke-width="2"/>
+          <path d="M20 306 l4 -14 4 14 4 -16 4 16 4 -12 4 12" stroke="#0d2210" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <!-- timber -->
+          <rect x="36" y="302" width="198" height="14" rx="2" fill="url(#wood)"/>
+          <rect x="70" y="40" width="14" height="264" fill="url(#wood)"/>
+          <rect x="70" y="40" width="152" height="14" rx="2" fill="url(#wood)"/>
+          <path d="M84 108 L132 54" stroke="#3a281b" stroke-width="10" stroke-linecap="square"/>
+          <path d="M74 70 v40 M78 120 v60 M74 200 v70" stroke="#1d1209" stroke-width="1.2" opacity=".7"/>
+          <circle cx="77" cy="47" r="2.2" fill="#1d1209"/><circle cx="212" cy="47" r="2.2" fill="#1d1209"/>
+          <!-- victim -->
+          <g id="drop"><g id="victim">
+            <line x1="190" y1="54" x2="190" y2="94" stroke="#c9a66b" stroke-width="3.5"/>
+            <path d="M184 88 q6 -5 12 0 q2 6 -6 8 q-8 -2 -6 -8z" fill="none" stroke="#c9a66b" stroke-width="3"/>
+            <g class="part" id="p-head"><g class="pop">
+              <ellipse cx="190" cy="116" rx="25" ry="22" fill="url(#pump)"/>
+              <path d="M190 94 C178 100 175 132 190 138 M190 94 C202 100 205 132 190 138" stroke="#a73a04" stroke-width="1.6" fill="none"/>
+              <path d="M188 95 q-2 -7 5 -10" stroke="#6fb04a" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <polygon class="eye" points="173,108 185,108 179,119"/><polygon class="eye" points="195,108 207,108 201,119"/>
+              <path class="eye" d="M174 126 l6 5 5 -5 5 6 5 -6 5 5 6 -5 -1 8 q-15 8 -30 0z"/>
+            </g></g>
+            <g class="part" id="p-body">
+              <line class="draw bone" pathLength="1" x1="190" y1="138" x2="190" y2="208"/>
+              <path class="draw bone" pathLength="1" d="M176 152 Q190 160 204 152"/>
+              <path class="draw bone" pathLength="1" d="M178 166 Q190 174 202 166"/>
+              <path class="draw bone" pathLength="1" d="M180 180 Q190 187 200 180"/>
+              <line class="draw bone" pathLength="1" x1="178" y1="208" x2="202" y2="208"/>
+            </g>
+            <g class="part" id="p-armL"><path class="draw bone" pathLength="1" d="M190 148 L160 160 L152 192"/><circle class="pop" cx="152" cy="196" r="4.5" fill="#f2e8cf"/></g>
+            <g class="part" id="p-armR"><path class="draw bone" pathLength="1" d="M190 148 L220 160 L228 192"/><circle class="pop" cx="228" cy="196" r="4.5" fill="#f2e8cf"/></g>
+            <g class="part" id="p-legL"><path class="draw bone" pathLength="1" d="M184 208 L172 244 L168 270"/><path class="draw bone" pathLength="1" d="M168 272 L156 276"/></g>
+            <g class="part" id="p-legR"><path class="draw bone" pathLength="1" d="M196 208 L208 244 L212 270"/><path class="draw bone" pathLength="1" d="M212 272 L224 276"/></g>
+          </g></g>
+        </svg>
+        <div class="flash"></div>
+      </div>
+
+      <div class="play">
+        <div class="parch">
+          <div class="k"><span>The clue</span><span id="clueMeta"></span></div>
+          <p id="clueText"></p>
+        </div>
+        <div class="board" id="board" aria-label="Word to guess"></div>
+        <div class="cursed" id="cursed"><span class="lbl">Cursed letters</span><span class="none">None yet. Choose wisely.</span></div>
+        <div class="keys" id="keys" role="group" aria-label="Letters"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="end" id="end" hidden role="dialog" aria-modal="true" aria-labelledby="endTitle">
+    <div class="end-card" id="endCard">
+      <h2 id="endTitle"></h2>
+      <p class="sub" id="endSub"></p>
+      <p class="the-word" id="endWord"></p>
+      <p class="stats" id="endStats"></p>
+      <div class="acts">
+        <button class="btn" id="againBtn" type="button">Spin again</button>
+        <button class="btn ghost" id="renameBtn" type="button">New name</button>
+      </div>
+    </div>
+  </div>
+  <div class="sr" id="sr" aria-live="polite"></div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MAX = 6;
+
+  /* ---------- content ---------- */
+  var BANK = {
+    movies: [
+      { w: 'HALLOWEEN', t: 'Horror', c: 'A masked killer comes home to Haddonfield on the one night everyone is already in costume.' },
+      { w: 'PSYCHO', t: 'Horror', c: 'A roadside motel, a mother who never leaves the house, and the most famous shower in cinema.' },
+      { w: 'THE EXORCIST', t: 'Horror', c: 'A twelve-year-old, a spinning head, and two priests armed with holy water.' },
+      { w: 'SCREAM', t: 'Horror', c: 'A ghost-faced caller on the phone wants to know your favourite scary movie.' },
+      { w: 'POLTERGEIST', t: 'Horror', c: 'They are here, and the television is the doorway.' },
+      { w: 'THE SHINING', t: 'Horror', c: 'Writer’s block, an empty mountain hotel in winter, and an axe through the bathroom door.' },
+      { w: 'GET OUT', t: 'Horror', c: 'A weekend at his girlfriend’s family estate ends in the sunken place.' },
+      { w: 'THE RING', t: 'Horror', c: 'Watch the cursed tape, take the phone call, and you have seven days.' },
+      { w: 'NOSFERATU', t: 'Horror', c: 'A 1922 silent film with the most unsettling vampire ever put on screen.' },
+      { w: 'THE BIRDS', t: 'Horror', c: 'Hitchcock sends ordinary gulls and crows after a seaside town.' },
+      { w: 'INTERSTELLAR', t: 'Sci-Fi', c: 'Farmers, a wormhole near Saturn, and a bookshelf that sends messages across time.' },
+      { w: 'THE MATRIX', t: 'Sci-Fi', c: 'Pick the red pill and learn that the world is made of code.' },
+      { w: 'BLADE RUNNER', t: 'Sci-Fi', c: 'A detective hunts replicants through a rainy, neon-lit Los Angeles.' },
+      { w: 'INCEPTION', t: 'Sci-Fi', c: 'A team plants an idea inside a dream, inside a dream, inside a dream.' },
+      { w: 'ARRIVAL', t: 'Sci-Fi', c: 'A linguist learns the language of visitors and starts to see time differently.' },
+      { w: 'ALIEN', t: 'Sci-Fi', c: 'A crew wakes from hypersleep and brings an unwelcome passenger aboard.' },
+      { w: 'THE TERMINATOR', t: 'Sci-Fi', c: 'A cyborg from 2029 hunts Sarah Connor and promises to come back.' },
+      { w: 'JURASSIC PARK', t: 'Sci-Fi', c: 'Cloned dinosaurs break out of their island zoo.' },
+      { w: 'METROPOLIS', t: 'Sci-Fi', c: 'Fritz Lang’s 1927 silent epic of a towering city and a robot named Maria.' },
+      { w: 'EX MACHINA', t: 'Sci-Fi', c: 'A programmer is asked to judge whether a robot named Ava is truly conscious.' }
+    ],
+    books: [
+      { w: 'DRACULA', t: 'Horror', c: 'Bram Stoker’s 1897 novel told in letters, diaries and telegrams about a count from Transylvania.' },
+      { w: 'FRANKENSTEIN', t: 'Horror', c: 'Mary Shelley’s tale of a young scientist and the creature he brings to life.' },
+      { w: 'THE HAUNTING OF HILL HOUSE', t: 'Horror', c: 'Shirley Jackson’s story of four people sent to investigate a house that is not sane.' },
+      { w: 'PET SEMATARY', t: 'Horror', c: 'Stephen King’s story of a burial ground behind a family home, where the dead come back wrong.' },
+      { w: 'THE TELL TALE HEART', t: 'Horror', c: 'Poe’s narrator insists he is sane while a heartbeat under the floorboards gives him away.' },
+      { w: 'THE TURN OF THE SCREW', t: 'Horror', c: 'Henry James’s governess is convinced the two children in her care are haunted.' },
+      { w: 'CARRIE', t: 'Horror', c: 'Stephen King’s first novel: a bullied teenager with telekinesis and a disastrous prom.' },
+      { w: 'JEKYLL AND HYDE', t: 'Horror', c: 'Stevenson’s London doctor drinks a potion that releases his darker self.' },
+      { w: 'WUTHERING HEIGHTS', t: 'Classic', c: 'Two doomed lovers and a ghost at the window on the Yorkshire moors.' },
+      { w: 'JANE EYRE', t: 'Classic', c: 'An orphaned governess and the secret locked in the attic at Thornfield Hall.' },
+      { w: 'PRIDE AND PREJUDICE', t: 'Classic', c: 'Mr Darcy, Elizabeth Bennet, and a very awkward first proposal.' },
+      { w: 'GREAT EXPECTATIONS', t: 'Classic', c: 'Pip, Miss Havisham and her stopped clocks, and a secret benefactor.' },
+      { w: 'MOBY DICK', t: 'Classic', c: 'Captain Ahab chases a white whale across every ocean.' },
+      { w: 'THE PICTURE OF DORIAN GRAY', t: 'Classic', c: 'A portrait ages and carries the sins of a beautiful young man.' },
+      { w: 'A TALE OF TWO CITIES', t: 'Classic', c: 'London and Paris during the French Revolution, by Charles Dickens.' },
+      { w: 'THE SCARLET LETTER', t: 'Classic', c: 'Hester Prynne is branded with a red A in Puritan Boston.' }
+    ],
+    characters: [
+      { w: 'SHERLOCK HOLMES', t: 'Fictional', c: 'A Baker Street detective with a pipe, a violin and a very sharp eye.' },
+      { w: 'DARTH VADER', t: 'Fictional', c: 'A dark lord in black armour who breathes like a broken machine.' },
+      { w: 'VAN HELSING', t: 'Fictional', c: 'The vampire hunter with stakes, garlic and a very long night ahead.' },
+      { w: 'VOLDEMORT', t: 'Fictional', c: 'A noseless dark wizard who split his soul into seven pieces.' },
+      { w: 'GANDALF', t: 'Fictional', c: 'A grey wizard who returns in white after falling with a balrog.' },
+      { w: 'GOLLUM', t: 'Fictional', c: 'A creature in a cave obsessed with one ring, and he calls it precious.' },
+      { w: 'HANNIBAL LECTER', t: 'Fictional', c: 'A brilliant, polite psychiatrist with a very unusual diet.' },
+      { w: 'NORMAN BATES', t: 'Fictional', c: 'The shy motel manager who talks with his mother a little too much.' },
+      { w: 'PENNYWISE', t: 'Fictional', c: 'A dancing clown who lives in the sewers of Derry and offers balloons.' },
+      { w: 'FREDDY KRUEGER', t: 'Fictional', c: 'Burnt face, razor glove, striped sweater. He visits you in dreams.' },
+      { w: 'JACK SKELLINGTON', t: 'Fictional', c: 'The Pumpkin King of Halloween Town, who tries to take over Christmas.' },
+      { w: 'HEATHCLIFF', t: 'Fictional', c: 'Brooding, vengeful foundling of the Yorkshire moors.' },
+      { w: 'QUASIMODO', t: 'Fictional', c: 'The bell ringer who lives in the towers of Notre-Dame.' },
+      { w: 'CAPTAIN AHAB', t: 'Fictional', c: 'A one-legged whaler whose only crew goal is revenge.' },
+      { w: 'FRANKENSTEINS MONSTER', t: 'Fictional', c: 'Stitched together from the dead and abandoned by the one who made him.' },
+      { w: 'DORIAN GRAY', t: 'Fictional', c: 'His face never ages. His portrait in the attic does.' }
+    ]
+  };
+  var META = {
+    books: { label: 'Books', theme: 'Classic and horror' },
+    characters: { label: 'Characters', theme: 'Fictional' },
+    movies: { label: 'Movies', theme: 'Horror and sci-fi' }
+  };
+  var ORDER = ['books', 'characters', 'movies'];
+
+  /* ---------- state ---------- */
+  var S = { name: '', wins: 0, streak: 0, played: 0, used: { books: [], characters: [], movies: [] }, cat: null, entry: null, guessed: {}, wrong: [], locked: true, rot: 0, spinning: false };
+  var slots = [], keyEls = {}, timers = [];
+  function later(fn, ms) { var id = setTimeout(fn, ms); timers.push(id); return id; }
+  function clearTimers() { timers.forEach(clearTimeout); timers = []; }
+
+  /* ---------- audio (starts only after a click) ---------- */
+  var ac = null, muted = false;
+  function actx() {
+    if (!ac) { try { ac = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { ac = null; } }
+    if (ac && ac.state === 'suspended') { ac.resume().catch(function () {}); }
+    return ac;
+  }
+  function tone(f, d, type, v, slide, delay) {
+    if (muted) return; var a = actx(); if (!a) return;
+    var t = a.currentTime + (delay || 0), o = a.createOscillator(), g = a.createGain();
+    o.type = type || 'sine'; o.frequency.setValueAtTime(f, t);
+    if (slide) o.frequency.exponentialRampToValueAtTime(Math.max(30, f + slide), t + d);
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(v || .06, t + .02); g.gain.exponentialRampToValueAtTime(.0001, t + d);
+    o.connect(g); g.connect(a.destination); o.start(t); o.stop(t + d + .05);
+  }
+  var sfx = {
+    click: function () { tone(320, .06, 'square', .03); },
+    hit: function () { tone(520, .12, 'triangle', .07); tone(780, .2, 'triangle', .06, 0, .08); },
+    miss: function () { tone(190, .4, 'sawtooth', .06, -130); },
+    win: function () { [392, 494, 587, 784].forEach(function (f, i) { tone(f, .35, 'triangle', .07, 0, i * .13); }); },
+    lose: function () { tone(230, .9, 'sawtooth', .07, -180); tone(110, 1.3, 'square', .04, -60, .25); },
+    ticks: function (dur) { for (var i = 1; i <= 26; i++) { tone(900, .03, 'square', .025, 0, dur * (1 - Math.pow(1 - i / 26, 1 / 3))); } },
+    stop: function () { tone(330, .5, 'triangle', .07); tone(660, .6, 'triangle', .05, 0, .12); }
+  };
+  $('#mute').addEventListener('click', function () {
+    muted = !muted; this.setAttribute('aria-pressed', String(muted)); this.setAttribute('aria-label', muted ? 'Unmute sound' : 'Mute sound');
+    if (!muted) sfx.click();
+  });
+
+  /* ---------- helpers ---------- */
+  function show(id) {
+    ['s-name', 's-wheel', 's-game'].forEach(function (s) { $('#' + s).hidden = (s !== id); });
+    $('#topbar').hidden = (id === 's-name');
+    window.scrollTo(0, 0);
+  }
+  function say(msg) { $('#sr').textContent = ''; later(function () { $('#sr').textContent = msg; }, 30); }
+  function updateChips() {
+    $('#chipName').textContent = S.name; $('#chipWins').textContent = S.wins; $('#chipStreak').textContent = S.streak;
+  }
+
+  /* ---------- ambient embers ---------- */
+  (function () {
+    var host = $('#embers'), html = '';
+    for (var i = 0; i < 22; i++) {
+      html += '<span class="ember" style="--x:' + (Math.random() * 100).toFixed(1) + '%;--z:' + (2 + Math.random() * 3).toFixed(1) + 'px;--t:' + (7 + Math.random() * 8).toFixed(1) + 's;--w:' + (-Math.random() * 12).toFixed(1) + 's;--dx:' + ((Math.random() - .5) * 140).toFixed(0) + 'px"></span>';
+    }
+    host.innerHTML = html;
+  })();
+
+  /* ---------- screen 1: name ---------- */
+  var nameInput = $('#nameInput');
+  $('#nameForm').addEventListener('submit', function (e) {
+    e.preventDefault(); actx();
+    var v = nameInput.value.replace(/\s+/g, ' ').trim();
+    if (!v) { $('#nameErr').textContent = 'The stone is blank. Carve a name first.'; nameInput.focus(); return; }
+    $('#nameErr').textContent = '';
+    S.name = v; sfx.click(); updateChips();
+    $('#fateName').textContent = v;
+    resetVerdict(); show('s-wheel'); $('#spinBtn').focus({ preventScroll: true });
+  });
+  nameInput.addEventListener('input', function () { $('#nameErr').textContent = ''; });
+
+  /* ---------- screen 2: wheel ---------- */
+  (function buildWheel() {
+    var R = 172, seg = '', lab = '', studs = '';
+    var cats = [{ g: 'gb', l: 'BOOKS', tl: 80 }, { g: 'gc', l: 'CHARACTERS', tl: 106 }, { g: 'gm', l: 'MOVIES', tl: 86 }];
+    function p(a, r) { var rad = a * Math.PI / 180; return [(r * Math.sin(rad)).toFixed(2), (-r * Math.cos(rad)).toFixed(2)]; }
+    cats.forEach(function (c, i) {
+      var a0 = i * 120, a1 = a0 + 120, P0 = p(a0, R), P1 = p(a1, R);
+      seg += '<path d="M0 0 L' + P0[0] + ' ' + P0[1] + ' A' + R + ' ' + R + ' 0 0 1 ' + P1[0] + ' ' + P1[1] + 'Z" fill="url(#' + c.g + ')" stroke="#f2e8cf" stroke-opacity=".4" stroke-width="2"/>';
+      lab += '<text class="wl" transform="rotate(' + (a0 + 60 - 90) + ')" x="54" y="9" textLength="' + c.tl + '" lengthAdjust="spacingAndGlyphs">' + c.l + '</text>';
+    });
+    for (var k = 0; k < 24; k++) { var q = p(k * 15, 183); studs += '<circle class="stud" cx="' + q[0] + '" cy="' + q[1] + '" r="3.6" fill="#ffb04a"/>'; }
+    $('#wheel').innerHTML =
+      '<defs>' +
+      '<radialGradient id="gb" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2a1458"/><stop offset="1" stop-color="#6a3cc4"/></radialGradient>' +
+      '<radialGradient id="gc" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8a2f05"/><stop offset="1" stop-color="#ff8a2a"/></radialGradient>' +
+      '<radialGradient id="gm" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0c2a12"/><stop offset="1" stop-color="#3f9a3a"/></radialGradient>' +
+      '</defs>' +
+      '<circle r="194" fill="#120a1f" stroke="#4b3d6b" stroke-width="4"/>' +
+      '<circle r="176" fill="#0a0612"/>' + seg + lab + studs +
+      '<circle r="38" fill="#0a0612" stroke="#ffb04a" stroke-width="4"/>' +
+      '<ellipse cx="0" cy="-3" rx="17" ry="15" fill="#f2e8cf"/><rect x="-10" y="8" width="20" height="12" rx="2" fill="#f2e8cf"/>' +
+      '<ellipse cx="-6.5" cy="-3" rx="4.2" ry="5" fill="#0a0612"/><ellipse cx="6.5" cy="-3" rx="4.2" ry="5" fill="#0a0612"/>' +
+      '<path d="M0 3 l-2.4 5 h4.8z" fill="#0a0612"/><path d="M-5 13 v6 M0 13 v6 M5 13 v6" stroke="#0a0612" stroke-width="1.6"/>';
+    $('#wheel').style.transformOrigin = '50% 50%';
+  })();
+
+  function resetVerdict() {
+    $('#verdict').textContent = '';
+    var items = document.querySelectorAll('#legend li'); for (var i = 0; i < items.length; i++) items[i].classList.remove('pick');
+    $('#spinBtn').disabled = false; S.spinning = false;
+  }
+  $('#spinBtn').addEventListener('click', function () {
+    if (S.spinning) return; actx();
+    S.spinning = true; this.disabled = true; $('#verdict').textContent = '';
+    var items = document.querySelectorAll('#legend li'); for (var i = 0; i < items.length; i++) items[i].classList.remove('pick');
+    var idx = Math.floor(Math.random() * 3);
+    var centre = idx * 120 + 60 + (Math.random() - .5) * 70;
+    var cur = ((S.rot % 360) + 360) % 360;
+    var delta = ((360 - centre) - cur) % 360; if (delta < 0) delta += 360;
+    var dur = reduced ? .6 : 5.2;
+    S.rot += (reduced ? 1 : 5) * 360 + delta;
+    var w = $('#wheel');
+    w.style.transition = 'transform ' + dur + 's cubic-bezier(.12,.62,.1,1)';
+    w.style.transform = 'rotate(' + S.rot + 'deg)';
+    if (!reduced) sfx.ticks(dur);
+    later(function () { landed(idx); }, dur * 1000 + 150);
+  });
+  function landed(idx) {
+    var k = ORDER[idx]; sfx.stop();
+    $('#verdict').textContent = META[k].label + ': ' + META[k].theme;
+    say('The wheel chose ' + META[k].label + '. ' + META[k].theme + '.');
+    var li = document.querySelector('#legend li[data-k="' + k + '"]'); if (li) li.classList.add('pick');
+    later(function () { startRound(k); }, reduced ? 500 : 1500);
+  }
+
+  /* ---------- screen 3: crypt ---------- */
+  var ROWS = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'];
+  (function buildKeys() {
+    var host = $('#keys');
+    ROWS.forEach(function (r) {
+      var row = document.createElement('div'); row.className = 'krow';
+      r.split('').forEach(function (L) {
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'key'; b.textContent = L; b.setAttribute('aria-label', 'Letter ' + L);
+        b.addEventListener('click', function () { guess(L); }); keyEls[L] = b; row.appendChild(b);
+      });
+      host.appendChild(row);
+    });
+  })();
+  var PARTS = ['p-head', 'p-body', 'p-armL', 'p-armR', 'p-legL', 'p-legR'];
+
+  function pickEntry(k) {
+    var pool = BANK[k], used = S.used[k];
+    var fresh = pool.filter(function (e) { return used.indexOf(e.w) < 0; });
+    if (!fresh.length) { S.used[k] = used = []; fresh = pool.slice(); }
+    var e = fresh[Math.floor(Math.random() * fresh.length)]; used.push(e.w); return e;
+  }
+
+  function startRound(k) {
+    clearTimers();
+    S.cat = k; S.entry = pickEntry(k); S.guessed = {}; S.wrong = []; S.locked = false; S.played++;
+    var word = S.entry.w;
+    // reset gallows
+    PARTS.forEach(function (id) { $('#' + id).classList.remove('show'); });
+    var v = $('#victim'); v.setAttribute('class', ''); v.style.removeProperty('--sw');
+    $('#drop').setAttribute('class', ''); $('#scene').classList.remove('zap', 'shake', 'hurt');
+    // lives
+    var lh = ''; for (var i = 0; i < MAX; i++) lh += '<svg class="pk" viewBox="0 0 32 32"><use href="#pk"/></svg>';
+    $('#lives').innerHTML = lh; $('#lives').setAttribute('aria-label', MAX + ' lives remaining');
+    // meta + clue
+    $('#catTag').textContent = META[k].label + ' · ' + S.entry.t;
+    var letters = word.replace(/ /g, '').length, words = word.split(' ').length;
+    $('#clueMeta').textContent = letters + ' letters' + (words > 1 ? ' · ' + words + ' words' : '');
+    $('#clueText').textContent = S.entry.c;
+    // board
+    var board = $('#board'); board.innerHTML = ''; board.classList.remove('won'); slots = [];
+    word.split(' ').forEach(function (wd) {
+      var w = document.createElement('div'); w.className = 'word';
+      wd.split('').forEach(function (ch) { var s = document.createElement('span'); s.className = 'slot'; s.dataset.ch = ch; w.appendChild(s); slots.push(s); });
+      board.appendChild(w);
+    });
+    // cursed tray + keys
+    $('#cursed').innerHTML = '<span class="lbl">Cursed letters</span><span class="none">None yet. Choose wisely.</span>';
+    Object.keys(keyEls).forEach(function (L) { var b = keyEls[L]; b.className = 'key'; b.disabled = false; });
+    $('#end').hidden = true;
+    show('s-game');
+    say('Round started. Category ' + META[k].label + '. ' + letters + ' letters. Clue: ' + S.entry.c);
+  }
+
+  function guess(L) {
+    if (S.locked || S.guessed[L]) return;
+    S.guessed[L] = true; actx();
+    var b = keyEls[L]; b.disabled = true;
+    if (S.entry.w.indexOf(L) >= 0) {
+      var n = 0; slots.forEach(function (s) { if (s.dataset.ch === L) { s.textContent = L; s.classList.add('on'); n++; } });
+      b.classList.add('hit'); sfx.hit();
+      say('Correct. ' + L + ' appears ' + n + (n > 1 ? ' times.' : ' time.'));
+      if (slots.every(function (s) { return s.classList.contains('on'); })) win();
+    } else {
+      S.wrong.push(L); var c = S.wrong.length;
+      b.classList.add('miss'); later(function () { b.classList.add('gone'); }, 440); sfx.miss();
+      var tray = $('#cursed'), none = tray.querySelector('.none'); if (none) none.remove();
+      var chip = document.createElement('span'); chip.className = 'x'; chip.textContent = L; tray.appendChild(chip);
+      var lives = $('#lives').children; if (lives[c - 1]) lives[c - 1].classList.add('lost');
+      $('#lives').setAttribute('aria-label', (MAX - c) + ' lives remaining');
+      var part = $('#' + PARTS[c - 1]); part.classList.add('show');
+      var v = $('#victim'); v.style.setProperty('--sw', (1 + c * .9) + 'deg'); v.classList.add('sway');
+      var sc = $('#scene'); sc.classList.remove('hurt'); void sc.offsetWidth; sc.classList.add('hurt');
+      say('Wrong. ' + L + ' is not in the word. ' + (MAX - c) + ' lives left.');
+      if (c >= MAX) lose();
+    }
+  }
+
+  function win() {
+    S.locked = true; S.wins++; S.streak++; updateChips();
+    $('#board').classList.add('won'); sfx.win();
+    var v = $('#victim'); if (S.wrong.length) { v.classList.remove('sway'); void v.offsetWidth; v.classList.add('saved'); }
+    say('You win. The word was ' + S.entry.w + '.');
+    later(function () { endCard(true); }, 1300);
+  }
+  function lose() {
+    S.locked = true; S.streak = 0; updateChips();
+    var v = $('#victim'); v.classList.remove('sway'); v.classList.add('dead');
+    var d = $('#drop'); d.classList.add('jolt');
+    var sc = $('#scene'); sc.classList.add('zap', 'shake'); sfx.lose();
+    slots.forEach(function (s) { if (!s.classList.contains('on')) { s.textContent = s.dataset.ch; s.classList.add('doom'); } });
+    say('You have been hanged. The word was ' + S.entry.w + '.');
+    later(function () { endCard(false); }, 2100);
+  }
+  function endCard(won) {
+    var card = $('#endCard'); card.className = 'end-card ' + (won ? 'win' : 'lose');
+    $('#endTitle').textContent = won ? 'The spirits approve' : 'Hanged at midnight';
+    $('#endSub').textContent = won ? (S.wrong.length ? 'You cut the rope with ' + (MAX - S.wrong.length) + ' ' + (MAX - S.wrong.length === 1 ? 'life' : 'lives') + ' to spare.' : 'Not a single wrong step. The graveyard is impressed.') : S.name + ', the word was:';
+    $('#endWord').textContent = S.entry.w;
+    $('#endStats').textContent = 'Wins ' + S.wins + '  ·  Streak ' + S.streak + '  ·  Rounds ' + S.played;
+    $('#end').hidden = false; $('#againBtn').focus();
+  }
+  $('#againBtn').addEventListener('click', function () { sfx.click(); $('#end').hidden = true; resetVerdict(); show('s-wheel'); $('#spinBtn').focus({ preventScroll: true }); });
+  $('#renameBtn').addEventListener('click', function () {
+    sfx.click(); $('#end').hidden = true; S.wins = 0; S.streak = 0; S.played = 0; updateChips(); nameInput.value = ''; show('s-name'); nameInput.focus();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if ($('#s-game').hidden || !$('#end').hidden) return;
+    if (/^[a-zA-Z]$/.test(e.key)) { guess(e.key.toUpperCase()); }
+  });
+
+  show('s-name');
+  nameInput.focus({ preventScroll: true });
+})();
+</script>

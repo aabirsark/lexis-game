@@ -1,0 +1,82 @@
+[
+  {
+    "w": "DRACULA",
+    "t": "Horror",
+    "c": "Bram Stoker’s 1897 novel told in letters, diaries and telegrams about a count from Transylvania."
+  },
+  {
+    "w": "FRANKENSTEIN",
+    "t": "Horror",
+    "c": "Mary Shelley’s tale of a young scientist and the creature he brings to life."
+  },
+  {
+    "w": "THE HAUNTING OF HILL HOUSE",
+    "t": "Horror",
+    "c": "Shirley Jackson’s story of four people sent to investigate a house that is not sane."
+  },
+  {
+    "w": "PET SEMATARY",
+    "t": "Horror",
+    "c": "Stephen King’s story of a burial ground behind a family home, where the dead come back wrong."
+  },
+  {
+    "w": "THE TELL TALE HEART",
+    "t": "Horror",
+    "c": "Poe’s narrator insists he is sane while a heartbeat under the floorboards gives him away."
+  },
+  {
+    "w": "THE TURN OF THE SCREW",
+    "t": "Horror",
+    "c": "Henry James’s governess is convinced the two children in her care are haunted."
+  },
+  {
+    "w": "CARRIE",
+    "t": "Horror",
+    "c": "Stephen King’s first novel: a bullied teenager with telekinesis and a disastrous prom."
+  },
+  {
+    "w": "JEKYLL AND HYDE",
+    "t": "Horror",
+    "c": "Stevenson’s London doctor drinks a potion that releases his darker self."
+  },
+  {
+    "w": "WUTHERING HEIGHTS",
+    "t": "Classic",
+    "c": "Two doomed lovers and a ghost at the window on the Yorkshire moors."
+  },
+  {
+    "w": "JANE EYRE",
+    "t": "Classic",
+    "c": "An orphaned governess and the secret locked in the attic at Thornfield Hall."
+  },
+  {
+    "w": "PRIDE AND PREJUDICE",
+    "t": "Classic",
+    "c": "Mr Darcy, Elizabeth Bennet, and a very awkward first proposal."
+  },
+  {
+    "w": "GREAT EXPECTATIONS",
+    "t": "Classic",
+    "c": "Pip, Miss Havisham and her stopped clocks, and a secret benefactor."
+  },
+  {
+    "w": "MOBY DICK",
+    "t": "Classic",
+    "c": "Captain Ahab chases a white whale across every ocean."
+  },
+  {
+    "w": "THE PICTURE OF DORIAN GRAY",
+    "t": "Classic",
+    "c": "A portrait ages and carries the sins of a beautiful young man."
+  },
+  {
+    "w": "A TALE OF TWO CITIES",
+    "t": "Classic",
+    "c": "London and Paris during the French Revolution, by Charles Dickens."
+  },
+  {
+    "w": "THE SCARLET LETTER",
+    "t": "Classic",
+    "c": "Hester Prynne is branded with a red A in Puritan Boston."
+  }
+]

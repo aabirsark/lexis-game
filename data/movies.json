@@ -1,0 +1,102 @@
+[
+  {
+    "w": "HALLOWEEN",
+    "t": "Horror",
+    "c": "A masked killer comes home to Haddonfield on the one night everyone is already in costume."
+  },
+  {
+    "w": "PSYCHO",
+    "t": "Horror",
+    "c": "A roadside motel, a mother who never leaves the house, and the most famous shower in cinema."
+  },
+  {
+    "w": "THE EXORCIST",
+    "t": "Horror",
+    "c": "A twelve-year-old, a spinning head, and two priests armed with holy water."
+  },
+  {
+    "w": "SCREAM",
+    "t": "Horror",
+    "c": "A ghost-faced caller on the phone wants to know your favourite scary movie."
+  },
+  {
+    "w": "POLTERGEIST",
+    "t": "Horror",
+    "c": "They are here, and the television is the doorway."
+  },
+  {
+    "w": "THE SHINING",
+    "t": "Horror",
+    "c": "Writer’s block, an empty mountain hotel in winter, and an axe through the bathroom door."
+  },
+  {
+    "w": "GET OUT",
+    "t": "Horror",
+    "c": "A weekend at his girlfriend’s family estate ends in the sunken place."
+  },
+  {
+    "w": "THE RING",
+    "t": "Horror",
+    "c": "Watch the cursed tape, take the phone call, and you have seven days."
+  },
+  {
+    "w": "NOSFERATU",
+    "t": "Horror",
+    "c": "A 1922 silent film with the most unsettling vampire ever put on screen."
+  },
+  {
+    "w": "THE BIRDS",
+    "t": "Horror",
+    "c": "Hitchcock sends ordinary gulls and crows after a seaside town."
+  },
+  {
+    "w": "INTERSTELLAR",
+    "t": "Sci-Fi",
+    "c": "Farmers, a wormhole near Saturn, and a bookshelf that sends messages across time."
+  },
+  {
+    "w": "THE MATRIX",
+    "t": "Sci-Fi",
+    "c": "Pick the red pill and learn that the world is made of code."
+  },
+  {
+    "w": "BLADE RUNNER",
+    "t": "Sci-Fi",
+    "c": "A detective hunts replicants through a rainy, neon-lit Los Angeles."
+  },
+  {
+    "w": "INCEPTION",
+    "t": "Sci-Fi",
+    "c": "A team plants an idea inside a dream, inside a dream, inside a dream."
+  },
+  {
+    "w": "ARRIVAL",
+    "t": "Sci-Fi",
+    "c": "A linguist learns the language of visitors and starts to see time differently."
+  },
+  {
+    "w": "ALIEN",
+    "t": "Sci-Fi",
+    "c": "A crew wakes from hypersleep and brings an unwelcome passenger aboard."
+  },
+  {
+    "w": "THE TERMINATOR",
+    "t": "Sci-Fi",
+    "c": "A cyborg from 2029 hunts Sarah Connor and promises to come back."
+  },
+  {
+    "w": "JURASSIC PARK",
+    "t": "Sci-Fi",
+    "c": "Cloned dinosaurs break out of their island zoo."
+  },
+  {
+    "w": "METROPOLIS",
+    "t": "Sci-Fi",
+    "c": "Fritz Lang’s 1927 silent epic of a towering city and a robot named Maria."
+  },
+  {
+    "w": "EX MACHINA",
+    "t": "Sci-Fi",
+    "c": "A programmer is asked to judge whether a robot named Ava is truly conscious."
+  }
+]
