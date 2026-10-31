@@ -30,7 +30,9 @@ const ORDER = ["books", "characters", "movies"];
 const MAX = 6;
 const ROUND_TIME = 90; // 1 min 30 sec
 const PARTS = ["p-head", "p-body", "p-armL", "p-armR", "p-legL", "p-legR"];
-const ROWS = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
+const ROWS = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM'*"];
+
+export const isGuessableChar = (ch: string) => /^[a-zA-Z'*]$/.test(ch);
 
 export interface RewardOption {
   id: number;
@@ -286,7 +288,10 @@ export default function LexisGamePage() {
     }
     const e = fresh[Math.floor(Math.random() * fresh.length)];
     used.push(e.w);
-    return e;
+    return {
+      ...e,
+      w: e.w.replace(/[‘’`]/g, "'"),
+    };
   }, []);
 
   // End card show
@@ -414,21 +419,25 @@ export default function LexisGamePage() {
 
   // Letter guess logic
   const guess = useCallback(
-    (L: string) => {
+    (inputL: string) => {
+      const L = inputL === "'" || inputL === "*" ? inputL : inputL.toUpperCase();
       if (isLocked || !currentEntry || guessed[L]) return;
 
       actx();
-      setGuessed((prev) => ({ ...prev, [L]: true }));
+      const nextGuessed = { ...guessed, [L]: true };
+      setGuessed(nextGuessed);
 
       const word = currentEntry.w;
+      const charName = L === "'" ? "Apostrophe" : L === "*" ? "Asterisk" : L;
       if (word.indexOf(L) >= 0) {
         // Hit
         sfx.current.hit();
-        const nextGuessed = { ...guessed, [L]: true };
-        const cleanWord = word.replace(/ /g, "");
-        const allRevealed = cleanWord.split("").every((ch) => nextGuessed[ch]);
+        const guessableChars = word.split("").filter((ch) => isGuessableChar(ch));
+        const allRevealed =
+          guessableChars.length > 0 &&
+          guessableChars.every((ch) => nextGuessed[ch] || nextGuessed[ch.toUpperCase()]);
 
-        say("Correct. " + L + " appears in the word.");
+        say("Correct. " + charName + " appears in the word.");
         if (allRevealed) {
           triggerWin(currentEntry, wrongLetters.length);
         }
@@ -461,7 +470,7 @@ export default function LexisGamePage() {
           sc.classList.add("hurt");
         }
 
-        say("Wrong. " + L + " is not in the word. " + (MAX - c) + " lives left.");
+        say("Wrong. " + charName + " is not in the word. " + (MAX - c) + " lives left.");
         if (c >= MAX) {
           triggerLose(currentEntry);
         }
@@ -618,13 +627,17 @@ export default function LexisGamePage() {
     window.scrollTo(0, 0);
   };
 
-  // Keyboard shortcut listener for letters
+  // Keyboard shortcut listener for letters and symbols
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey || e.metaKey || e.altKey) return;
       if (screen !== "game" || endCardVisible) return;
-      if (/^[a-zA-Z]$/.test(e.key)) {
-        guess(e.key.toUpperCase());
+      let key = e.key;
+      if (key === "’" || key === "‘" || key === "`") key = "'";
+      if (/^[a-zA-Z]$/.test(key)) {
+        guess(key.toUpperCase());
+      } else if (key === "'" || key === "*") {
+        guess(key);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -1089,7 +1102,7 @@ export default function LexisGamePage() {
                   <div className="k">
                     <span>The clue</span>
                     <span id="clueMeta">
-                      {currentEntry.w.replace(/ /g, "").length} letters
+                      {currentEntry.w.split("").filter((ch) => isGuessableChar(ch)).length} letters
                       {wordTokens.length > 1 ? ` · ${wordTokens.length} words` : ""}
                     </span>
                   </div>
@@ -1099,7 +1112,10 @@ export default function LexisGamePage() {
                 <div
                   className={`board ${
                     wordTokens.length > 0 &&
-                    currentEntry.w.replace(/ /g, "").split("").every((ch) => guessed[ch])
+                    currentEntry.w
+                      .split("")
+                      .filter((ch) => isGuessableChar(ch))
+                      .every((ch) => guessed[ch] || guessed[ch.toUpperCase()])
                       ? "won"
                       : ""
                   }`}
@@ -1109,12 +1125,15 @@ export default function LexisGamePage() {
                   {wordTokens.map((wd, wIdx) => (
                     <div key={wIdx} className="word">
                       {wd.split("").map((ch, cIdx) => {
-                        const isRevealed = guessed[ch];
+                        const guessable = isGuessableChar(ch);
+                        const isRevealed = !guessable || Boolean(guessed[ch] || guessed[ch.toUpperCase()]);
                         const isMissedAtEnd = endCardVisible && !endCardWon && !isRevealed;
                         return (
                           <span
                             key={cIdx}
-                            className={`slot ${isRevealed ? "on" : ""} ${isMissedAtEnd ? "doom" : ""}`}
+                            className={`slot ${isRevealed ? "on" : ""} ${isMissedAtEnd ? "doom" : ""} ${
+                              !guessable ? "symbol" : ""
+                            }`}
                             data-ch={ch}
                           >
                             {isRevealed || isMissedAtEnd ? ch : ""}
@@ -1132,7 +1151,11 @@ export default function LexisGamePage() {
                     <span className="none">None yet. Choose wisely.</span>
                   ) : (
                     wrongLetters.map((L) => (
-                      <span key={L} className="x">
+                      <span
+                        key={L}
+                        className="x"
+                        aria-label={`Incorrect guess: ${L === "'" ? "Apostrophe" : L === "*" ? "Asterisk" : L}`}
+                      >
                         {L}
                       </span>
                     ))
@@ -1140,22 +1163,27 @@ export default function LexisGamePage() {
                 </div>
 
                 {/* Keyboard */}
-                <div className="keys" id="keys" role="group" aria-label="Letters">
+                <div className="keys" id="keys" role="group" aria-label="Letters and symbols">
                   {ROWS.map((row, rIdx) => (
                     <div key={rIdx} className="krow">
                       {row.split("").map((L) => {
-                        const isGuessed = guessed[L];
+                        const isGuessed = Boolean(guessed[L]);
                         const isHit = isGuessed && currentEntry.w.indexOf(L) >= 0;
                         const isMiss = isGuessed && currentEntry.w.indexOf(L) < 0;
-                        const isGone = shatteredKeys[L];
+                        const isGone = Boolean(shatteredKeys[L]);
+                        const isSymbol = L === "'" || L === "*";
+                        const labelName = L === "'" ? "Apostrophe" : L === "*" ? "Asterisk" : `Letter ${L}`;
 
                         return (
                           <button
                             key={L}
                             type="button"
-                            className={`key ${isHit ? "hit" : ""} ${isMiss ? "miss" : ""} ${isGone ? "gone" : ""}`}
+                            className={`key ${isHit ? "hit" : ""} ${isMiss ? "miss" : ""} ${
+                              isGone ? "gone" : ""
+                            } ${isSymbol ? "symbol-key" : ""}`}
                             disabled={isLocked || isGuessed}
-                            aria-label={`Letter ${L}`}
+                            aria-label={labelName}
+                            data-key={L}
                             onClick={() => guess(L)}
                           >
                             {L}
