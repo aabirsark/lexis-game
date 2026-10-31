@@ -1267,8 +1267,34 @@ export default function LexisGamePage() {
                     </p>
                   </div>
 
-                  <div className="reward-wheelbox">
-                    <svg className="reward-pointer" viewBox="0 0 40 56" aria-hidden="true">
+                  <div
+                    className="reward-wheelbox"
+                    style={{
+                      position: "relative",
+                      width: "min(72vw, 260px)",
+                      aspectRatio: "1 / 1",
+                      margin: "8px auto 6px",
+                    }}
+                  >
+                    <svg
+                      className="reward-pointer"
+                      viewBox="0 0 40 56"
+                      width="26"
+                      height="36"
+                      style={{
+                        position: "absolute",
+                        left: "50%",
+                        top: "-4%",
+                        width: "26px",
+                        height: "36px",
+                        maxWidth: "26px",
+                        maxHeight: "36px",
+                        transform: "translateX(-50%)",
+                        zIndex: 3,
+                        filter: "drop-shadow(0 0 8px rgba(224, 51, 74, 0.9))",
+                      }}
+                      aria-hidden="true"
+                    >
                       <path d="M20 54 L4 14 A18 18 0 1 1 36 14Z" fill="#ff7a1a" stroke="#f2e8cf" strokeWidth="2" />
                       <circle cx="20" cy="16" r="6" fill="#0a0612" />
                     </svg>
@@ -1278,7 +1304,12 @@ export default function LexisGamePage() {
                       className="reward-wheel"
                       viewBox="-200 -200 400 400"
                       aria-hidden="true"
-                      style={{ transformOrigin: "50% 50%" }}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        display: "block",
+                        transformOrigin: "50% 50%",
+                      }}
                     >
                       <defs>
                         <radialGradient id="rw0" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">

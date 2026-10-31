@@ -1,302 +1,602 @@
 [
   {
-    "w": "HALLOWEEN",
-    "t": "Poetry",
-    "c": "A six-note piano cadence chill, / The Shape stands on the autumn hill;\nBehind the pale William Shatner mask, / He finishes his butchering task."
-  },
-  {
-    "w": "PSYCHO",
-    "t": "Dialogue",
-    "c": "“A boy’s best friend is his mother.” Forty thousand stolen dollars vanish into the fruit cellar, accompanied by screeching violins in a shower stall."
-  },
-  {
-    "w": "THE EXORCIST",
+    "w": "SUSPIRIA",
     "t": "Who Am I?",
-    "c": "Who am I? — Unearthed from Nineveh ruins, my demonic presence manifests in a Georgetown child with spinning head, levitating mattress, and foul vomit, mocking the rites of two Jesuit priests."
+    "c": "Who am I? — A Freiburg dance academy where an American newcomer arrives in a storm, soon learning her teachers are a coven answering to Helena Markos."
   },
   {
-    "w": "SCREAM",
-    "t": "Dialogue",
-    "c": "“What’s your favorite scary movie?” A ghost-faced caller weaponizes slasher cliches over a cellular phone, hunting teenagers who break the cardinal rules of horror."
-  },
-  {
-    "w": "POLTERGEIST",
+    "w": "INFERNO",
     "t": "Poetry",
-    "c": "They only moved the granite stones, / Leaving the subterranean bones;\nThrough static television snow, / The hungry closet demons glow."
+    "c": "An alchemist raised three homes of stone, / For three dark sisters, each a throne;\nThe Mother of Shadows rules the one / In New York, beneath a cold gray sun."
   },
   {
-    "w": "THE SHINING",
+    "w": "DEEP RED",
     "t": "Dialogue",
-    "c": "“Here’s Johnny!” An isolated winter caretaker’s writer's block erupts into manic axe swings, elevator torrents of crimson, and frozen hedge maze footprints."
+    "c": "“The murderer is in the picture, and you saw it!” A jazz pianist witnesses a killing, then keeps haunting a villa of a screaming child, a mechanical doll and black gloves."
   },
   {
-    "w": "GET OUT",
+    "w": "TENEBRAE",
     "t": "Who Am I?",
-    "c": "Who am I? — Paralyzed by a silver spoon tapping porcelain china, I fall helpless into the black Sunken Place while an affluent upstate family auctions my body for neurosurgical theft."
+    "c": "Who am I? — A Latin word for darkness; in Rome, a visiting thriller novelist finds a razor-wielding killer is staging murders straight out of his latest book."
   },
   {
-    "w": "THE RING",
+    "w": "PHENOMENA",
     "t": "Poetry",
-    "c": "A static tape of wells and trees, / A telephone chime on the breeze;\nSeven days the clock shall run, / Till water crawls into the sun."
+    "c": "A Swiss school on a windswept height, / Where a girl can call the flies by night;\nA glowing insect guides her through, / To find what killer stalks the view."
   },
   {
-    "w": "NOSFERATU",
+    "w": "THE BEYOND",
     "t": "Who Am I?",
-    "c": "Who am I? — In a 1922 silent masterwork, my clawed, rodent-like shadow ascends the whitewashed stair of Bremen, sailing upon a ghost ship laden with plague-bearing vermin."
+    "c": "Who am I? — A decaying Louisiana hotel inherited by a young woman, built over one of the seven gateways of Hell and sealed since a painter was crucified in the cellar."
   },
   {
-    "w": "THE BIRDS",
+    "w": "CITY OF THE LIVING DEAD",
     "t": "Dialogue",
-    "c": "“Why are they doing this? Why are they gathering?” Innocently purchased caged lovebirds trigger an unexplained avian apocalypse, turning telephone wires into perches of death."
+    "c": "“Dunwich is a gateway.” A priest hangs himself in a New England graveyard, and a medium in New York dies of fright, seeing the door to the underworld open."
   },
   {
-    "w": "INTERSTELLAR",
-    "t": "Poetry",
-    "c": "Near Gargantua’s titanic ring, / One hour will seven winters bring;\nThrough gravitational morse he speaks, / Behind the bookshelf that she seeks."
-  },
-  {
-    "w": "THE MATRIX",
-    "t": "Dialogue",
-    "c": "“You take the blue pill, the story ends. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.”"
-  },
-  {
-    "w": "BLADE RUNNER",
-    "t": "Poetry",
-    "c": "Neon rain on Los Angeles street, / Where rogue synthetic humans meet;\n“All those moments lost in pain, / Like tears dissolved inside the rain.”"
-  },
-  {
-    "w": "INCEPTION",
+    "w": "BLACK SUNDAY",
     "t": "Who Am I?",
-    "c": "Who am I? — In zero-gravity hotel hallways and snowbound mountain vaults, I stage corporate espionage within dreams, relying on a perpetual brass spinning top to know if I am awake."
+    "c": "Who am I? — A 1960 Mario Bava picture opening with a Moldavian witch-princess branded and fitted with an iron mask studded with spikes on the inside."
   },
   {
-    "w": "ARRIVAL",
-    "t": "Dialogue",
-    "c": "“If you could see your whole life from start to finish, would you change things?” Circular inky glyphs unlock a palindromic timeline, uniting a daughter’s birth with her future demise."
+    "w": "KWAIDAN",
+    "t": "Poetry",
+    "c": "A blind musician, singing war, / Is painted over, ear and pore,\nWith holy scripture, head to heel — / Yet both his ears the spirits peel."
   },
   {
-    "w": "ALIEN",
+    "w": "ONIBABA",
     "t": "Who Am I?",
-    "c": "Who am I? — Gestating inside a commercial towing crewman after an eggsack breach, my acid-blooded biomechanical perfection erupts through the chest to hunt in steam vents where no one can hear you scream."
+    "c": "Who am I? — Two women in a field of tall reeds kill stray soldiers for their armor, until one dons a demon mask that will not come off her face."
   },
   {
-    "w": "THE TERMINATOR",
-    "t": "Dialogue",
-    "c": "“I’ll be back.” A hyperalloy cybernetic assassin wrapped in living human tissue storms a police station to exterminate the mother of the future resistance."
-  },
-  {
-    "w": "JURASSIC PARK",
+    "w": "KURONEKO",
     "t": "Poetry",
-    "c": "Prehistoric amber preserved the flea, / To patch the gaps with amphibian spree;\nWhen stormy winds cut electric strand, / Colossal reptiles rule the land."
+    "c": "A bamboo grove, a burnt-down home, / Two women slain, now spirits roam;\nWith feline grace and thirst for blood, / They tear through samurai like flood."
   },
   {
-    "w": "METROPOLIS",
+    "w": "KAIRO",
+    "t": "Dialogue",
+    "c": "“I’m not dead — but I’m so lonely.” Sealed rooms with red tape, shadows burned into walls, and ghosts spreading through the early internet in a Kiyoshi Kurosawa elegy."
+  },
+  {
+    "w": "AUDITION",
     "t": "Who Am I?",
-    "c": "Who am I? — In Fritz Lang’s 1927 silent dystopia, I am the metallic robot built in the likeness of Maria, inciting subterranean workers to drown their own machinery in catastrophic revolt."
+    "c": "Who am I? — A widower stages a fake casting call to find a new wife and meets a quiet woman with a burlap sack, piano wire and a chant of “deeper, deeper”."
   },
   {
-    "w": "EX MACHINA",
-    "t": "Dialogue",
-    "c": "“Isn’t it strange, to create something that hates you?” A translucent silicone android manipulates power blackouts and an insecure coder to escape her creator's glass prison."
-  },
-  {
-    "w": "HEREDITARY",
+    "w": "DARK WATER",
     "t": "Poetry",
-    "c": "A clucking tongue, a severed head, / A miniature diorama of the dead;\nIn candlelit attics bowing prone, / King Paimon mounts his fleshy throne."
+    "c": "A ceiling stain that spreads and grows, / A yellow raincoat, red school bag;\nA mother in a custody feud / Finds something wet that’s watching, nude."
   },
   {
-    "w": "MIDSOMMAR",
+    "w": "CURE",
+    "t": "Dialogue",
+    "c": "“Who are you?” A detective keeps asking an amnesiac drifter, who flicks a lighter and leaves victims carved with a bloody X while ordinary people kill on his suggestion."
+  },
+  {
+    "w": "A TALE OF TWO SISTERS",
     "t": "Who Am I?",
-    "c": "Who am I? — Crowned in an enormous pyramid of meadow blossoms after psychedelic dancing in perpetual Swedish sunlight, I smile as an unfaithful lover burns inside a hollowed-out bear carcass."
+    "c": "Who am I? — A 2003 Korean ghost story in which two girls return from hospital to a lakeside house, a bitter stepmother and a wardrobe holding the family’s secret."
   },
   {
-    "w": "THE LIGHTHOUSE",
+    "w": "THE WICKER MAN",
     "t": "Dialogue",
-    "c": "“Why’d ya spill yer beans, Tommy?” Two wickies trapped on a storm-lashed New England spit drink kerosene, murder seagulls, and lust after the blinding lantern light."
+    "c": "“Rowan Morrison is not here.” A devout police sergeant flies his seaplane to Summerisle over a missing child — and a May Day he’ll never forget."
   },
   {
-    "w": "THE WITCH",
-    "t": "Dialogue",
-    "c": "“Wouldst thou like the taste of butter? A pretty dress? Wouldst thou like to live deliciously?” whispers Black Phillip in the moonlit New England woods."
-  },
-  {
-    "w": "A QUIET PLACE",
-    "t": "Poetry",
-    "c": "Upon the white sand path tread light, / Speak not a syllable in the night;\nFor blind monstrosities attend, / To every whisper silence would end."
-  },
-  {
-    "w": "SILENCE OF THE LAMBS",
-    "t": "Dialogue",
-    "c": "“Well, Clarice… have the lambs stopped screaming?” An imprisoned cannibal psychiatrist trades psychological profiling for traumatic childhood memories."
-  },
-  {
-    "w": "SEVEN",
-    "t": "Dialogue",
-    "c": "“What’s in the box?!” screams a distraught detective in the arid desert power lines, discovering how a serial preacher orchestrated the final mortal sin of wrath."
-  },
-  {
-    "w": "SHUTTER ISLAND",
+    "w": "DON'T LOOK NOW",
     "t": "Who Am I?",
-    "c": "Who am I? — Searching for a vanished inmate at an offshore fortress for the criminally insane, my migraine hallucinations and lighthouse dreams force me to realize I am the sixtieth patient."
+    "c": "Who am I? — A grieving restoration expert in Venice glimpses a small figure in a red coat and follows it through narrow canals after his daughter’s drowning."
   },
   {
-    "w": "PAN LABYRINTH",
+    "w": "THE INNOCENTS",
     "t": "Poetry",
-    "c": "In fascist Spain the faun awaits, / Beyond the mossy stone-hewn gates;\nBeware the Pale Man's banquet hall, / Whose eyes upon his fingers crawl."
+    "c": "A governess at a country estate / Believes two children haunted late;\nA ghostly valet, a drowned young maid, / Possess the pair, she is afraid."
   },
   {
-    "w": "TWELVE MONKEYS",
+    "w": "THE HAUNTING",
+    "t": "Dialogue",
+    "c": "“Journeys end in lovers meeting.” A 1963 black-and-white tale of four guests in a mansion where the door seems to breathe and a lonely woman hears her name called."
+  },
+  {
+    "w": "CARNIVAL OF SOULS",
     "t": "Who Am I?",
-    "c": "Who am I? — Sent backward from an underground post-apocalyptic future to intercept an army releasing a fatal virus, I realize the recurring airport nightmare of my childhood was my own death."
+    "c": "Who am I? — A church organist who survives a drowning car crash, then is stalked by a pale, ghostly man and drawn toward a derelict lakeside pavilion in Utah."
   },
   {
-    "w": "DONNIE DARKO",
+    "w": "NIGHT OF THE DEMON",
     "t": "Poetry",
-    "c": "A jet turbine falls from cloudless skies, / A monstrous rabbit with silver eyes;\nTwenty-eight days the clock shall chime, / To close the tangent seam of time."
+    "c": "A scrap of parchment, runes aglow, / Is slipped to him — and he will know;\nThree days remain until the fire-beast comes / To stalk a skeptic through the slums."
   },
   {
-    "w": "THE TRUMAN SHOW",
+    "w": "THE TENANT",
     "t": "Dialogue",
-    "c": "“Good morning, and in case I don't see ya: good afternoon, good evening, and good night!” A cheerful insurance clerk discovers his entire world is an ocean under a domed television set."
+    "c": "“Is it so terrible to be a woman who jumped from a window?” A timid Paris clerk rents the flat of a suicide and begins to turn into her."
   },
   {
-    "w": "CHILDREN OF MEN",
+    "w": "REPULSION",
     "t": "Who Am I?",
-    "c": "Who am I? — In a bleak 2027 where two decades of global infertility have doomed humanity to despair, I am the miraculous young immigrant carrying the first unborn child in eighteen years."
+    "c": "Who am I? — Left alone in a London flat, a young manicurist hallucinates arms reaching from the walls and a cracked wall as an uneasy rabbit rots on a plate."
   },
   {
-    "w": "ETERNAL SUNSHINE OF THE SPOTLESS MIND",
+    "w": "LET THE RIGHT ONE IN",
     "t": "Dialogue",
-    "c": "“Meet me in Montauk…” Desperate to erase the memories of a turbulent tangerine-haired romance, a subconscious lover flees through collapsing rooms and childhood sandbars."
+    "c": "“Can you be my friend? I’m not a girl.” A bullied twelve-year-old in a snowy Swedish suburb befriends an odd new neighbor who must be invited before entering."
   },
   {
-    "w": "THE FLY",
-    "t": "Poetry",
-    "c": "Two telepods in clean array, / A buzzing pest that went astray;\nFlesh fused with chitin, genes defiled, / A Brundle-monster fierce and wild."
-  },
-  {
-    "w": "THE THING",
+    "w": "RAW",
     "t": "Who Am I?",
-    "c": "Who am I? — An extraterrestrial cellular imitator buried a hundred thousand years in polar ice, I assimilate sled dogs and Antarctic scientists, betraying my presence only when hot copper touches blood."
+    "c": "Who am I? — A strict vegetarian vet-school freshman, forced into a hazing ritual, who eats a rabbit kidney and awakens a very different appetite."
   },
   {
-    "w": "JAWS",
-    "t": "Dialogue",
-    "c": "“You’re gonna need a bigger boat.” A twenty-five-foot rogue carcharodon terrorizes the Fourth of July beaches of Amity Island, luring the Orca into an offshore duel."
+    "w": "TITANE",
+    "t": "Poetry",
+    "c": "A plate of steel inside her skull, / A cabaret car’s sensual lull;\nA firefighter claims her as his son — / The Palme d’Or went to this one."
   },
   {
-    "w": "MEMENTO",
+    "w": "MARTYRS",
     "t": "Who Am I?",
-    "c": "Who am I? — Stricken with anterograde memory loss since the assault that killed my wife, I navigate a reverse investigation through tattooed facts, labeled Polaroids, and self-delusion."
+    "c": "Who am I? — A 2008 French film whose long-abused heroine and her best friend face a secretive society seeking glimpses of the afterlife through suffering."
   },
   {
-    "w": "FIGHT CLUB",
+    "w": "INSIDE",
     "t": "Dialogue",
-    "c": "“The first rule of Fight Club is: you do not talk about Fight Club.” A nameless insomniac discovers his charismatic soap-peddling anarchic companion is his own nocturnal hallucination."
+    "c": "“Open the door.” On Christmas Eve, a widow eight months pregnant is besieged by a woman in black, who has a pair of scissors and an obsession."
   },
   {
-    "w": "THE SIXTH SENSE",
-    "t": "Dialogue",
-    "c": "“I see dead people. Walking around like regular people. They don't see each other. They only see what they want to see. They don't know they're dead.”"
-  },
-  {
-    "w": "BLACK SWAN",
-    "t": "Poetry",
-    "c": "In mirrors shattered, visions gleam, / To dance Tchaikovsky's royal dream;\nFrom porcelain white to feathers black, / Her sanity will not come back."
-  },
-  {
-    "w": "MISERY",
-    "t": "Dialogue",
-    "c": "“I’m your number one fan!” A bedridden novelist crippled in a Colorado snowstorm is kept prisoner by a nurse whose devotion turns to sledgehammer amputations when her heroine dies."
-  },
-  {
-    "w": "A NIGHTMARE ON ELM STREET",
-    "t": "Poetry",
-    "c": "Keep awake and guard the light, / Do not sleep into the night;\nFour sharpened blades upon his hand, / He rules the screaming slumber land."
-  },
-  {
-    "w": "PARASITE",
+    "w": "HIGH TENSION",
     "t": "Who Am I?",
-    "c": "Who am I? — A semi-basement Seoul family who falsified credentials to infiltrate an affluent architect's villa as tutors, chauffeurs, and housekeepers, unaware of the secret bunker beneath the pantry."
+    "c": "Who am I? — Two students retreat to a farmhouse and a rusty truck driver in coveralls shows up, with a tangled twist that rewrites the whole movie."
   },
   {
-    "w": "SINISTER",
+    "w": "THE ORPHANAGE",
+    "t": "Poetry",
+    "c": "A sack-faced child at a seaside door, / A lost boy not seen anymore;\nA mother seeks him with candle and game, / A treasure hunt that ends in shame."
+  },
+  {
+    "w": "JULIA'S EYES",
     "t": "Who Am I?",
-    "c": "Who am I? — A pagan Babylonian deity known as Baghuul, I harvest children's souls through eight-millimeter snuff films discovered in an author's attic."
+    "c": "Who am I? — A woman going blind from a degenerative disease investigates her twin sister’s apparent suicide and is followed by an unseen man."
   },
   {
-    "w": "THE CABIN IN THE WOODS",
+    "w": "REC",
     "t": "Dialogue",
-    "c": "“The virgin survives—or she dies last! That’s all that matters!” Underground corporate technicians manipulate college archetypes into slaughter to placate ancient deities sleeping beneath the earth."
+    "c": "“Keep filming!” A Barcelona TV reporter and cameraman follow firefighters into an apartment block that’s sealed by the authorities, with something upstairs."
   },
   {
-    "w": "VERTIGO",
+    "w": "THE DEVIL'S BACKBONE",
     "t": "Poetry",
-    "c": "Spiraling stair and dizzy heights, / San Francisco's foggy nights;\nHe dyes her hair and buys the dress, / To resurrect a ghost's caress."
+    "c": "A bomb stands upright in the yard, / A child ghost sighs and whispers hard;\nIn Spain’s civil war, a school of boys / Learns that the dead keep mournful noise."
   },
   {
-    "w": "REAR WINDOW",
+    "w": "CRIMSON PEAK",
     "t": "Who Am I?",
-    "c": "Who am I? — Confined to a wheelchair with a broken leg during a Greenwich Village heatwave, I peer through a telephoto lens to deduce my courtyard neighbor chopped his wife into luggage."
+    "c": "Who am I? — A sinking English mansion on a hill of red clay, where an American novelist is courted by a baronet and warned by ghosts to leave."
   },
   {
-    "w": "BLUE VELVET",
+    "w": "MAMA",
     "t": "Dialogue",
-    "c": "“Now it’s dark,” whispers Frank Booth, inhaling amyl nitrite from a mask. An innocent young man finds a severed human ear in an idyllic meadow, plummeting into neon subterranean rot."
+    "c": "“Someone’s been looking after you.” Two girls found feral in a cabin after five years are adopted by their uncle, unaware that something has followed them out of the woods."
   },
   {
-    "w": "THE STRANGERS",
-    "t": "Dialogue",
-    "c": "“Why are you doing this to us?” weeping victims ask the sack-masked intruders outside their secluded vacation cabin. The chilling reply: “Because you were home.”"
-  },
-  {
-    "w": "US",
-    "t": "Poetry",
-    "c": "Red boiler suits and golden shears, / Underground echoes of our fears;\nAcross the continent they stand, / The Tethered shadows take the land."
-  },
-  {
-    "w": "EVENT HORIZON",
-    "t": "Dialogue",
-    "c": "“Where we’re going, we won’t need eyes to see.” An experimental gravity-drive vessel orbits Neptune, returning from an alternate dimension of pure, screaming infernal chaos."
-  },
-  {
-    "w": "BLAIR WITCH PROJECT",
-    "t": "Poetry",
-    "c": "In Black Hills woods the branches crack, / Small stick-bundle talismans on the track;\nNo compass turns the hunters right, / And someone stands in the corner's sight."
-  },
-  {
-    "w": "THE BABADOOK",
-    "t": "Poetry",
-    "c": "If it's in a word, or it's in a look, / You can't get rid of the Babadook;\nA rumbling growl, three taps on the door, / A mother's grief upon the floor."
-  },
-  {
-    "w": "NO COUNTRY FOR OLD MEN",
-    "t": "Dialogue",
-    "c": "“What’s the most you ever lost on a coin toss?” An emotionless hitman carrying a pneumatic cattle stunner wagers mortal souls on the call of a nickel in west Texas."
-  },
-  {
-    "w": "TOTAL RECALL",
+    "w": "IT FOLLOWS",
     "t": "Who Am I?",
-    "c": "Who am I? — A construction worker whose virtual holiday memory implant in Rekall inadvertently unmasks my true identity as an elite double-agent on a rebel-controlled Martian colony."
+    "c": "Who am I? — A 2014 Detroit-set film where a curse passes from person to person and walks toward you slowly, wearing the faces of strangers or loved ones."
   },
   {
-    "w": "THE MIST",
+    "w": "THE LODGE",
     "t": "Poetry",
-    "c": "An unearthly vapor rolls from lake, / Where tentacled behemoths wake;\nInside the market, zealots scream, / And hasty bullets end the dream."
+    "c": "A winter cabin, snow piled high, / A cult survivor, two kids nearby;\nThe power dies, the pills are gone, / And something chilling carries on."
   },
   {
-    "w": "SOLARIS",
+    "w": "VERONICA",
     "t": "Dialogue",
-    "c": "“We don’t want to conquer any cosmos, we want to extend the Earth to the cosmos.” Yet the sentient oceanic planet generates living physical spectres of a psychologist’s dead wife."
+    "c": "“Don’t play with the board.” In 1991 Madrid, a teenager looking after her siblings tries a Ouija session during a solar eclipse and invites something sinister in."
   },
   {
-    "w": "THE DESCENT",
+    "w": "THE AUTOPSY OF JANE DOE",
     "t": "Who Am I?",
-    "c": "Who am I? — Trapped in an unmapped Appalachian cavern system by a subterranean cave-in, my spelunking expedition is hunted through pitch darkness by blind, carnivorous humanoid crawlers."
+    "c": "Who am I? — An unidentified young woman with no outward injuries but a ruined interior is brought to a family morgue; a bell tied to my toe starts ringing."
   },
   {
-    "w": "DARK CITY",
+    "w": "HAUSU",
     "t": "Poetry",
-    "c": "When midnight strikes the mortals sleep, / While Strangers in their trench coats creep;\nThey bend the stone and swap the mind, / Till one awake leaves night behind."
+    "c": "A schoolgirl trip to a country home, / A grand piano with a tooth-bared dome;\nThe futon swallows, a cat looks on, / In candy colors, the girls are gone."
+  },
+  {
+    "w": "THE DEVIL RIDES OUT",
+    "t": "Dialogue",
+    "c": "“Do you know what you have done?” A Hammer classic with a French duke battling a charismatic satanist, a pentacle circle and the Angel of Death."
+  },
+  {
+    "w": "WITCHFINDER GENERAL",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1968 British picture set in the English Civil War, where Vincent Price plays a self-appointed hunter of witches who tortures for money."
+  },
+  {
+    "w": "THE ABOMINABLE DR. PHIBES",
+    "t": "Poetry",
+    "c": "A vengeful organist, masked and thin, / Kills surgeons by the plagues of sin;\nLocusts, frogs, and rats and blood, / To Egypt’s curse he gives the flood."
+  },
+  {
+    "w": "THEATRE OF BLOOD",
+    "t": "Dialogue",
+    "c": "“Parting is such sweet sorrow.” A hammy Shakespearean actor, thought dead, kills the critics who spurned him by staging the deaths from the Bard’s plays."
+  },
+  {
+    "w": "DEATHDREAM",
+    "t": "Who Am I?",
+    "c": "Who am I? — A grieving family’s son returns from Vietnam after a mother’s plea, but he’s silent, pale and needs a dreadful supply to stay alive."
+  },
+  {
+    "w": "MESSIAH OF EVIL",
+    "t": "Poetry",
+    "c": "A Californian seaside town in dread, / A painter’s father gone and fled;\nA moon of blood, a cinema’s seats, / Where pale-faced townsfolk feed on meats."
+  },
+  {
+    "w": "LET'S SCARE JESSICA TO DEATH",
+    "t": "Who Am I?",
+    "c": "Who am I? — A young woman recently out of a mental hospital moves to a Connecticut farmhouse, where a strange drifter and a pale girl seem to know her."
+  },
+  {
+    "w": "THE CHANGELING",
+    "t": "Dialogue",
+    "c": "“I want you to help me.” A grieving composer in a rented Seattle mansion hears bangs on the pipes and finds a small wheelchair in a sealed room."
+  },
+  {
+    "w": "BURNT OFFERINGS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A rental house offered at a bargain for a summer holiday, which seems to heal itself and slowly drain its tenants while consuming an obsessive wife."
+  },
+  {
+    "w": "THE ENTITY",
+    "t": "Poetry",
+    "c": "A single mother, nightly prey, / To unseen force that will not stay;\nThe doctors say it’s in her mind, / But parapsychs find what’s not kind."
+  },
+  {
+    "w": "THE BROOD",
+    "t": "Dialogue",
+    "c": "“Rage made flesh.” A radical psychotherapist’s patient births small, furious children at his retreat, and they attack those who anger her."
+  },
+  {
+    "w": "SHIVERS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A glossy Montreal tower block where a scientist’s experimental parasite turns residents into lustful, ravenous carriers, in Cronenberg’s early feature."
+  },
+  {
+    "w": "VIDEODROME",
+    "t": "Poetry",
+    "c": "A pirate signal, torture play, / A slit across the belly’s way;\nA tape inside the stomach slips: / “Long live the new flesh!” on his lips."
+  },
+  {
+    "w": "RABID",
+    "t": "Who Am I?",
+    "c": "Who am I? — After experimental plastic surgery, a woman grows a stinger from her armpit that feeds on blood, and a plague spreads through Montreal."
+  },
+  {
+    "w": "EYES WITHOUT A FACE",
+    "t": "Dialogue",
+    "c": "“Her features have been destroyed.” A surgeon abducts young women for transplant attempts to restore his daughter, who hides behind an expressionless white mask."
+  },
+  {
+    "w": "LES DIABOLIQUES",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1955 Clouzot thriller where a headmaster’s wife and mistress drown him in a bathtub, after which his body vanishes from the pool."
+  },
+  {
+    "w": "PEEPING TOM",
+    "t": "Poetry",
+    "c": "A camera whirs, a tripod’s blade, / A mirror shows what fear has made;\nHe films the moment of their death, / A father’s lab gave him this breath."
+  },
+  {
+    "w": "THE LEOPARD MAN",
+    "t": "Dialogue",
+    "c": "“It’s only a cat.” A publicity stunt in a New Mexico town goes wrong when a circus cat breaks loose and the killings that follow may not be its doing."
+  },
+  {
+    "w": "CAT PEOPLE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1942 Val Lewton chiller in which a Serbian-born woman fears that kissing her husband will turn her into a panther; a swimming pool scene is famous."
+  },
+  {
+    "w": "I WALKED WITH A ZOMBIE",
+    "t": "Poetry",
+    "c": "A nurse from Canada, sugar isle, / Her patient walks in silent style;\nThe drums at night, the trail of stone, / A Jane Eyre story, voodoo-grown."
+  },
+  {
+    "w": "THE BODY SNATCHER",
+    "t": "Who Am I?",
+    "c": "Who am I? — Boris Karloff plays a cabman who supplies Edinburgh doctors with fresh cadavers from unfortunate people, in this 1945 Val Lewton drama."
+  },
+  {
+    "w": "ISLE OF THE DEAD",
+    "t": "Dialogue",
+    "c": "“There is a vorvolaka among us.” A Greek general quarantined with refugees on a small island suspects a vampiric spirit among the survivors."
+  },
+  {
+    "w": "FREAKS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1932 Tod Browning film in which a trapeze artist plots to poison a little person for his inheritance, and a carnival troupe takes revenge."
+  },
+  {
+    "w": "THE OLD DARK HOUSE",
+    "t": "Poetry",
+    "c": "A Welsh road washed out by rain, / A brooding family in the lane;\nA scarred and mute and drunken man / Controls the keys — the storms began."
+  },
+  {
+    "w": "WHITE ZOMBIE",
+    "t": "Dialogue",
+    "c": "“She is dead, yet she lives.” Bela Lugosi’s Haitian sugar-mill master, with a hypnotic stare, enslaves a bride so that a planter may have her."
+  },
+  {
+    "w": "VAMPYR",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1932 Carl Dreyer picture in which a young traveler at an inn sees shadows that move without bodies and an elderly lady spreading a curse."
+  },
+  {
+    "w": "THE CABINET OF DR. CALIGARI",
+    "t": "Poetry",
+    "c": "A fairground showman, tall and stern, / A sleepwalker for whom they yearn;\nWith jagged sets and painted shade, / Expressionism’s first parade."
+  },
+  {
+    "w": "HAXAN",
+    "t": "Dialogue",
+    "c": "“Witchcraft through the ages.” A 1922 Swedish-Danish silent film mixing documentary lecture with dramatized sabbaths, torture chambers and demons."
+  },
+  {
+    "w": "THE HANDS OF ORLAC",
+    "t": "Who Am I?",
+    "c": "Who am I? — A concert pianist who loses his fingers in a train wreck and is given those of an executed murderer, and finds them craving the knife."
+  },
+  {
+    "w": "THE DEVIL'S REJECTS",
+    "t": "Poetry",
+    "c": "A motel room, a clown in white, / A killer family on the flight;\nTo a Lynyrd Skynyrd guitar solo, / They run toward the end in the slow-mo."
+  },
+  {
+    "w": "MAY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A shy assistant at an animal hospital who was given a doll as a child and decides to build a perfect friend from the best parts of people."
+  },
+  {
+    "w": "SESSION 9",
+    "t": "Dialogue",
+    "c": "“Hello, Doctor.” An asbestos-removal crew works in an abandoned Massachusetts asylum, and one worker listens to tapes of a patient with multiple personalities."
+  },
+  {
+    "w": "DOG SOLDIERS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A British army squad on a training exercise in the Scottish Highlands, holed up in a farmhouse and besieged by a pack of werewolves."
+  },
+  {
+    "w": "THE LOVED ONES",
+    "t": "Poetry",
+    "c": "A prom night snatched, a dinner set, / A father’s dress of pink, and yet;\nA girl in sequins, spiked with glee, / Adores a boy tied to a tree."
+  },
+  {
+    "w": "WOLF CREEK",
+    "t": "Dialogue",
+    "c": "“That’s not a knife.” Backpackers visiting a crater in the Australian outback accept help from a friendly stranger with a bush hat and a sinister garage."
+  },
+  {
+    "w": "THE RITUAL",
+    "t": "Who Am I?",
+    "c": "Who am I? — Four British friends hiking a Swedish forest in memory of a lost friend take a shortcut and discover a horned, antlered figure worshipped by a cult."
+  },
+  {
+    "w": "APOSTLE",
+    "t": "Poetry",
+    "c": "A Welsh isle’s cult, a ransomed maid, / A goddess fed on blood and shade;\nIn nineteen-oh-five, a brother goes / To rescue her from savage foes."
+  },
+  {
+    "w": "HAGAZUSSA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A fifteenth-century Alpine tale of a lonely woman shunned as a witch, her baby, a goat’s milk and visions slowly consuming her mind."
+  },
+  {
+    "w": "THE DARK AND THE WICKED",
+    "t": "Dialogue",
+    "c": "“Something’s wrong with Mom.” Two siblings return to their parents’ remote Texas farm to say goodbye to their father and meet an unwelcome presence."
+  },
+  {
+    "w": "THE EMPTY MAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 2020 film that opens with American hikers in a Bulgarian mountain pass and later follows a retired cop hunting for a missing girl and a cult."
+  },
+  {
+    "w": "RELIC",
+    "t": "Poetry",
+    "c": "A grandmother’s house, a note on a door, / Black mold spreads across the floor;\nThree generations, one dark maze, / Of dementia’s slow and eerie haze."
+  },
+  {
+    "w": "SATAN'S SLAVES",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 2017 Indonesian remake in which a family with a dying singer is visited by dread after the mother’s death and her old fan group returns."
+  },
+  {
+    "w": "THE HOLE IN THE GROUND",
+    "t": "Dialogue",
+    "c": "“That’s not my son.” A mother in rural Ireland suspects her boy has changed after discovering a vast sinkhole in the forest nearby."
+  },
+  {
+    "w": "A DARK SONG",
+    "t": "Who Am I?",
+    "c": "Who am I? — A grieving woman hires a grim occultist to guide her through a months-long ritual in a remote Welsh house to speak to her dead son."
+  },
+  {
+    "w": "LAKE MUNGO",
+    "t": "Poetry",
+    "c": "A family films a teenage girl, / Who drowned and left a puzzling swirl;\nThe tapes reveal what she concealed, / In Australian mockumentary revealed."
+  },
+  {
+    "w": "THE INVITATION",
+    "t": "Dialogue",
+    "c": "“Who’s hungry?” A reunion dinner in the Hollywood Hills with his ex-wife and her new husband, who has joined a strange group, turns unsettling."
+  },
+  {
+    "w": "TOURIST TRAP",
+    "t": "Who Am I?",
+    "c": "Who am I? — A roadside wax museum where mannequins move on their own; the owner, played by Chuck Connors, has an odd telekinetic talent."
+  },
+  {
+    "w": "THE SENTINEL",
+    "t": "Poetry",
+    "c": "A Brooklyn brownstone, flats above, / A blind old priest sits at the door;\nA model rents a room there, then / Discovers Hell lies in that den."
+  },
+  {
+    "w": "PRINCE OF DARKNESS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1987 John Carpenter film in which physics students and a priest in an L.A. church study a swirling green canister that holds the Anti-God."
+  },
+  {
+    "w": "IN THE MOUTH OF MADNESS",
+    "t": "Dialogue",
+    "c": "“Read my books.” An insurance investigator is sent to find a missing best-selling horror writer and ends up in a town that exists only in his fiction."
+  },
+  {
+    "w": "THE FOG",
+    "t": "Who Am I?",
+    "c": "Who am I? — A centennial in a California coastal town, when a glowing mist rolls in carrying the vengeful ghosts of drowned lepers from a wrecked ship."
+  },
+  {
+    "w": "GINGER SNAPS",
+    "t": "Poetry",
+    "c": "Two sisters sworn to die as one, / One bitten when the night is done;\nHer body changes with the moon, / And suburbs hear the howling tune."
+  },
+  {
+    "w": "THE CRAZIES",
+    "t": "Dialogue",
+    "c": "“They’re all infected!” A bioweapon contaminates the water of a Pennsylvania town, and soldiers in white suits seal it off from the world."
+  },
+  {
+    "w": "THE PIT AND THE PENDULUM",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1961 Roger Corman film, based on a Poe story, in which a man visits a Spanish castle after his sister’s death and finds torture devices."
+  },
+  {
+    "w": "THE MASQUE OF THE RED DEATH",
+    "t": "Poetry",
+    "c": "A prince behind his castle wall, / Throws a party for them all;\nSeven rooms in seven hues, / A cloaked guest nobody excuses."
+  },
+  {
+    "w": "TWINS OF EVIL",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Hammer film from 1971 in which two identical sisters come to live with a puritan uncle and a decadent count, one good and one corrupted."
+  },
+  {
+    "w": "THE VAMPIRE LOVERS",
+    "t": "Dialogue",
+    "c": "“Carmilla is my name.” A young general’s daughter befriends a mysterious guest whose arrival coincides with a series of deaths in Styria."
+  },
+  {
+    "w": "COUNT YORGA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1970 vampire in Los Angeles, played by Robert Quarry, who arrives with a coffin and a séance to claim a young woman."
+  },
+  {
+    "w": "DEAD OF NIGHT",
+    "t": "Poetry",
+    "c": "An architect with a dream he knew, / A ventriloquist’s dummy, too;\nFive tales are told one stormy eve, / The circle ends where you believe."
+  },
+  {
+    "w": "THE UNINVITED",
+    "t": "Dialogue",
+    "c": "“Do you smell mimosa?” A brother and sister buy a bargain seaside house in Cornwall and find a spirit, cold spots and a scent of flowers."
+  },
+  {
+    "w": "THE LADY IN WHITE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Halloween night in 1962 when a small boy locked in the school cloakroom witnesses the ghost of a murdered girl and meets a killer."
+  },
+  {
+    "w": "GHOST STORY",
+    "t": "Poetry",
+    "c": "Old men in a New England town, / Sit by the fire as the snow comes down;\nThey tell their tales to keep at bay, / A woman they once did away."
+  },
+  {
+    "w": "THE HOWLING",
+    "t": "Dialogue",
+    "c": "“It’s only a movie.” A TV anchor recovers at a rural retreat, the Colony, whose members seem to share a savage secret in the woods."
+  },
+  {
+    "w": "NEAR DARK",
+    "t": "Who Am I?",
+    "c": "Who am I? — An Oklahoma farm boy lured by a pretty drifter is bitten and forced to live on the road with a nomadic family of blood-drinkers."
+  },
+  {
+    "w": "TRICK 'R TREAT",
+    "t": "Poetry",
+    "c": "A burlap-masked and lollipop'd tot, / Enforces all the rules he's got;\nOne Ohio town, one Halloween night, / Four stories tangled up in fright."
+  },
+  {
+    "w": "SLEEPAWAY CAMP",
+    "t": "Dialogue",
+    "c": "“Who’s killing the campers?” A shy girl arrives at Arawak summer retreat with her cousin, and a string of 'accidents' ends in one of horror’s most notorious twists."
+  },
+  {
+    "w": "THE BAY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A found-footage film in which a Maryland town’s Fourth of July celebration is overrun by parasites released by the polluted water."
+  },
+  {
+    "w": "THE BLOOD ON SATAN'S CLAW",
+    "t": "Poetry",
+    "c": "In England’s fields, a plough turns up / A skull with fur — the earth’s dark cup;\nThe village children change and prey, / To summon back old Satan’s sway."
+  },
+  {
+    "w": "CRY OF THE BANSHEE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A 1970 Vincent Price film in which a cruel English magistrate hunts witches and is cursed by a wronged woman who sends a beast."
+  },
+  {
+    "w": "THE BLACK CAT",
+    "t": "Dialogue",
+    "c": "“Supernatural, perhaps. Baloney, perhaps not.” Karloff and Lugosi duel in a modernist Hungarian mansion built over a battlefield grave."
+  },
+  {
+    "w": "DRAG ME TO HELL",
+    "t": "Who Am I?",
+    "c": "Who am I? — A loan officer denies an old woman an extension and is cursed by a demon named Lamia, with only three days left to escape damnation."
+  },
+  {
+    "w": "THE DEVIL'S CANDY",
+    "t": "Poetry",
+    "c": "A painter, wife and metalhead child, / Move to a Texas farm so wild;\nThe old man’s voice commands the brush, / To paint what terrifies the hush."
+  },
+  {
+    "w": "THE VOID",
+    "t": "Dialogue",
+    "c": "“They’re not coming from there. They’re coming from inside.” A rural hospital is surrounded by hooded white figures as patients mutate within."
+  },
+  {
+    "w": "COLOR OUT OF SPACE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A meteorite lands on a farm and its shimmering pink hue warps the well, the alpacas, the plants and the family, in a Lovecraft adaptation."
+  },
+  {
+    "w": "IN FEAR",
+    "t": "Poetry",
+    "c": "A couple lost on country lanes, / A hotel booked for their remains;\nThe signs repeat, the roads all bend, / And someone watches round each end."
+  },
+  {
+    "w": "THE BORDERLANDS",
+    "t": "Who Am I?",
+    "c": "Who am I? — Vatican investigators arrive at a remote Devon church to debunk a reported miracle, and something in the crypt does not want them to."
+  },
+  {
+    "w": "KILL LIST",
+    "t": "Dialogue",
+    "c": "“Thank you.” A depressed ex-soldier turned hitman takes a job with three targets, and with each murder, a sinister cult comes closer."
+  },
+  {
+    "w": "CALVAIRE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A traveling entertainer’s van breaks down in the Belgian Ardennes, where a lonely innkeeper decides that he will never leave."
+  },
+  {
+    "w": "ALL THE BOYS LOVE MANDY LANE",
+    "t": "Poetry",
+    "c": "A Texas ranch, a party night, / A girl all others hold in sight;\nThe guests are picked off one by one, / To find who’s hiding with a gun."
   }
 ]
