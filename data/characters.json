@@ -1,282 +1,602 @@
 [
   {
-    "w": "SHERLOCK HOLMES",
+    "w": "SMERDYAKOV",
     "t": "Who Am I?",
-    "c": "Who am I? — Armed with a Stradivarius, a seven-percent cocaine solution, and relentless deductive ratiocination, I decipher an empire's darkest homicides from the red mud on a suspect's boot."
+    "c": "Who am I? — The epileptic cook and illegitimate servant in a Russian landowner’s house who commits the murder everyone blames on another, then hangs himself."
   },
   {
-    "w": "DARTH VADER",
-    "t": "Dialogue",
-    "c": "“I find your lack of faith disturbing.” Encased in pressurized obsidian armor, my baritone mechanical respirator silences the windpipes of imperial admirals who fail me."
+    "w": "PORFIRY PETROVICH",
+    "t": "Who Am I?",
+    "c": "Who am I? — An examining magistrate plays cat-and-mouse with a feverish student, never arresting him until the man breaks."
   },
   {
-    "w": "VAN HELSING",
+    "w": "PRINCE MYSHKIN",
+    "t": "Who Am I?",
+    "c": "Who am I? — Back from a Swiss sanatorium, an epileptic and impossibly kind nobleman who walks into a Petersburg tangle of rivals and ends in silent breakdown."
+  },
+  {
+    "w": "OBLOMOV",
     "t": "Poetry",
-    "c": "With wild rose, garlic, and communion host, / A scholar hunts the predatory ghost;\nThrough Transylvanian night he stems the flood, / And drives the ash stake through the unholy blood."
+    "c": "A dressing gown, a sofa deep, / A landowner who’d rather sleep;\nHis servant Zakhar shuffles by, / While dreams of Stolz go drifting by."
   },
   {
-    "w": "VOLDEMORT",
+    "w": "BAZAROV",
     "t": "Who Am I?",
-    "c": "Who am I? — Terrified of mortality, I fractured my withered soul into seven serpentine reliquaries, striking terror into the wizarding world with a noseless, reptilian sneer and the killing curse."
+    "c": "Who am I? — A medical student who dissects frogs and scorns every authority, preaching nothing but usefulness until love and a typhus cut undo me."
   },
   {
-    "w": "GANDALF",
+    "w": "PECHORIN",
     "t": "Dialogue",
-    "c": "“You cannot pass! I am a servant of the Secret Fire, wielder of the flame of Anor.” Cast down with a demon of shadow and flame, I returned reborn in white to break a king's bewitchment."
+    "c": "“I am ready to love the whole world, yet nobody understands me.” A bored officer in the Caucasus wrecks every life that touches his, ending with a duel."
   },
   {
-    "w": "GOLLUM",
+    "w": "NASTASYA FILIPPOVNA",
     "t": "Who Am I?",
-    "c": "Who am I? — For five centuries beneath misty roots of granite, I gnawed blind fish and croaked to my bifurcated soul, weeping for the golden ring that burned my black heart: My preciousss!"
+    "c": "Who am I? — I toss a bundle of a hundred thousand rubles into a fireplace to see who will fetch it, on a birthday evening in Petersburg."
   },
   {
-    "w": "HANNIBAL LECTER",
+    "w": "MEURSAULT",
     "t": "Dialogue",
-    "c": "“A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.” A brilliant forensic psychiatrist resting behind plexiglass with an exquisite culinary palate."
+    "c": "“Maman died today. Or yesterday maybe, I don’t know.” An Algiers clerk shoots a stranger on a beach because of the glare of the sun."
   },
   {
-    "w": "NORMAN BATES",
-    "t": "Poetry",
-    "c": "Behind the counter, quiet and shy, / Where stuffed owl talons catch the eye;\nIn mother's lace and kitchen knife, / He carves away a bather's life."
-  },
-  {
-    "w": "PENNYWISE",
+    "w": "KURTZ",
     "t": "Who Am I?",
-    "c": "Who am I? — An ancient extraterrestrial entity nesting in Derry’s sewer mains, I adopt the guise of a dancing carnival jester offering crimson balloons that float… and you’ll float too!"
+    "c": "Who am I? — An ivory agent at the end of a river, sent up as a hero of civilization, who left his reason in the jungle with a final cry."
   },
   {
-    "w": "FREDDY KRUEGER",
+    "w": "BARTLEBY",
     "t": "Dialogue",
-    "c": "“One, two, Freddy’s coming for you…” Slumber offers no sanctuary from my scorched flesh, striped woolen pullover, and leather glove tipped with four gleaming garden blades."
+    "c": "“I would prefer not to.” A pale copyist at a Wall Street law office gradually refuses all work, then all food."
   },
   {
-    "w": "JACK SKELLINGTON",
-    "t": "Poetry",
-    "c": "The Pumpkin King in pinstripe thread, / Grew weary of the screaming dead;\nHe stole midwinter's snowy cheer, / And showered serpentine toys of fear."
-  },
-  {
-    "w": "HEATHCLIFF",
+    "w": "QUEEQUEG",
     "t": "Who Am I?",
-    "c": "Who am I? — An untamed foundling of the Liverpool docks, I let vengeance curdle my marrow till I bought out both estates, digging down to embrace Catherine's skeletal dust beneath the Yorkshire moor."
+    "c": "Who am I? — A tattooed harpooneer from the island of Kokovoko who shares a bed with the narrator and later builds himself a coffin that saves another’s life."
   },
   {
-    "w": "QUASIMODO",
+    "w": "BENJY COMPSON",
     "t": "Poetry",
-    "c": "High in the gothic spire he clings, / Deaf to the heavy bells he rings;\nA misshapen heart of purest grace, / Died cradling a gypsy in death's embrace."
+    "c": "A golf course fence, a bellowed cry, / Thirty-three years beneath the sky;\nHe smells like trees, he knows no clock, / And time collapses at the lock."
   },
   {
-    "w": "CAPTAIN AHAB",
+    "w": "DILSEY",
+    "t": "Who Am I?",
+    "c": "Who am I? — The Black cook who keeps a crumbling Mississippi household together and, on Easter Sunday, takes the idiot son to church; of us it is said we endured."
+  },
+  {
+    "w": "LORD HENRY WOTTON",
     "t": "Dialogue",
-    "c": "“From hell’s heart I stab at thee; for hate’s sake I spit my last breath at thee!” Chained by harpoon cords to the albino leviathan, I dragged the Pequod's crew into the Pacific maw."
+    "c": "“The only way to get rid of a temptation is to yield to it.” A languid aristocrat whose epigrams corrupt a beautiful young man’s soul."
   },
   {
-    "w": "FRANKENSTEINS MONSTER",
+    "w": "ABBE FARIA",
     "t": "Who Am I?",
-    "c": "Who am I? — Stitched of sepulchral remnants and ignited by lightning, I learned human empathy from Paradise Lost only to be met with bullets and fire, resolving to be the serpent to my creator's Adam."
+    "c": "Who am I? — A learned prisoner in the Château d’If who tunnels into a young sailor’s cell, educates him and whispers of a treasure on a Mediterranean isle."
   },
   {
-    "w": "DORIAN GRAY",
+    "w": "FANTINE",
     "t": "Poetry",
-    "c": "Untouched by wrinkles, sin, or strife, / He tastes the poisons of his life;\nWhile upstairs in the darkness locked, / His portrait rots, defiled and mocked."
+    "c": "She sold her hair, she sold her teeth, / To feed the child she had beneath;\nA factory dismissed her name, / A mayor’s mercy came — too late to claim."
   },
   {
-    "w": "COUNT DRACULA",
+    "w": "CLAUDE FROLLO",
+    "t": "Who Am I?",
+    "c": "Who am I? — An archdeacon of Paris, alchemist and foster-father to a deformed foundling, destroyed by lust for a dancing girl."
+  },
+  {
+    "w": "BECKY SHARP",
     "t": "Dialogue",
-    "c": "“Listen to them—the children of the night. What music they make!” Welcome to my castle, where shadows crawl down sheer precipices and blood is the very wine of life."
+    "c": "“I think I could be a good woman if I had five thousand a year.” A penniless governess clambers up society on charm, watching Waterloo from a distance."
   },
   {
-    "w": "PROFESSOR MORIARTY",
+    "w": "ABEL MAGWITCH",
     "t": "Who Am I?",
-    "c": "Who am I? — The Napoleon of crime who sits motionless at the center of London’s underworld web, matching mathematical genius against Baker Street until our fatal grapple at Reichenbach Falls."
+    "c": "Who am I? — An escaped convict on the Kentish marshes frightening a small boy for a file and food, who returns years later as a secret benefactor."
   },
   {
-    "w": "EBENEZER SCROOGE",
-    "t": "Poetry",
-    "c": "A grasping hand of frost and flint, / Who loved no gold but ledger print;\nTill three dark spectres turned his head, / To weep before his unmourned bed."
+    "w": "TRISTRAM SHANDY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A narrator who takes three volumes to be born, whose nose is crushed by forceps and whose life story is lost among digressions."
   },
   {
-    "w": "MACBETH",
+    "w": "MALVOLIO",
+    "t": "Who Am I?",
+    "c": "Who am I? — A steward fooled by a forged letter into wearing yellow stockings cross-gartered, smiling madly, and locked in a dark room."
+  },
+  {
+    "w": "CALIBAN",
     "t": "Dialogue",
-    "c": "“Will all great Neptune’s ocean wash this blood clean from my hand? No, this my hand will rather the multitudinous seas incarnadine, making the green one red.”"
+    "c": "“This island’s mine, by Sycorax my mother.” A creature of the isle curses his master with the language he was taught."
   },
   {
-    "w": "LADY MACBETH",
-    "t": "Who Am I?",
-    "c": "Who am I? — I invoked dark spirits to unsex me here and crown my husband king, yet in the sleepwalking night I weep in vain over phantom crimson perfumes of Arabia that will not wash away."
-  },
-  {
-    "w": "ICHABOD CRANE",
+    "w": "TITUS ANDRONICUS",
     "t": "Poetry",
-    "c": "A crane-legged pedagogue on a steed, / Whose greedy heart and fearful creed;\nFled through the nocturnal hollow damp, / Pursued by a rider without a lamp."
+    "c": "A general home from Gothic wars, / Who buried sons and settled scores;\nHe bakes a pie for the empress’s feast, / And serves the flesh of her sons at least."
   },
   {
-    "w": "HEADLESS HORSEMAN",
+    "w": "SVIDRIGAILOV",
     "t": "Who Am I?",
-    "c": "Who am I? — A decapitated Hessian mercenary whose severed cranium was torn off by a cannonball, galloping Sleepy Hollow lanes on a black charger to fling a fiery pumpkin at trespassing schoolmasters."
+    "c": "Who am I? — A debauched landowner who once employed a young woman’s family, haunted by a dead wife, who ends with a pistol on a rainy Petersburg night."
   },
   {
-    "w": "ATTICUS FINCH",
+    "w": "KARENIN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A cold St. Petersburg minister whose ears and crackling knuckles his wife cannot stand, who ultimately takes in his rival’s child."
+  },
+  {
+    "w": "COUNT VRONSKY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A dashing cavalry officer whose steeplechase fall mirrors my lover’s fate, and who ends by riding off to a war."
+  },
+  {
+    "w": "PIERRE BEZUKHOV",
+    "t": "Who Am I?",
+    "c": "Who am I? — An awkward illegitimate count who inherits a vast fortune, wanders the field of Borodino, and plans to assassinate Napoleon."
+  },
+  {
+    "w": "IVAN ILYICH",
     "t": "Dialogue",
-    "c": "“You never really understand a person until you consider things from his point of view… until you climb into his skin and walk around in it.” An Alabama lawyer guarding a jailhouse with a reading lamp."
+    "c": "“Maybe I did not live as I ought?” A judge whose pain began with a fall while hanging curtains discovers, too late, that his life was a counterfeit."
   },
   {
-    "w": "JAY GATSBY",
-    "t": "Poetry",
-    "c": "Across the bay the green light gleams, / A palace raised on bootleg dreams;\nA silk-shirt host whose lavish night, / Longed only for a lost love's sight."
-  },
-  {
-    "w": "HOLDEN CAULFIELD",
+    "w": "DOCTOR MOREAU",
     "t": "Who Am I?",
-    "c": "Who am I? — In a red hunting cap roaming New York's phony avenues, I dread adulthood's corruption and dream only of catching innocent children before they tumble off a cliff in the rye."
-  },
-  {
-    "w": "CAPTAIN HOOK",
-    "t": "Dialogue",
-    "c": "“Pan, who and what art thou?” hissed the Etonian buccaneer, clutching his iron barb in terror as the relentless ticking of a clock inside a crocodile echoed across the lagoon."
-  },
-  {
-    "w": "PETER PAN",
-    "t": "Poetry",
-    "c": "A runaway lad who sewed his shade, / In cocky arrogance never swayed;\nHe leads lost boys to pirate wars, / And never grows old beneath the stars."
-  },
-  {
-    "w": "BEOWULF",
-    "t": "Who Am I?",
-    "c": "Who am I? — Disdaining iron blade or mail, I wrestled the nocturnal marsh-stalker in Heorot's hall with bare thirty-man strength, wrenching his sinewy shoulder and claw from bone."
-  },
-  {
-    "w": "GRENDEL",
-    "t": "Dialogue",
-    "c": "“The harper sings of the shaping of earth, and it tears my ears like lances!” An outcast stalker from the murky fens, cursed by the mark of Cain to slaughter Danish warriors in the night."
-  },
-  {
-    "w": "MEDUSA",
-    "t": "Poetry",
-    "c": "Once maiden fair of temple grace, / Now cursed with scales and hissing face;\nLet mortal eyes behold her crown, / And turn to marble, frozen down."
-  },
-  {
-    "w": "PROMETHEUS",
-    "t": "Who Am I?",
-    "c": "Who am I? — Chained to Caucasian granite while Zeus’s eagle feasts daily upon my regenerating liver, I glory in the stolen ember I smuggled to mankind inside a fennel stalk."
-  },
-  {
-    "w": "FAUST",
-    "t": "Dialogue",
-    "c": "“Stay awhile, thou art so fair!” For worldly omniscience, youth, and forbidden power, I signed my immortal soul over to a cunning demon in drops of crimson blood."
-  },
-  {
-    "w": "MEPHISTOPHELES",
-    "t": "Poetry",
-    "c": "The spirit who ever denies with grace, / A courtly devil in silk and lace;\nHe whispers riddles, sneers at prayer, / And binds the scholar in despair."
-  },
-  {
-    "w": "CAPTAIN NEMO",
-    "t": "Who Am I?",
-    "c": "Who am I? — An exiled Indian prince piloting the electric ramming submarine Nautilus, I severed all bonds with tyrannical empires to rule the abyssal depths under the motto: Mobilis in mobili."
-  },
-  {
-    "w": "EDWARD ROCHESTER",
-    "t": "Dialogue",
-    "c": "“Jane, will you accept me with all my scars?” A cynical master of Thornfield whose dark proposal hid a howling Creole heiress locked behind the tapestry of the third story."
-  },
-  {
-    "w": "MISS HAVISHAM",
-    "t": "Poetry",
-    "c": "In yellowed veil and rotting lace, / Cobwebs veil her withered face;\nBeside stopped clocks and bridal crumbs, / To watch a cold girl's revenge that comes."
-  },
-  {
-    "w": "LONG JOHN SILVER",
-    "t": "Who Am I?",
-    "c": "Who am I? — A one-legged ship's quartermaster with a crutch and a squawking green parrot crying “Pieces of eight!”, balancing murderous buccaneer mutiny with fondness for young Jim Hawkins."
-  },
-  {
-    "w": "LUCIFER",
-    "t": "Dialogue",
-    "c": "“Better to reign in Hell than serve in Heaven!” Hurled headlong from the crystal battlements of heaven, I raised an obsidian Pandemonium to seduce mankind to ruin."
-  },
-  {
-    "w": "HERCULE POIROT",
-    "t": "Who Am I?",
-    "c": "Who am I? — A dapper Belgian exile with an egg-shaped head, patent leather shoes, and waxed moustaches, I unravel impossible murders aboard luxury trains using only my little grey cells."
-  },
-  {
-    "w": "SAM SPADE",
-    "t": "Poetry",
-    "c": "In trench-coat noir and cigarette smoke, / He sees through every femme fatale's cloak;\nHe hands his lover over to law, / For a falcon made of lead and flaw."
-  },
-  {
-    "w": "VICTOR FRANKENSTEIN",
-    "t": "Dialogue",
-    "c": "“I had desired it with an ardour that far exceeded moderation; but now that I had finished, the beauty of the dream vanished, and breathless horror and disgust filled my heart.”"
-  },
-  {
-    "w": "CARMILLA",
-    "t": "Poetry",
-    "c": "A velvet carriage in the night, / A guest of languid, dark delight;\nWith needle punctures at the throat, / She drains the maid in Styria's moat."
-  },
-  {
-    "w": "TYLER DURDEN",
-    "t": "Dialogue",
-    "c": "“It’s only after we’ve lost everything that we’re free to do anything.” In a red leather jacket selling soap made of human fat, I lead an insomniac clerk into basement anarchy."
-  },
-  {
-    "w": "PATRICK BATEMAN",
-    "t": "Who Am I?",
-    "c": "Who am I? — Obsessed with embossed eggshell business cards, Valentino suits, and facial cleansers, my veneer of Wall Street sanity dissolves into chainsaw slaughters to the tunes of Huey Lewis."
-  },
-  {
-    "w": "SWEENEY TODD",
-    "t": "Poetry",
-    "c": "The silver razor glints in light, / To give a London gent good night;\nA pedal pushed, a sudden fall, / Down to the cellar beneath the wall."
-  },
-  {
-    "w": "MRS LOVETT",
-    "t": "Dialogue",
-    "c": "“Times is hard! What with the price of meat what it is, when you get it, if you get it…” Fortunately, my gentleman upstairs provides the freshest filling for London’s tastiest pies!"
-  },
-  {
-    "w": "JACOB MARLEY",
-    "t": "Who Am I?",
-    "c": "Who am I? — Dead these seven Christmases, I appear through a door knocker dragging phantom links of cashboxes, ledgers, padlocks, and iron deeds forged link by link through a miser's life."
-  },
-  {
-    "w": "MINA HARKER",
-    "t": "Poetry",
-    "c": "A holy wafer scorches red, / Upon a pure and noble head;\nIn telepathic trance she sees, / The vampire sailing on the seas."
+    "c": "Who am I? — An exiled vivisectionist on a Pacific island who carves beasts into men in the House of Pain, and imposes a Law on them."
   },
   {
     "w": "RENFIELD",
-    "t": "Dialogue",
-    "c": "“The blood is the life, Dr. Seward! The blood is the life!” Give me fat bluebottles, plump spiders, and singing sparrows to consume until my Master grants me eternal sustenance."
-  },
-  {
-    "w": "RODION RASKOLNIKOV",
-    "t": "Who Am I?",
-    "c": "Who am I? — In a yellow-papered Petersburg garret, I authored a treatise dividing humanity into ordinary lice and Napoleons, testing my thesis with an axe only to unravel in feverish delirium."
-  },
-  {
-    "w": "EDMOND DANTES",
     "t": "Poetry",
-    "c": "Sewn in a shroud and hurled in brine, / From Chateau d'If's dark prison line;\nHe claims an island's golden hoard, / And strikes with vengeance as a lord."
+    "c": "An asylum cell of flies and spiders, / He serves a master, sees through riders;\nA lunatic with hungry stare, / He begs the Count to hear his prayer."
   },
   {
-    "w": "INSPECTOR JAVERT",
-    "t": "Dialogue",
-    "c": "“There is nothing on earth but the law!” When a condemned galley thief spared my life instead of slitting my throat, my unbending moral universe shattered, leaving only a leap into the Seine."
-  },
-  {
-    "w": "JEAN VALJEAN",
+    "w": "CARMILLA",
     "t": "Who Am I?",
-    "c": "Who am I? — Imprisoned nineteen years for a loaf of bread, a bishop’s silver candlesticks bought my soul from darkness, bidding me cast off yellow passports to become a guardian of orphans."
+    "c": "Who am I? — An aristocratic Styrian guest who sleepwalks through a castle at night, befriends the narrator, and is also known as Millarca."
   },
   {
-    "w": "BIG BROTHER",
+    "w": "BEN GUNN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A castaway abandoned on a treasure island for three years who has moved the loot."
+  },
+  {
+    "w": "PHILEAS FOGG",
+    "t": "Who Am I?",
+    "c": "Who am I? — A punctual clubman of Savile Row who wagers half his fortune that he can circle the globe in eighty days, and wins by an extra day gained."
+  },
+  {
+    "w": "PASSEPARTOUT",
+    "t": "Who Am I?",
+    "c": "Who am I? — A French manservant who has had many careers, signs on with an Englishman, rescues a widow from a pyre, and carries a pocket watch from home."
+  },
+  {
+    "w": "MILADY DE WINTER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A blonde spy marked with a fleur-de-lis on her shoulder, who dies by the sword of a Lille executioner."
+  },
+  {
+    "w": "ARAMIS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A musketeer who dreams of the cloth, writes poems, juggles lovers, and is eventually revealed as the head of a secret Order."
+  },
+  {
+    "w": "GAVROCHE",
     "t": "Poetry",
-    "c": "From every wall his eyes command, / A mustache ruling over the land;\nWar is Peace and Black is White, / And Thoughtcrime dies within the night."
+    "c": "A Paris urchin, sharp and small, / He sleeps within a plaster elephant’s hall;\nHe sings while bullets cut the air, / Collecting cartridges there."
   },
   {
-    "w": "SEVERUS SNAPE",
+    "w": "EMMA BOVARY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A country doctor’s wife in Yonville, undone by novels, adulteries, debts and a bottle of arsenic."
+  },
+  {
+    "w": "JULIEN SOREL",
+    "t": "Who Am I?",
+    "c": "Who am I? — A carpenter’s son, tutor and seminarian who rises through two ladies’ beds and ends at the guillotine."
+  },
+  {
+    "w": "OEDIPA MAAS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Californian executrix who stumbles on a muted post horn symbol and a possible underground postal conspiracy called the Tristero."
+  },
+  {
+    "w": "MILO MINDERBINDER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A lieutenant who runs a syndicate in which everyone has a share, trading Egyptian cotton and even contracting to bomb his own squadron."
+  },
+  {
+    "w": "ALEX DELARGE",
     "t": "Dialogue",
-    "c": "“After all this time?” whispered the headmaster. “Always,” replied the dark potions master, summoning a silver doe from his wand to guard the son of his only love to his final breath."
+    "c": "“What’s it going to be then, eh?” A teenage narrator who speaks Nadsat, loves Beethoven and violence, and is treated with the Ludovico technique."
+  },
+  {
+    "w": "PIGGY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A bespectacled asthmatic boy on a deserted island whose glasses kindle fire, and who is killed by a falling boulder as the conch shatters."
+  },
+  {
+    "w": "HANS LANDA",
+    "t": "Dialogue",
+    "c": "“That’s a bingo!” A polyglot SS colonel nicknamed the Jew Hunter who orders a glass of milk in a French farmhouse and savours strudel with cream."
+  },
+  {
+    "w": "AMON GOETH",
+    "t": "Who Am I?",
+    "c": "Who am I? — A commandant who shoots prisoners from the balcony of a villa overlooking the Kraków-Płaszów camp."
+  },
+  {
+    "w": "BUFFALO BILL",
+    "t": "Poetry",
+    "c": "A basement pit, a sewing machine, / A moth chrysalis unseen;\nHe stitches suits from women’s skin, / And asks the captive to lotion in."
+  },
+  {
+    "w": "ROBERT NEVILLE",
+    "t": "Who Am I?",
+    "c": "Who am I? — The only man left in a Los Angeles overrun by blood-drinkers, who ends up as the legend of the new world, hammering stakes by day."
+  },
+  {
+    "w": "QUINT",
+    "t": "Dialogue",
+    "c": "“Eleven hundred men went into the water.” A grizzled shark hunter on a fishing boat recounts a naval disaster in the Pacific over drinks and scars."
+  },
+  {
+    "w": "RUPERT PUPKIN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A would-be stand-up comedian who kidnaps a talk show host so that I may perform my monologue on national television."
+  },
+  {
+    "w": "BARTON FINK",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Broadway playwright holed up in a sweltering Hollywood hotel to write a wrestling picture, tormented by his neighbour."
+  },
+  {
+    "w": "WALTER SOBCHAK",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Vietnam veteran, convert to Judaism, who refuses to roll on Saturdays and brandishes a pistol over a bowling line violation."
+  },
+  {
+    "w": "LLEWELYN MOSS",
+    "t": "Poetry",
+    "c": "A welder hunting in the sand, / Finds a satchel and a drug deal gone bad;\nHe takes the cash and hears the phone — / A stranger’s coin will claim his own."
+  },
+  {
+    "w": "ENKIDU",
+    "t": "Who Am I?",
+    "c": "Who am I? — Fashioned from clay by a goddess to rival a king, I lived with gazelles until a temple woman civilized me, then I fell sick for slaying a bull."
+  },
+  {
+    "w": "CASSANDRA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Trojan princess whose true prophecies are doomed never to be believed, a curse of the sun god."
+  },
+  {
+    "w": "TIRESIAS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A blind Theban seer who lived seven years as a woman and later warned a king that he himself was the polluter of the city."
+  },
+  {
+    "w": "ANTIGONE",
+    "t": "Poetry",
+    "c": "She scattered dust upon the dead, / Against a ruler’s law, she said;\nBuried alive for burying kin, / A sister’s loyalty paid the sin."
+  },
+  {
+    "w": "CLYTEMNESTRA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A queen who welcomes my husband home from Troy with a purple carpet, a bath and a net, avenging our daughter."
+  },
+  {
+    "w": "ORESTES",
+    "t": "Who Am I?",
+    "c": "Who am I? — A prince who kills his mother at the god’s command and is chased by the Furies until a trial on Athens’ hill acquits him."
+  },
+  {
+    "w": "PHILOCTETES",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Greek archer abandoned on Lemnos with a festering snakebite, later fetched because Troy will not fall without his weapon."
+  },
+  {
+    "w": "THERSITES",
+    "t": "Who Am I?",
+    "c": "Who am I? — The ugliest and most foul-mouthed soldier at Troy, a lame, bow-legged commoner who mocks kings and is beaten with a sceptre by Odysseus."
+  },
+  {
+    "w": "PENTHESILEA",
+    "t": "Poetry",
+    "c": "An Amazon queen who came to Troy, / To fight for Priam’s city’s joy;\nAchilles struck her, then he gazed, / And wept for beauty he had razed."
+  },
+  {
+    "w": "HECUBA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A queen who watched fifty sons fall with her city, saw my youngest murdered by a guest, and was changed into a dog."
+  },
+  {
+    "w": "SARPEDON",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Lycian ally of Troy and son of Zeus, who falls to Patroclus and is borne home by Sleep and Death."
+  },
+  {
+    "w": "SIGURD",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Norse hero who slays Fafnir, tastes his heart, and then is fatally forgotten by a ring of fire."
+  },
+  {
+    "w": "BRYNHILD",
+    "t": "Who Am I?",
+    "c": "Who am I? — A shieldmaiden sleeping on a mountain ringed by flames, awaiting the man who can pass through, tricked into marrying another."
+  },
+  {
+    "w": "UNFERTH",
+    "t": "Who Am I?",
+    "c": "Who am I? — Hrothgar’s spokesman who mocks a stranger over a swimming contest, but lends him the sword Hrunting in the end."
+  },
+  {
+    "w": "SIR GAWAIN",
+    "t": "Poetry",
+    "c": "A Christmas feast, a giant green, / A beheading game, a bargain keen;\nHe wears a girdle to save his skin, / And lives to bear the sash of sin."
+  },
+  {
+    "w": "MORDRED",
+    "t": "Who Am I?",
+    "c": "Who am I? — Arthur’s nephew or son, who seizes the throne in his absence, then meets him at Camlann in a final fatal battle."
+  },
+  {
+    "w": "ELAINE OF ASTOLAT",
+    "t": "Who Am I?",
+    "c": "Who am I? — A maiden who loved Lancelot in vain, died, and drifted down a river on a barge to Camelot with a letter in her hand."
+  },
+  {
+    "w": "ORLANDO",
+    "t": "Who Am I?",
+    "c": "Who am I? — A paladin of Charlemagne who loses his wits over a pagan princess, and whose senses are retrieved from the moon."
+  },
+  {
+    "w": "DULCINEA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A peasant woman of El Toboso, never seen by the reader, whom a deluded knight has made his lady."
+  },
+  {
+    "w": "LAZARILLO",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Spanish rogue who serves a blind man, a miserly priest and a starving squire, and learns survival through roguery."
+  },
+  {
+    "w": "MEPHISTOPHELES",
+    "t": "Dialogue",
+    "c": "“I am the spirit that always denies!” A devil who appears to a scholar in the shape of a poodle and bargains for his soul."
+  },
+  {
+    "w": "GRETCHEN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A young woman seduced by a learned doctor, who kills her newborn and refuses rescue from a prison cell."
+  },
+  {
+    "w": "EUGENE ONEGIN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A bored dandy who rejects a country girl’s letter, kills his friend in a duel, and finds her years later married to a general."
+  },
+  {
+    "w": "TATYANA LARINA",
+    "t": "Poetry",
+    "c": "A country girl who dared to write, / And poured her heart out in the night;\nShe later turns her suitor down, / A princess in the capital town."
+  },
+  {
+    "w": "CHICHIKOV",
+    "t": "Who Am I?",
+    "c": "Who am I? — A genteel swindler who tours provincial Russia buying the names of dead serfs from landowners for a mortgage scheme."
+  },
+  {
+    "w": "KHLESTAKOV",
+    "t": "Who Am I?",
+    "c": "Who am I? — A penniless clerk in a provincial inn who is mistaken for the inspector, and takes bribes before fleeing."
+  },
+  {
+    "w": "TARTUFFE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A pious fraud who installs himself in a rich man’s household and tries to marry his daughter and seduce his wife."
+  },
+  {
+    "w": "ALCESTE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Parisian nobleman who hates flattery and insists on bluntness, yet loves a coquettish widow and ends by retiring to the desert."
+  },
+  {
+    "w": "HEDDA GABLER",
+    "t": "Poetry",
+    "c": "A general’s daughter, bored and proud, / Her father’s pistols, tightly bowed;\nShe burns a manuscript in flame, / And ends her story with a shot of shame."
+  },
+  {
+    "w": "NORA HELMER",
+    "t": "Dialogue",
+    "c": "“I must stand quite alone if I am to understand myself.” A wife dances the tarantella, then slams a door heard across Europe."
+  },
+  {
+    "w": "PEER GYNT",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Norwegian braggart who weds a troll king’s daughter, sails to Morocco, and peels an onion in search of his true core."
+  },
+  {
+    "w": "THOMAS STOCKMANN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A spa town doctor who finds the baths are contaminated, and is branded by the town as an enemy of the people."
+  },
+  {
+    "w": "JOHN GABRIEL BORKMAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A disgraced banker who paces upstairs in a cold house for eight years, waiting for a call to return."
+  },
+  {
+    "w": "MOTHER COURAGE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A canteen woman hauls a wagon across Europe in the Thirty Years’ War and loses all her children."
+  },
+  {
+    "w": "BABBITT",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Zenith real-estate salesman, a joiner of clubs, who briefly rebels against a conformist life and then backs down."
+  },
+  {
+    "w": "ELMER GANTRY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A hard-drinking salesman turned fiery evangelist who preaches against sin while indulging in all of it."
+  },
+  {
+    "w": "MEYER WOLFSHEIM",
+    "t": "Poetry",
+    "c": "A gambler with the Series fixed, / His cufflinks strangely mixed;\nHe wears the molars of men, / And turns up not at the end."
+  },
+  {
+    "w": "LILY BART",
+    "t": "Who Am I?",
+    "c": "Who am I? — A beautiful New York socialite whose chances for a rich marriage slip away through scandal, ending in a fatal dose of chloral."
+  },
+  {
+    "w": "NEWLAND ARCHER",
+    "t": "Dialogue",
+    "c": "“Tell her I’m old-fashioned.” A New York lawyer torn between his fiancée and her exiled cousin, who never goes up to her door at the end."
+  },
+  {
+    "w": "ELLEN OLENSKA",
+    "t": "Who Am I?",
+    "c": "Who am I? — A countess who flees a European marriage to return to Old New York, scandalizing the families and haunting a lawyer’s dreams."
+  },
+  {
+    "w": "CROOKS",
+    "t": "Who Am I?",
+    "c": "Who am I? — The stable buck who lives apart in a room by the barn, with books and a bad back, and is allowed one conversation with dreamers."
+  },
+  {
+    "w": "TOM JOAD",
+    "t": "Dialogue",
+    "c": "“Wherever there’s a cop beating a guy, I’ll be there.” A parolee who returns to a dust-bowl farm and joins a family’s westward trek."
+  },
+  {
+    "w": "JIM CASY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A former preacher who lost his faith but found a bigger sense of the holy in people, and dies defending strikers."
+  },
+  {
+    "w": "STARBUCK",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Quaker first mate who objects to a captain’s revenge and contemplates killing him as he sleeps, but is too principled."
+  },
+  {
+    "w": "BILLY BUDD",
+    "t": "Who Am I?",
+    "c": "Who am I? — A handsome young sailor with a stutter who strikes a superior dead with one blow and is hanged from a yardarm."
+  },
+  {
+    "w": "CLAGGART",
+    "t": "Poetry",
+    "c": "A master-at-arms with a pallid face, / Who hates the boy’s sunny grace;\nHe lies about mutiny, and then / Is struck down dead before the men."
+  },
+  {
+    "w": "DANIEL QUILP",
+    "t": "Who Am I?",
+    "c": "Who am I? — A malicious, grinning dwarf and moneylender who torments an old man and his granddaughter, drowning in the Thames."
+  },
+  {
+    "w": "WILKINS MICAWBER",
+    "t": "Dialogue",
+    "c": "“Something will turn up.” A perpetually debt-ridden optimist who finally exposes a villainous clerk before sailing to Australia."
+  },
+  {
+    "w": "MR. JAGGERS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Little Britain lawyer who washes his hands after cross-examining clients and keeps a housekeeper with scarred wrists."
+  },
+  {
+    "w": "BENTLEY DRUMMLE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A sullen, rich, lumbering rival nicknamed after an arachnid, who marries and mistreats a heroine and is killed by a horse."
+  },
+  {
+    "w": "BILL SIKES",
+    "t": "Poetry",
+    "c": "A burglar with a pit-bull friend, / Whose temper brings a girl to end;\nHe flees across the rooftops dark, / And hangs himself, caught in the dark."
+  },
+  {
+    "w": "SYDNEY CARTON",
+    "t": "Who Am I?",
+    "c": "Who am I? — A dissolute barrister who resembles a French émigré and takes his place in a prison cell on the eve of the guillotine."
+  },
+  {
+    "w": "MADAME DEFARGE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A Paris wine-shop keeper who knits the names of the condemned into her stitches."
+  },
+  {
+    "w": "SAM WELLER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A cockney bootblack turned manservant to a club president, famed for comparisons that begin with a saying and end with a pun."
+  },
+  {
+    "w": "RAWDON CRAWLEY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A dim dragoon guardsman who loves his wife and horse and finally discovers her intimacy with a marquis."
+  },
+  {
+    "w": "LORD STEYNE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A wealthy, wicked marquis who protects a social climber and leaves her ruined when her husband returns."
+  },
+  {
+    "w": "BARRY LYNDON",
+    "t": "Who Am I?",
+    "c": "Who am I? — An Irish rogue who elopes, deserts, gambles across Europe, marries a rich widow and loses it all."
+  },
+  {
+    "w": "SEBASTIAN MORAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A big-game hunter, ex-colonel, and chief of staff to a consulting criminal, felled by an air gun across the street from Baker Street."
+  },
+  {
+    "w": "PROFESSOR CHALLENGER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A bearded, bellowing scientist who leads an expedition to a South American plateau of surviving dinosaurs."
+  },
+  {
+    "w": "ALLAN QUATERMAIN",
+    "t": "Poetry",
+    "c": "A hunter old with elephant gun, / A hidden mine, a vanished son;\nWith Sir Henry and Good they go, / Through Kukuanaland’s deadly show."
+  },
+  {
+    "w": "HORATIO HORNBLOWER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A hesitant Royal Navy midshipman who becomes an admiral, anxious and seasick, always hiding his doubts behind duty."
+  },
+  {
+    "w": "STEPHEN MATURIN",
+    "t": "Who Am I?",
+    "c": "Who am I? — An Anglo-Irish physician, naturalist, intelligence agent and cello player, friend of a sea captain."
+  },
+  {
+    "w": "GEORGE SMILEY",
+    "t": "Who Am I?",
+    "c": "Who am I? — A rumpled spymaster with thick glasses and a faithless wife, who hunts a Soviet rival through the Circus."
+  },
+  {
+    "w": "ALEC LEAMAS",
+    "t": "Who Am I?",
+    "c": "Who am I? — A burnt-out British agent who pretends to defect in order to ruin an East German intelligence officer and dies at the Berlin Wall."
+  },
+  {
+    "w": "SALLY BOWLES",
+    "t": "Poetry",
+    "c": "A cabaret in Weimar days, / Green-painted nails and daring ways;\nShe sings and drinks on Berlin nights, / While brown shirts gather in the lights."
+  },
+  {
+    "w": "CHARLES RYDER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A painter who revisits a great English estate during wartime and recalls his friendship with a charming, drunken undergraduate."
+  },
+  {
+    "w": "SEBASTIAN FLYTE",
+    "t": "Who Am I?",
+    "c": "Who am I? — An Oxford aristocrat with a teddy bear called Aloysius, fleeing his family to a Moroccan monastery."
+  },
+  {
+    "w": "GUSTAV VON ASCHENBACH",
+    "t": "Who Am I?",
+    "c": "Who am I? — A renowned German writer who travels to the Lido, becomes obsessed with a beautiful Polish boy, and lingers while cholera spreads."
   }
 ]
