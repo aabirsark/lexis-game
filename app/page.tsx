@@ -31,6 +31,35 @@ const MAX = 6;
 const PARTS = ["p-head", "p-body", "p-armL", "p-armR", "p-legL", "p-legR"];
 const ROWS = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
+export interface RewardOption {
+  id: number;
+  label: string;
+  icon: string;
+  isTryAgain: boolean;
+}
+
+export const REWARD_OPTIONS: RewardOption[] = [
+  { id: 0, label: "Bookmark", icon: "🔖", isTryAgain: false },
+  { id: 1, label: "3 sticker", icon: "✨", isTryAgain: false },
+  { id: 2, label: "Badge", icon: "🎖️", isTryAgain: false },
+  { id: 3, label: "Mug", icon: "☕", isTryAgain: false },
+  { id: 4, label: "1 Sticker", icon: "⭐", isTryAgain: false },
+  { id: 5, label: "2 Sticker", icon: "🌟", isTryAgain: false },
+  { id: 6, label: "Try again", icon: "🔄", isTryAgain: true },
+  { id: 7, label: "Try again", icon: "💀", isTryAgain: true },
+];
+
+const REWARD_SLICES = [
+  { d: "M0 0 L 0.00 -172.00 A 172 172 0 0 1 121.62 -121.62 Z", fill: "url(#rw0)" },
+  { d: "M0 0 L 121.62 -121.62 A 172 172 0 0 1 172.00 0.00 Z", fill: "url(#rw1)" },
+  { d: "M0 0 L 172.00 0.00 A 172 172 0 0 1 121.62 121.62 Z", fill: "url(#rw2)" },
+  { d: "M0 0 L 121.62 121.62 A 172 172 0 0 1 0.00 172.00 Z", fill: "url(#rw3)" },
+  { d: "M0 0 L 0.00 172.00 A 172 172 0 0 1 -121.62 121.62 Z", fill: "url(#rw4)" },
+  { d: "M0 0 L -121.62 121.62 A 172 172 0 0 1 -172.00 0.00 Z", fill: "url(#rw5)" },
+  { d: "M0 0 L -172.00 0.00 A 172 172 0 0 1 -121.62 -121.62 Z", fill: "url(#rw6)" },
+  { d: "M0 0 L -121.62 -121.62 A 172 172 0 0 1 0.00 -172.00 Z", fill: "url(#rw7)" },
+];
+
 interface SwarmBat {
   id: number;
   dx: string;
@@ -90,6 +119,16 @@ export default function LexisGamePage() {
   const [wrongLetters, setWrongLetters] = useState<string[]>([]);
   const [isLocked, setIsLocked] = useState(true);
   const [shatteredKeys, setShatteredKeys] = useState<Record<string, boolean>>({});
+
+  // 60-Second Timer state
+  const [timeLeft, setTimeLeft] = useState(60);
+
+  // Reward Wheel state
+  const [rewardWheelRot, setRewardWheelRot] = useState(0);
+  const [isRewardSpinning, setIsRewardSpinning] = useState(false);
+  const [rewardWon, setRewardWon] = useState<RewardOption | null>(null);
+  const [rewardMessage, setRewardMessage] = useState("");
+  const rewardWheelRef = useRef<SVGSVGElement>(null);
 
   // Jumpscare & Swarm state
   const [jumpscareActive, setJumpscareActive] = useState(false);
@@ -207,6 +246,23 @@ export default function LexisGamePage() {
       tone(330, 0.5, "triangle", 0.07);
       tone(660, 0.6, "triangle", 0.05, 0, 0.12);
     },
+    rewardWin: () => {
+      [523, 659, 784, 1046].forEach((f, i) => {
+        tone(f, 0.35, "triangle", 0.08, 0, i * 0.1);
+      });
+    },
+    rewardTryAgain: () => {
+      tone(380, 0.28, "sawtooth", 0.06, -70);
+      tone(260, 0.45, "triangle", 0.07, -80, 0.14);
+    },
+    heartbeat: (critical: boolean) => {
+      if (muted) return;
+      tone(critical ? 85 : 72, 0.09, "sine", critical ? 0.12 : 0.08, -25);
+      tone(critical ? 95 : 80, 0.09, "sine", critical ? 0.1 : 0.06, -20, 0.13);
+      if (critical) {
+        tone(1200, 0.035, "triangle", 0.045, 0, 0.02);
+      }
+    },
   });
 
   // Toggle Mute
@@ -235,6 +291,9 @@ export default function LexisGamePage() {
   // End card show
   const showEndCard = useCallback((won: boolean) => {
     setEndCardWon(won);
+    setRewardWon(null);
+    setRewardMessage("");
+    setIsRewardSpinning(false);
     setEndCardVisible(true);
   }, []);
 
@@ -323,6 +382,10 @@ export default function LexisGamePage() {
       setIsLocked(false);
       setPlayed((p) => p + 1);
       setEndCardVisible(false);
+      setTimeLeft(60);
+      setRewardWon(null);
+      setRewardMessage("");
+      setIsRewardSpinning(false);
 
       // Reset gallows animations
       PARTS.forEach((id) => {
@@ -449,6 +512,85 @@ export default function LexisGamePage() {
       }, reduced ? 500 : 1500);
     }, dur * 1000 + 150);
   }, [isSpinning, wheelRot, actx, later, say, startRound]);
+
+  // Handle Reward Wheel Spin
+  const spinRewardWheel = useCallback(() => {
+    if (isRewardSpinning) return;
+    actx();
+    setIsRewardSpinning(true);
+    setRewardMessage("");
+    setRewardWon(null);
+
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    // Pick an index between 0 and 7
+    const idx = Math.floor(Math.random() * 8);
+    const centre = idx * 45 + 22.5 + (Math.random() - 0.5) * 22;
+    const cur = ((rewardWheelRot % 360) + 360) % 360;
+    let delta = ((360 - centre) - cur) % 360;
+    if (delta < 0) delta += 360;
+
+    const dur = reduced ? 0.6 : 5.0;
+    const nextRot = rewardWheelRot + (reduced ? 1 : 5) * 360 + delta;
+    setRewardWheelRot(nextRot);
+
+    const rw = rewardWheelRef.current;
+    if (rw) {
+      rw.style.transition = "transform " + dur + "s cubic-bezier(.12,.62,.1,1)";
+      rw.style.transform = "rotate(" + nextRot + "deg)";
+    }
+
+    if (!reduced) sfx.current.ticks(dur);
+
+    later(() => {
+      const prize = REWARD_OPTIONS[idx];
+      sfx.current.stop();
+      setIsRewardSpinning(false);
+      setRewardWon(prize);
+
+      if (prize.isTryAgain) {
+        sfx.current.rewardTryAgain();
+        setRewardMessage("💀 The spirits tease thee: Try again! Spin once more!");
+        say("Landed on Try again. You may spin the reward wheel again.");
+      } else {
+        sfx.current.rewardWin();
+        setRewardMessage(`🏆 Thou hast claimed: ${prize.label} ${prize.icon}`);
+        say("Congratulations! You won " + prize.label + "!");
+      }
+    }, dur * 1000 + 150);
+  }, [isRewardSpinning, actx, rewardWheelRot, later, say]);
+
+  // 60-Second Countdown timer with tension
+  useEffect(() => {
+    if (screen !== "game" || isLocked || endCardVisible || jumpscareActive || !currentEntry) {
+      return;
+    }
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          triggerLose(currentEntry);
+          return 0;
+        }
+
+        const next = prev - 1;
+
+        // Tension sound effects
+        if (next <= 10) {
+          sfx.current.heartbeat(true);
+        } else if (next <= 20) {
+          sfx.current.heartbeat(false);
+        }
+
+        return next;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [screen, isLocked, endCardVisible, jumpscareActive, currentEntry, triggerLose]);
 
   // Reset verdict and prepare wheel
   const resetVerdict = useCallback(() => {
@@ -811,6 +953,13 @@ export default function LexisGamePage() {
         {/* SCREEN 3: CRYPT */}
         {screen === "game" && currentEntry && currentCat && (
           <section className="screen" id="s-game" aria-label="Hangman round">
+            {/* Pulsing screen-edge vignette under high tension */}
+            {timeLeft <= 20 && !isLocked && !endCardVisible && (
+              <div
+                className={`panic-vignette ${timeLeft <= 10 ? "critical" : ""}`}
+                aria-hidden="true"
+              />
+            )}
             <div className="crypt">
               {/* Scene & Gallows */}
               <div className="scene" id="scene" ref={sceneRef}>
@@ -826,6 +975,7 @@ export default function LexisGamePage() {
                       </svg>
                     ))}
                   </div>
+
                   <div className="tagline" id="catTag">
                     {META[currentCat].label} · {currentEntry.t}
                   </div>
@@ -1016,6 +1166,61 @@ export default function LexisGamePage() {
                 </div>
               </div>
             </div>
+
+            {/* LARGE SPOOKY BOTTOM TIMER ALTAR */}
+            <div
+              className={`spooky-timer-altar ${
+                timeLeft <= 10 ? "panic" : timeLeft <= 20 ? "tense" : ""
+              }`}
+              role="timer"
+              aria-live="polite"
+              aria-label={`${timeLeft} seconds remaining`}
+            >
+              <div className="spooky-timer-topline">
+                <span>⏳</span>
+                <span className="status-phrase">
+                  {timeLeft <= 10
+                    ? "DEATH KNOCKS! THE NOOSE DROPS!"
+                    : timeLeft <= 20
+                    ? "THE NOOSE TIGHTENS!"
+                    : "MORTAL SECONDS REMAINING"}
+                </span>
+              </div>
+
+              <div className="spooky-timer-body">
+                {/* Left Spooky Totem: Flickering Pumpkin */}
+                <svg className="spooky-totem left" viewBox="0 0 32 32" aria-hidden="true">
+                  <use href="#pk" />
+                </svg>
+
+                {/* Large Timer Digits */}
+                <div className="spooky-timer-digits">
+                  <span>{String(Math.floor(timeLeft / 60)).padStart(2, "0")}</span>
+                  <span className="colon">:</span>
+                  <span>{String(timeLeft % 60).padStart(2, "0")}</span>
+                </div>
+
+                {/* Right Spooky Totem: Mystic Skull */}
+                <svg className="spooky-totem right" viewBox="0 0 32 32" aria-hidden="true">
+                  <ellipse cx="16" cy="14" rx="11" ry="10" fill={timeLeft <= 10 ? "#e0334a" : "#f2e8cf"} />
+                  <rect x="9" y="20" width="14" height="8" rx="2" fill={timeLeft <= 10 ? "#e0334a" : "#f2e8cf"} />
+                  <circle cx="12" cy="14" r="3" fill="#0a0612" />
+                  <circle cx="20" cy="14" r="3" fill="#0a0612" />
+                  <polygon points="16,17 14,20 18,20" fill="#0a0612" />
+                  <line x1="12" y1="23" x2="12" y2="28" stroke="#0a0612" strokeWidth="1.5" />
+                  <line x1="16" y1="23" x2="16" y2="28" stroke="#0a0612" strokeWidth="1.5" />
+                  <line x1="20" y1="23" x2="20" y2="28" stroke="#0a0612" strokeWidth="1.5" />
+                </svg>
+              </div>
+
+              {/* Altar Burning Fuse Bar */}
+              <div className="altar-fuse">
+                <div
+                  className="altar-fuse-fill"
+                  style={{ width: `${(timeLeft / 60) * 100}%` }}
+                />
+              </div>
+            </div>
           </section>
         )}
 
@@ -1031,7 +1236,7 @@ export default function LexisGamePage() {
                   ? wrongLetters.length
                     ? `You cut the rope with ${MAX - wrongLetters.length} ${
                         MAX - wrongLetters.length === 1 ? "life" : "lives"
-                      } to spare.`
+                      } to spare in ${60 - timeLeft}s.`
                     : "Not a single wrong step. The graveyard is impressed."
                   : `${name}, the word was:`}
               </p>
@@ -1039,7 +1244,7 @@ export default function LexisGamePage() {
                 {currentEntry.w}
               </p>
 
-              {/* Poetic Funeral Epitaph */}
+              {/* Poetic Funeral Epitaph on defeat */}
               {!endCardWon && (
                 <div className="poem-box">
                   {getPoeticEpitaph(currentCat, currentEntry.w, name).map((line, idx) => (
@@ -1050,40 +1255,223 @@ export default function LexisGamePage() {
                 </div>
               )}
 
+              {/* REWARD WHEEL ON VICTORY */}
+              {endCardWon && (
+                <div className="reward-section">
+                  <div className="reward-intro">
+                    <span className="reward-tag">Victory Bounty</span>
+                    <h3 className="reward-heading">The Wheel of Spoils</h3>
+                    <p className="reward-desc">
+                      Thou hast cheated the grave! Spin the wheel to claim thy reward.
+                    </p>
+                  </div>
+
+                  <div className="reward-wheelbox">
+                    <svg className="reward-pointer" viewBox="0 0 40 56" aria-hidden="true">
+                      <path d="M20 54 L4 14 A18 18 0 1 1 36 14Z" fill="#ff7a1a" stroke="#f2e8cf" strokeWidth="2" />
+                      <circle cx="20" cy="16" r="6" fill="#0a0612" />
+                    </svg>
+
+                    <svg
+                      ref={rewardWheelRef}
+                      className="reward-wheel"
+                      viewBox="-200 -200 400 400"
+                      aria-hidden="true"
+                      style={{ transformOrigin: "50% 50%" }}
+                    >
+                      <defs>
+                        <radialGradient id="rw0" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#8a2f05" />
+                          <stop offset="100%" stopColor="#e66a00" />
+                        </radialGradient>
+                        <radialGradient id="rw1" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#3d1466" />
+                          <stop offset="100%" stopColor="#8a3cc4" />
+                        </radialGradient>
+                        <radialGradient id="rw2" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#0c2a12" />
+                          <stop offset="100%" stopColor="#289438" />
+                        </radialGradient>
+                        <radialGradient id="rw3" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#660a1d" />
+                          <stop offset="100%" stopColor="#b81d3d" />
+                        </radialGradient>
+                        <radialGradient id="rw4" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#142854" />
+                          <stop offset="100%" stopColor="#2e64c4" />
+                        </radialGradient>
+                        <radialGradient id="rw5" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#5c3804" />
+                          <stop offset="100%" stopColor="#b37409" />
+                        </radialGradient>
+                        <radialGradient id="rw6" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#3d0d1b" />
+                          <stop offset="100%" stopColor="#751934" />
+                        </radialGradient>
+                        <radialGradient id="rw7" cx="0" cy="0" r="172" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stopColor="#221838" />
+                          <stop offset="100%" stopColor="#4a3575" />
+                        </radialGradient>
+                      </defs>
+
+                      <circle r="194" fill="#120a1f" stroke="#4b3d6b" strokeWidth="4" />
+                      <circle r="176" fill="#0a0612" />
+
+                      {/* 8 Sectors */}
+                      {REWARD_SLICES.map((s, idx) => (
+                        <path
+                          key={idx}
+                          d={s.d}
+                          fill={s.fill}
+                          stroke="#f2e8cf"
+                          strokeOpacity=".35"
+                          strokeWidth="2"
+                        />
+                      ))}
+
+                      {/* 8 Labels with icons */}
+                      {REWARD_OPTIONS.map((opt, idx) => {
+                        const mid = idx * 45 + 22.5;
+                        const isFlipped = mid > 90 && mid < 270;
+                        return (
+                          <g
+                            key={idx}
+                            transform={`rotate(${mid - 90}) translate(108, 0) ${
+                              isFlipped ? "rotate(180)" : ""
+                            }`}
+                          >
+                            <text
+                              className="reward-wl"
+                              x="0"
+                              y="4"
+                              textAnchor="middle"
+                            >
+                              {opt.label} {opt.icon}
+                            </text>
+                          </g>
+                        );
+                      })}
+
+                      {/* 24 Studs around rim */}
+                      {Array.from({ length: 24 }).map((_, k) => {
+                        const rad = (k * 15 * Math.PI) / 180;
+                        const cx = (183 * Math.sin(rad)).toFixed(2);
+                        const cy = (-183 * Math.cos(rad)).toFixed(2);
+                        return <circle key={k} className="stud" cx={cx} cy={cy} r="3.4" fill="#ffb04a" />;
+                      })}
+
+                      {/* Center gift medallion */}
+                      <circle r="36" fill="#0a0612" stroke="#ffb04a" strokeWidth="3.5" />
+                      <text x="0" y="8" textAnchor="middle" fontSize="24" fill="#f2e8cf">
+                        🎁
+                      </text>
+                    </svg>
+                  </div>
+
+                  {/* Outcome Banner */}
+                  {rewardMessage && (
+                    <div
+                      className={`reward-banner ${rewardWon?.isTryAgain ? "try-again" : "won"}`}
+                      aria-live="polite"
+                    >
+                      {rewardMessage}
+                    </div>
+                  )}
+
+                  {/* Reward Action Buttons */}
+                  <div className="reward-acts">
+                    {!rewardWon && (
+                      <button
+                        className="btn"
+                        type="button"
+                        disabled={isRewardSpinning}
+                        onClick={spinRewardWheel}
+                      >
+                        {isRewardSpinning ? "Spinning..." : "Spin for reward"}
+                      </button>
+                    )}
+
+                    {rewardWon?.isTryAgain && (
+                      <button
+                        className="btn"
+                        type="button"
+                        disabled={isRewardSpinning}
+                        onClick={spinRewardWheel}
+                      >
+                        {isRewardSpinning ? "Spinning..." : "Spin again"}
+                      </button>
+                    )}
+
+                    {rewardWon && !rewardWon.isTryAgain && (
+                      <button
+                        className="btn"
+                        type="button"
+                        onClick={() => {
+                          sfx.current.click();
+                          setEndCardVisible(false);
+                          resetVerdict();
+                          setScreen("wheel");
+                        }}
+                      >
+                        Play next round
+                      </button>
+                    )}
+
+                    <button
+                      className="btn ghost"
+                      type="button"
+                      disabled={isRewardSpinning}
+                      onClick={() => {
+                        sfx.current.click();
+                        setEndCardVisible(false);
+                        resetVerdict();
+                        setScreen("wheel");
+                      }}
+                    >
+                      {rewardWon && !rewardWon.isTryAgain ? "Spin category wheel" : "Skip reward"}
+                    </button>
+                  </div>
+                </div>
+              )}
+
               <p className="stats" id="endStats">
                 Wins {wins} · Streak {streak} · Rounds {played}
               </p>
-              <div className="acts">
-                <button
-                  className="btn"
-                  id="againBtn"
-                  type="button"
-                  onClick={() => {
-                    sfx.current.click();
-                    setEndCardVisible(false);
-                    resetVerdict();
-                    setScreen("wheel");
-                  }}
-                >
-                  Spin again
-                </button>
-                <button
-                  className="btn ghost"
-                  id="renameBtn"
-                  type="button"
-                  onClick={() => {
-                    sfx.current.click();
-                    setEndCardVisible(false);
-                    setWins(0);
-                    setStreak(0);
-                    setPlayed(0);
-                    setName("");
-                    setScreen("name");
-                  }}
-                >
-                  New name
-                </button>
-              </div>
+
+              {/* Standard acts only shown on defeat */}
+              {!endCardWon && (
+                <div className="acts">
+                  <button
+                    className="btn"
+                    id="againBtn"
+                    type="button"
+                    onClick={() => {
+                      sfx.current.click();
+                      setEndCardVisible(false);
+                      resetVerdict();
+                      setScreen("wheel");
+                    }}
+                  >
+                    Spin again
+                  </button>
+                  <button
+                    className="btn ghost"
+                    id="renameBtn"
+                    type="button"
+                    onClick={() => {
+                      sfx.current.click();
+                      setEndCardVisible(false);
+                      setWins(0);
+                      setStreak(0);
+                      setPlayed(0);
+                      setName("");
+                      setScreen("name");
+                    }}
+                  >
+                    New name
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}

@@ -1,82 +1,282 @@
 [
   {
     "w": "SHERLOCK HOLMES",
-    "t": "Fictional",
-    "c": "A Baker Street detective with a pipe, a violin and a very sharp eye."
+    "t": "Who Am I?",
+    "c": "Who am I? — Armed with a Stradivarius, a seven-percent cocaine solution, and relentless deductive ratiocination, I decipher an empire's darkest homicides from the red mud on a suspect's boot."
   },
   {
     "w": "DARTH VADER",
-    "t": "Fictional",
-    "c": "A dark lord in black armour who breathes like a broken machine."
+    "t": "Dialogue",
+    "c": "“I find your lack of faith disturbing.” Encased in pressurized obsidian armor, my baritone mechanical respirator silences the windpipes of imperial admirals who fail me."
   },
   {
     "w": "VAN HELSING",
-    "t": "Fictional",
-    "c": "The vampire hunter with stakes, garlic and a very long night ahead."
+    "t": "Poetry",
+    "c": "With wild rose, garlic, and communion host, / A scholar hunts the predatory ghost;\nThrough Transylvanian night he stems the flood, / And drives the ash stake through the unholy blood."
   },
   {
     "w": "VOLDEMORT",
-    "t": "Fictional",
-    "c": "A noseless dark wizard who split his soul into seven pieces."
+    "t": "Who Am I?",
+    "c": "Who am I? — Terrified of mortality, I fractured my withered soul into seven serpentine reliquaries, striking terror into the wizarding world with a noseless, reptilian sneer and the killing curse."
   },
   {
     "w": "GANDALF",
-    "t": "Fictional",
-    "c": "A grey wizard who returns in white after falling with a balrog."
+    "t": "Dialogue",
+    "c": "“You cannot pass! I am a servant of the Secret Fire, wielder of the flame of Anor.” Cast down with a demon of shadow and flame, I returned reborn in white to break a king's bewitchment."
   },
   {
     "w": "GOLLUM",
-    "t": "Fictional",
-    "c": "A creature in a cave obsessed with one ring, and he calls it precious."
+    "t": "Who Am I?",
+    "c": "Who am I? — For five centuries beneath misty roots of granite, I gnawed blind fish and croaked to my bifurcated soul, weeping for the golden ring that burned my black heart: My preciousss!"
   },
   {
     "w": "HANNIBAL LECTER",
-    "t": "Fictional",
-    "c": "A brilliant, polite psychiatrist with a very unusual diet."
+    "t": "Dialogue",
+    "c": "“A census taker once tried to test me. I ate his liver with some fava beans and a nice Chianti.” A brilliant forensic psychiatrist resting behind plexiglass with an exquisite culinary palate."
   },
   {
     "w": "NORMAN BATES",
-    "t": "Fictional",
-    "c": "The shy motel manager who talks with his mother a little too much."
+    "t": "Poetry",
+    "c": "Behind the counter, quiet and shy, / Where stuffed owl talons catch the eye;\nIn mother's lace and kitchen knife, / He carves away a bather's life."
   },
   {
     "w": "PENNYWISE",
-    "t": "Fictional",
-    "c": "A dancing clown who lives in the sewers of Derry and offers balloons."
+    "t": "Who Am I?",
+    "c": "Who am I? — An ancient extraterrestrial entity nesting in Derry’s sewer mains, I adopt the guise of a dancing carnival jester offering crimson balloons that float… and you’ll float too!"
   },
   {
     "w": "FREDDY KRUEGER",
-    "t": "Fictional",
-    "c": "Burnt face, razor glove, striped sweater. He visits you in dreams."
+    "t": "Dialogue",
+    "c": "“One, two, Freddy’s coming for you…” Slumber offers no sanctuary from my scorched flesh, striped woolen pullover, and leather glove tipped with four gleaming garden blades."
   },
   {
     "w": "JACK SKELLINGTON",
-    "t": "Fictional",
-    "c": "The Pumpkin King of Halloween Town, who tries to take over Christmas."
+    "t": "Poetry",
+    "c": "The Pumpkin King in pinstripe thread, / Grew weary of the screaming dead;\nHe stole midwinter's snowy cheer, / And showered serpentine toys of fear."
   },
   {
     "w": "HEATHCLIFF",
-    "t": "Fictional",
-    "c": "Brooding, vengeful foundling of the Yorkshire moors."
+    "t": "Who Am I?",
+    "c": "Who am I? — An untamed foundling of the Liverpool docks, I let vengeance curdle my marrow till I bought out both estates, digging down to embrace Catherine's skeletal dust beneath the Yorkshire moor."
   },
   {
     "w": "QUASIMODO",
-    "t": "Fictional",
-    "c": "The bell ringer who lives in the towers of Notre-Dame."
+    "t": "Poetry",
+    "c": "High in the gothic spire he clings, / Deaf to the heavy bells he rings;\nA misshapen heart of purest grace, / Died cradling a gypsy in death's embrace."
   },
   {
     "w": "CAPTAIN AHAB",
-    "t": "Fictional",
-    "c": "A one-legged whaler whose only crew goal is revenge."
+    "t": "Dialogue",
+    "c": "“From hell’s heart I stab at thee; for hate’s sake I spit my last breath at thee!” Chained by harpoon cords to the albino leviathan, I dragged the Pequod's crew into the Pacific maw."
   },
   {
     "w": "FRANKENSTEINS MONSTER",
-    "t": "Fictional",
-    "c": "Stitched together from the dead and abandoned by the one who made him."
+    "t": "Who Am I?",
+    "c": "Who am I? — Stitched of sepulchral remnants and ignited by lightning, I learned human empathy from Paradise Lost only to be met with bullets and fire, resolving to be the serpent to my creator's Adam."
   },
   {
     "w": "DORIAN GRAY",
-    "t": "Fictional",
-    "c": "His face never ages. His portrait in the attic does."
+    "t": "Poetry",
+    "c": "Untouched by wrinkles, sin, or strife, / He tastes the poisons of his life;\nWhile upstairs in the darkness locked, / His portrait rots, defiled and mocked."
+  },
+  {
+    "w": "COUNT DRACULA",
+    "t": "Dialogue",
+    "c": "“Listen to them—the children of the night. What music they make!” Welcome to my castle, where shadows crawl down sheer precipices and blood is the very wine of life."
+  },
+  {
+    "w": "PROFESSOR MORIARTY",
+    "t": "Who Am I?",
+    "c": "Who am I? — The Napoleon of crime who sits motionless at the center of London’s underworld web, matching mathematical genius against Baker Street until our fatal grapple at Reichenbach Falls."
+  },
+  {
+    "w": "EBENEZER SCROOGE",
+    "t": "Poetry",
+    "c": "A grasping hand of frost and flint, / Who loved no gold but ledger print;\nTill three dark spectres turned his head, / To weep before his unmourned bed."
+  },
+  {
+    "w": "MACBETH",
+    "t": "Dialogue",
+    "c": "“Will all great Neptune’s ocean wash this blood clean from my hand? No, this my hand will rather the multitudinous seas incarnadine, making the green one red.”"
+  },
+  {
+    "w": "LADY MACBETH",
+    "t": "Who Am I?",
+    "c": "Who am I? — I invoked dark spirits to unsex me here and crown my husband king, yet in the sleepwalking night I weep in vain over phantom crimson perfumes of Arabia that will not wash away."
+  },
+  {
+    "w": "ICHABOD CRANE",
+    "t": "Poetry",
+    "c": "A crane-legged pedagogue on a steed, / Whose greedy heart and fearful creed;\nFled through the nocturnal hollow damp, / Pursued by a rider without a lamp."
+  },
+  {
+    "w": "HEADLESS HORSEMAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — A decapitated Hessian mercenary whose severed cranium was torn off by a cannonball, galloping Sleepy Hollow lanes on a black charger to fling a fiery pumpkin at trespassing schoolmasters."
+  },
+  {
+    "w": "ATTICUS FINCH",
+    "t": "Dialogue",
+    "c": "“You never really understand a person until you consider things from his point of view… until you climb into his skin and walk around in it.” An Alabama lawyer guarding a jailhouse with a reading lamp."
+  },
+  {
+    "w": "JAY GATSBY",
+    "t": "Poetry",
+    "c": "Across the bay the green light gleams, / A palace raised on bootleg dreams;\nA silk-shirt host whose lavish night, / Longed only for a lost love's sight."
+  },
+  {
+    "w": "HOLDEN CAULFIELD",
+    "t": "Who Am I?",
+    "c": "Who am I? — In a red hunting cap roaming New York's phony avenues, I dread adulthood's corruption and dream only of catching innocent children before they tumble off a cliff in the rye."
+  },
+  {
+    "w": "CAPTAIN HOOK",
+    "t": "Dialogue",
+    "c": "“Pan, who and what art thou?” hissed the Etonian buccaneer, clutching his iron barb in terror as the relentless ticking of a clock inside a crocodile echoed across the lagoon."
+  },
+  {
+    "w": "PETER PAN",
+    "t": "Poetry",
+    "c": "A runaway lad who sewed his shade, / In cocky arrogance never swayed;\nHe leads lost boys to pirate wars, / And never grows old beneath the stars."
+  },
+  {
+    "w": "BEOWULF",
+    "t": "Who Am I?",
+    "c": "Who am I? — Disdaining iron blade or mail, I wrestled the nocturnal marsh-stalker in Heorot's hall with bare thirty-man strength, wrenching his sinewy shoulder and claw from bone."
+  },
+  {
+    "w": "GRENDEL",
+    "t": "Dialogue",
+    "c": "“The harper sings of the shaping of earth, and it tears my ears like lances!” An outcast stalker from the murky fens, cursed by the mark of Cain to slaughter Danish warriors in the night."
+  },
+  {
+    "w": "MEDUSA",
+    "t": "Poetry",
+    "c": "Once maiden fair of temple grace, / Now cursed with scales and hissing face;\nLet mortal eyes behold her crown, / And turn to marble, frozen down."
+  },
+  {
+    "w": "PROMETHEUS",
+    "t": "Who Am I?",
+    "c": "Who am I? — Chained to Caucasian granite while Zeus’s eagle feasts daily upon my regenerating liver, I glory in the stolen ember I smuggled to mankind inside a fennel stalk."
+  },
+  {
+    "w": "FAUST",
+    "t": "Dialogue",
+    "c": "“Stay awhile, thou art so fair!” For worldly omniscience, youth, and forbidden power, I signed my immortal soul over to a cunning demon in drops of crimson blood."
+  },
+  {
+    "w": "MEPHISTOPHELES",
+    "t": "Poetry",
+    "c": "The spirit who ever denies with grace, / A courtly devil in silk and lace;\nHe whispers riddles, sneers at prayer, / And binds the scholar in despair."
+  },
+  {
+    "w": "CAPTAIN NEMO",
+    "t": "Who Am I?",
+    "c": "Who am I? — An exiled Indian prince piloting the electric ramming submarine Nautilus, I severed all bonds with tyrannical empires to rule the abyssal depths under the motto: Mobilis in mobili."
+  },
+  {
+    "w": "EDWARD ROCHESTER",
+    "t": "Dialogue",
+    "c": "“Jane, will you accept me with all my scars?” A cynical master of Thornfield whose dark proposal hid a howling Creole heiress locked behind the tapestry of the third story."
+  },
+  {
+    "w": "MISS HAVISHAM",
+    "t": "Poetry",
+    "c": "In yellowed veil and rotting lace, / Cobwebs veil her withered face;\nBeside stopped clocks and bridal crumbs, / To watch a cold girl's revenge that comes."
+  },
+  {
+    "w": "LONG JOHN SILVER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A one-legged ship's quartermaster with a crutch and a squawking green parrot crying “Pieces of eight!”, balancing murderous buccaneer mutiny with fondness for young Jim Hawkins."
+  },
+  {
+    "w": "LUCIFER",
+    "t": "Dialogue",
+    "c": "“Better to reign in Hell than serve in Heaven!” Hurled headlong from the crystal battlements of heaven, I raised an obsidian Pandemonium to seduce mankind to ruin."
+  },
+  {
+    "w": "HERCULE POIROT",
+    "t": "Who Am I?",
+    "c": "Who am I? — A dapper Belgian exile with an egg-shaped head, patent leather shoes, and waxed moustaches, I unravel impossible murders aboard luxury trains using only my little grey cells."
+  },
+  {
+    "w": "SAM SPADE",
+    "t": "Poetry",
+    "c": "In trench-coat noir and cigarette smoke, / He sees through every femme fatale's cloak;\nHe hands his lover over to law, / For a falcon made of lead and flaw."
+  },
+  {
+    "w": "VICTOR FRANKENSTEIN",
+    "t": "Dialogue",
+    "c": "“I had desired it with an ardour that far exceeded moderation; but now that I had finished, the beauty of the dream vanished, and breathless horror and disgust filled my heart.”"
+  },
+  {
+    "w": "CARMILLA",
+    "t": "Poetry",
+    "c": "A velvet carriage in the night, / A guest of languid, dark delight;\nWith needle punctures at the throat, / She drains the maid in Styria's moat."
+  },
+  {
+    "w": "TYLER DURDEN",
+    "t": "Dialogue",
+    "c": "“It’s only after we’ve lost everything that we’re free to do anything.” In a red leather jacket selling soap made of human fat, I lead an insomniac clerk into basement anarchy."
+  },
+  {
+    "w": "PATRICK BATEMAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — Obsessed with embossed eggshell business cards, Valentino suits, and facial cleansers, my veneer of Wall Street sanity dissolves into chainsaw slaughters to the tunes of Huey Lewis."
+  },
+  {
+    "w": "SWEENEY TODD",
+    "t": "Poetry",
+    "c": "The silver razor glints in light, / To give a London gent good night;\nA pedal pushed, a sudden fall, / Down to the cellar beneath the wall."
+  },
+  {
+    "w": "MRS LOVETT",
+    "t": "Dialogue",
+    "c": "“Times is hard! What with the price of meat what it is, when you get it, if you get it…” Fortunately, my gentleman upstairs provides the freshest filling for London’s tastiest pies!"
+  },
+  {
+    "w": "JACOB MARLEY",
+    "t": "Who Am I?",
+    "c": "Who am I? — Dead these seven Christmases, I appear through a door knocker dragging phantom links of cashboxes, ledgers, padlocks, and iron deeds forged link by link through a miser's life."
+  },
+  {
+    "w": "MINA HARKER",
+    "t": "Poetry",
+    "c": "A holy wafer scorches red, / Upon a pure and noble head;\nIn telepathic trance she sees, / The vampire sailing on the seas."
+  },
+  {
+    "w": "RENFIELD",
+    "t": "Dialogue",
+    "c": "“The blood is the life, Dr. Seward! The blood is the life!” Give me fat bluebottles, plump spiders, and singing sparrows to consume until my Master grants me eternal sustenance."
+  },
+  {
+    "w": "RODION RASKOLNIKOV",
+    "t": "Who Am I?",
+    "c": "Who am I? — In a yellow-papered Petersburg garret, I authored a treatise dividing humanity into ordinary lice and Napoleons, testing my thesis with an axe only to unravel in feverish delirium."
+  },
+  {
+    "w": "EDMOND DANTES",
+    "t": "Poetry",
+    "c": "Sewn in a shroud and hurled in brine, / From Chateau d'If's dark prison line;\nHe claims an island's golden hoard, / And strikes with vengeance as a lord."
+  },
+  {
+    "w": "INSPECTOR JAVERT",
+    "t": "Dialogue",
+    "c": "“There is nothing on earth but the law!” When a condemned galley thief spared my life instead of slitting my throat, my unbending moral universe shattered, leaving only a leap into the Seine."
+  },
+  {
+    "w": "JEAN VALJEAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — Imprisoned nineteen years for a loaf of bread, a bishop’s silver candlesticks bought my soul from darkness, bidding me cast off yellow passports to become a guardian of orphans."
+  },
+  {
+    "w": "BIG BROTHER",
+    "t": "Poetry",
+    "c": "From every wall his eyes command, / A mustache ruling over the land;\nWar is Peace and Black is White, / And Thoughtcrime dies within the night."
+  },
+  {
+    "w": "SEVERUS SNAPE",
+    "t": "Dialogue",
+    "c": "“After all this time?” whispered the headmaster. “Always,” replied the dark potions master, summoning a silver doe from his wand to guard the son of his only love to his final breath."
   }
 ]

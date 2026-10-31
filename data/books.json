@@ -1,82 +1,282 @@
 [
   {
     "w": "DRACULA",
-    "t": "Horror",
-    "c": "Bram Stoker’s 1897 novel told in letters, diaries and telegrams about a count from Transylvania."
+    "t": "Poetry",
+    "c": "In boxes filled with native sod, / An ancient count forsakes his God;\nBy Whitby’s crags the sanguine feeds, / While consecrated host impedes."
   },
   {
     "w": "FRANKENSTEIN",
-    "t": "Horror",
-    "c": "Mary Shelley’s tale of a young scientist and the creature he brings to life."
+    "t": "Who Am I?",
+    "c": "Who am I? — Conceived in charnel gloom from severed clay and galvanized vitality, I sought communion in paradise, but finding only revulsion, I swore a glacial vendetta against the modern Prometheus who fled my sight."
   },
   {
     "w": "THE HAUNTING OF HILL HOUSE",
-    "t": "Horror",
-    "c": "Shirley Jackson’s story of four people sent to investigate a house that is not sane."
+    "t": "Poetry",
+    "c": "No living organism may long sanity sustain, / Where silence walks through angled stone and darkness rules the pane;\nFour seekers cross the threshold to plumb the haunted deep, / But whatever walks within that house, walks nevermore asleep."
   },
   {
     "w": "PET SEMATARY",
-    "t": "Horror",
-    "c": "Stephen King’s story of a burial ground behind a family home, where the dead come back wrong."
+    "t": "Dialogue",
+    "c": "“The soil of a man’s heart is stonier, Louis. A man grows what he can and tends it. But beyond the deadfall lies a sour ground where the dead return… and sometimes dead is better.”"
   },
   {
     "w": "THE TELL TALE HEART",
-    "t": "Horror",
-    "c": "Poe’s narrator insists he is sane while a heartbeat under the floorboards gives him away."
+    "t": "Who Am I?",
+    "c": "Who am I? — You call me mad, yet how lucidly I dismembered the pale vulture eye under suffocating quilts! Yet beneath the cedar planks, a relentless ticking rhythm crescendoes until my own confession betrays me."
   },
   {
     "w": "THE TURN OF THE SCREW",
-    "t": "Horror",
-    "c": "Henry James’s governess is convinced the two children in her care are haunted."
+    "t": "Poetry",
+    "c": "Two gilded wards of fair Bly hall, / A phantom shadow on the wall;\nDoes evil perch upon the tower, / Or blooms it in the watcher's bower?"
   },
   {
     "w": "CARRIE",
-    "t": "Horror",
-    "c": "Stephen King’s first novel: a bullied teenager with telekinesis and a disastrous prom."
+    "t": "Dialogue",
+    "c": "“They’re all going to laugh at you!” whispered the closeted altar of maternal zealotry, before the abattoir bucket fell and telekinetic crimson fury consumed the coronation."
   },
   {
     "w": "JEKYLL AND HYDE",
-    "t": "Horror",
-    "c": "Stevenson’s London doctor drinks a potion that releases his darker self."
+    "t": "Who Am I?",
+    "c": "Who am I? — In Victorian salon and laboratory draft, I severed conscience from predatory impulse; by day a revered physician, by night a troglodyte trampling the innocent with an ivory cane."
   },
   {
     "w": "WUTHERING HEIGHTS",
-    "t": "Classic",
-    "c": "Two doomed lovers and a ghost at the window on the Yorkshire moors."
+    "t": "Poetry",
+    "c": "The heather weeps, the cold gorse sighs, / A phantom taps where Catherine lies;\nTwo vengeful souls on Yorkshire stone, / Forever doomed to rot alone."
   },
   {
     "w": "JANE EYRE",
-    "t": "Classic",
-    "c": "An orphaned governess and the secret locked in the attic at Thornfield Hall."
+    "t": "Dialogue",
+    "c": "“I am no bird; and no net ensnares me; I am a free human being with an independent will.” Yet across the nocturnal moor, a clairvoyant voice summons me back to Thornfield’s charred and blinded ruins."
   },
   {
     "w": "PRIDE AND PREJUDICE",
-    "t": "Classic",
-    "c": "Mr Darcy, Elizabeth Bennet, and a very awkward first proposal."
+    "t": "Poetry",
+    "c": "Ten thousand pounds and high disdain, / An assembly slight that seeds disdain;\nTill epistolary truth takes flight, / And vanity yields to clearer sight."
   },
   {
     "w": "GREAT EXPECTATIONS",
-    "t": "Classic",
-    "c": "Pip, Miss Havisham and her stopped clocks, and a secret benefactor."
+    "t": "Who Am I?",
+    "c": "Who am I? — Shrouded in yellowed bridal silk beside a decaying banquet frozen at twenty minutes to nine, I nurtured a haughty ward to avenge my jilted heart, oblivious to the convict forge that bought a blacksmith's destiny."
   },
   {
     "w": "MOBY DICK",
-    "t": "Classic",
-    "c": "Captain Ahab chases a white whale across every ocean."
+    "t": "Poetry",
+    "c": "With ivory peg and pagan vow, / He drives the doomed Pequod's prow;\nTo drown all mortal fear and grace, / Within the albino leviathan's embrace."
   },
   {
     "w": "THE PICTURE OF DORIAN GRAY",
-    "t": "Classic",
-    "c": "A portrait ages and carries the sins of a beautiful young man."
+    "t": "Dialogue",
+    "c": "“The only way to get rid of a temptation is to yield to it.” Thus youth remains unblemished porcelain in society's salons, while in a locked attic, poisoned pigments fester with the bloated rot of my soul."
   },
   {
     "w": "A TALE OF TWO CITIES",
-    "t": "Classic",
-    "c": "London and Paris during the French Revolution, by Charles Dickens."
+    "t": "Poetry",
+    "c": "Beside the grim La Guillotine, / A drunken advocate serene;\n“A far, far better rest I find,” / Than any earthly dream left behind."
   },
   {
     "w": "THE SCARLET LETTER",
-    "t": "Classic",
-    "c": "Hester Prynne is branded with a red A in Puritan Boston."
+    "t": "Who Am I?",
+    "c": "Who am I? — Upon my bosom burns an embroidered vermilion talisman of civic shame, yet its public ignominy is far lighter than the unseen brand gnawing within the cowardly pastor’s dying breast."
+  },
+  {
+    "w": "THE METAMORPHOSIS",
+    "t": "Poetry",
+    "c": "At dawn from restless dreams unbound, / A chitinous carapace is found;\nWith twitching legs and muted squeak, / An outcast vermin, starved and weak."
+  },
+  {
+    "w": "CRIME AND PUNISHMENT",
+    "t": "Dialogue",
+    "c": "“Am I a trembling creature, or have I the right?” whispered the impoverished student, raising a yellow-handled pawnbroker's axe only to find conscience a crueler magistrate than Siberia."
+  },
+  {
+    "w": "THE CASK OF AMONTILLADO",
+    "t": "Who Am I?",
+    "c": "Who am I? — Under carnival bells and a roquelaure cloak, I lured a vainglorious connoisseur past damp nitre bones, mortaring the final granite ashlar with a mocking toast: In pace requiescat!"
+  },
+  {
+    "w": "THE CALL OF CTHULHU",
+    "t": "Poetry",
+    "c": "In sunken vaults of non-Euclidean stone, / The cephalopod colossus dreams alone;\nTill aberrant stars in alignment flare, / And waking blasphemy strips mortals bare."
+  },
+  {
+    "w": "HEART OF DARKNESS",
+    "t": "Dialogue",
+    "c": "“The horror! The horror!” gasped the hollow imperialist, whose silver-tongued eloquence and ivory greed dissolved into the primordial obsidian silence of the Congo."
+  },
+  {
+    "w": "THE SHADOW OVER INNSMOUTH",
+    "t": "Poetry",
+    "c": "Salt marshes whisper of ancestral pacts, / Where unblinking eyes trace blasphemous acts;\nFrom Devil Reef the deep tides swell, / To claim the kin who in Innsmouth dwell."
+  },
+  {
+    "w": "LORD OF THE FLIES",
+    "t": "Who Am I?",
+    "c": "Who am I? — Impaled upon a jagged stake in the sweltering jungle glade, my fly-blown swine skull whispers to a fainting choirboy that the beast is not something you can hunt, but a darkness dwelling within you all."
+  },
+  {
+    "w": "FAHRENHEIT FOUR HUNDRED FIFTY ONE",
+    "t": "Poetry",
+    "c": "Kerosene salamanders spit out flame, / Erasing thought and poet's name;\nAt ignition point the parchment burns, / Till book-men wander where memory turns."
+  },
+  {
+    "w": "THE STRANGER",
+    "t": "Dialogue",
+    "c": "“I said that people never change their lives, that in any case one life was as good as another.” Then the blinding Algerian sun struck the revolver blade, and four fatal beats echoed into the abyss of indifference."
+  },
+  {
+    "w": "BRAVE NEW WORLD",
+    "t": "Who Am I?",
+    "c": "Who am I? — Nurtured on Bokanovsky incubation, hypnopaedic maxims, and synthetic grams of soma, my civilized realm banishes Shakespeare and sorrow for pneumatic, conditioned contentment."
+  },
+  {
+    "w": "NINETEEN EIGHTY FOUR",
+    "t": "Poetry",
+    "c": "Beneath the telescreen's cold glare, / Two plus two makes five, they swear;\nIn Room One Hundred One they break the soul, / And Big Brother reigns supreme and whole."
+  },
+  {
+    "w": "THE COLOR OUT OF SPACE",
+    "t": "Poetry",
+    "c": "From shattered meteorite it bled, / A hue no terrestrial eye had read;\nIt sapped the marrow, blighted the grain, / And burned a homestead to brittle pain."
+  },
+  {
+    "w": "SOMETHING WICKED THIS WAY COMES",
+    "t": "Dialogue",
+    "c": "“By the pricking of my thumbs, something wicked this way comes.” An autumn carousel spins mortal marrow backwards into dust, while an illustrated carnival master hunts the souls of boys."
+  },
+  {
+    "w": "THE LOTTERY",
+    "t": "Who Am I?",
+    "c": "Who am I? — Conducted on a clear June morning amidst blossoming clover, my ritual black wooden box and folded slips turn neighbors into executioners, welcoming stones from childhood hands."
+  },
+  {
+    "w": "DUNE",
+    "t": "Poetry",
+    "c": "Across the scorched and waterless sand, / Where colossal worms dominion command;\nA prescient messiah with sapphire eyes, / Bids the desert empire of spice arise."
+  },
+  {
+    "w": "THE ROAD",
+    "t": "Dialogue",
+    "c": "“Are we still the good guys?” asked the shivering boy under an ash-choked nuclear winter. “Yes,” replied the dying father, gripping two revolver shells. “We are carrying the fire.”"
+  },
+  {
+    "w": "THE INVISIBLE MAN",
+    "t": "Who Am I?",
+    "c": "Who am I? — Refracting flesh beyond the ocular spectrum, I wrapped my stolen absence in gauze and smoked spectacles, only to descend into homicidal megalomania across English inns."
+  },
+  {
+    "w": "THE MONKEY PAW",
+    "t": "Poetry",
+    "c": "Three twisted boons an eastern talisman gave, / To drag a son from his machinery grave;\nTwo hundred pounds for a broken head, / And a frantic midnight knocking from the dead."
+  },
+  {
+    "w": "AT THE MOUNTAINS OF MADNESS",
+    "t": "Poetry",
+    "c": "Beyond Antarctic glaciers vast and high, / Dead basalt ramparts mock the polar sky;\nWhere primal Elder Things carved frozen frieze, / Before the piping Shoggoths breached the freeze."
+  },
+  {
+    "w": "THE CHRONICLES OF NARNIA",
+    "t": "Dialogue",
+    "c": "“It is winter in Narnia, and has been for ever so long; always winter, but never Christmas.” Yet through the cedar wardrobe and fur coats, a great lion's roar begins to thaw the stone."
+  },
+  {
+    "w": "THE MASQUE OF THE RED DEATH",
+    "t": "Poetry",
+    "c": "Seven stained chambers of blue and red, / An ebony pendulum tolls for the dead;\nThrough castellated gates no bolt could seal, / The shroud-clad pestilence makes princes kneel."
+  },
+  {
+    "w": "ONE HUNDRED YEARS OF SOLITUDE",
+    "t": "Who Am I?",
+    "c": "Who am I? — Bound to a chestnut tree while gypsies bring magnets and ice to Macondo, my mirrored lineage marches toward an apocalyptic hurricane, cursed by parchment prophecies and an infant with a pig's tail."
+  },
+  {
+    "w": "THE ODYSSEY",
+    "t": "Poetry",
+    "c": "Through lotus shores and cyclopean caves, / A wandering sacker of cities braves;\nDisguised in beggar's rags he strings the yew, / To purge the banquet hall of treason's crew."
+  },
+  {
+    "w": "THE FALL OF THE HOUSE OF USHER",
+    "t": "Dialogue",
+    "c": "“Madman! I tell you that she now stands without the door!” As the lightning flashed, an enshrouded sister burst her copper-lined vault, dragging an ancient dynasty into the tarn's black abyss."
+  },
+  {
+    "w": "SLAUGHTERHOUSE FIVE",
+    "t": "Who Am I?",
+    "c": "Who am I? — Unstuck in time between a Dresden meat locker firestorm and an extraterrestrial geodesic dome on Tralfamadore, I gaze upon corpses with serene resignation: so it goes."
+  },
+  {
+    "w": "THE HOUND OF THE BASKERVILLES",
+    "t": "Poetry",
+    "c": "Upon the treacherous Grimpen Mire, / A phantom beast with eyes of fire;\nWith phosphorus jaws and spectral breath, / It hurls a baronet to death."
+  },
+  {
+    "w": "DO ANDROIDS DREAM OF ELECTRIC SHEEP",
+    "t": "Dialogue",
+    "c": "“Do you think androids have souls, or do they merely mimic empathy?” asked the bounty hunter, tallying electric animals while tracking synthetic renegades across radioactive dust."
+  },
+  {
+    "w": "THE TRIAL",
+    "t": "Who Am I?",
+    "c": "Who am I? — Arrested on my thirtieth birthday without having committed any crime, I am dragged through stifling tenement attics and labyrinthine judicial halls, slaughtered like a dog in a stone quarry."
+  },
+  {
+    "w": "BELOVED",
+    "t": "Poetry",
+    "c": "A venomous spirit haunts Bluestone floor, / Leaving crawled footprints by the door;\nBought with maternal blood and chokeberry wine, / A daughter resurrected from sorrow's shrine."
+  },
+  {
+    "w": "THE DUNWICH HORROR",
+    "t": "Dialogue",
+    "c": "“The old ones were, the old ones are, and the old ones shall be.” At the summit of Sentinel Hill, an invisible blasphemy reared from Necronomicon rites to shatter the Whateley farmhouse."
+  },
+  {
+    "w": "THE ISLAND OF DOCTOR MOREAU",
+    "t": "Who Am I?",
+    "c": "Who am I? — On a remote volcanic atoll, my surgical scalpel carved swine and puma into human parodies, enforcing the litany: Are we not men? Not to go on all-fours; that is the Law."
+  },
+  {
+    "w": "OF MICE AND MEN",
+    "t": "Poetry",
+    "c": "Soft velvet stroked till breath is still, / A dream of rabbits on the hill;\nA gunshot by the willow pool, / To grant sweet mercy to a gentle fool."
+  },
+  {
+    "w": "THE WAR OF THE WORLDS",
+    "t": "Dialogue",
+    "c": "“Ulla! Ulla!” wailed the giant Martian tripods as their heat-rays died above London, felled not by man’s armaments, but by the humblest putrefactive bacteria."
+  },
+  {
+    "w": "A CLOCKWORK ORANGE",
+    "t": "Who Am I?",
+    "c": "Who am I? — Sipping milk laced with vellocet and indulging in ultraviolence with my droogs, state conditioning forced my eyelids open to weaponize beloved Ludwig van into visceral agony."
+  },
+  {
+    "w": "THE TIME MACHINE",
+    "t": "Poetry",
+    "c": "Eight hundred thousand years ahead, / The fragile Eloi dance on bread;\nWhile in subterranean night, / The carnivorous Morlocks claim their bite."
+  },
+  {
+    "w": "THE PIT AND THE PENDULUM",
+    "t": "Dialogue",
+    "c": "“Down—steadily down it crept… shimmering like a crescent scythe of steel!” Lashed to a low wooden bunk in Toledo’s dungeon, I anointed my bonds with fatty meat for ravenous sewer rats."
+  },
+  {
+    "w": "THE PHANTOM OF THE OPERA",
+    "t": "Who Am I?",
+    "c": "Who am I? — Masked in death-head silk within the subterranean lake beneath the Palais Garnier, I dropped a chandelier and commanded Box Five for the love of an angelic soprano."
+  },
+  {
+    "w": "THE WILLOWS",
+    "t": "Poetry",
+    "c": "Where swollen Danube marshes sigh, / The shifting willow branches cry;\nThey carve weird funnels in the sand, / And breach the veil from borderland."
+  },
+  {
+    "w": "DON QUIXOTE",
+    "t": "Dialogue",
+    "c": "“Look yonder, friend Sancho! Thirty or more monstrous giants with whom I intend to do battle!” Donning a brass barber’s basin, I lance spinning windmill sails across the La Mancha plain."
+  },
+  {
+    "w": "THE GRAPES OF WRATH",
+    "t": "Poetry",
+    "c": "Red dust storm choked the Oklahoma field, / A rusted jalopy for highway shield;\nTo California’s bitter grove they tread, / Where wrath ferments inside the hungry bread."
   }
 ]

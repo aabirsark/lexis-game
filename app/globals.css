@@ -216,7 +216,7 @@ h1.logo small { display: block; font-size: .42em; color: var(--bone); letter-spa
   border-radius: 6px 14px 8px 12px / 12px 6px 14px 8px; box-shadow: 0 10px 30px rgba(0, 0, 0, .5), inset 0 0 40px rgba(120, 80, 20, .25);
 }
 .parch .k { font-family: var(--f-mono); font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; color: #7a3b0c; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-.parch p { margin: 6px 0 0; font-size: clamp(1.12rem, 2.6vw, 1.38rem); line-height: 1.35; font-style: italic; }
+.parch p { margin: 6px 0 0; font-size: clamp(1.05rem, 2.3vw, 1.32rem); line-height: 1.4; font-style: italic; white-space: pre-line; }
 .board { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 26px; padding: 6px 0; }
 .word { display: flex; gap: clamp(4px, 1.2vw, 8px); }
 .slot {
@@ -381,5 +381,213 @@ h1.logo small { display: block; font-size: .42em; color: var(--bone); letter-spa
 @keyframes verseFade {
   from { opacity: 0; transform: translateY(8px); filter: blur(3px); }
   to { opacity: 1; transform: none; filter: blur(0); }
+}
+
+/* ---------- Large Spooky Bottom Timer Altar ---------- */
+.spooky-timer-altar {
+  position: relative;
+  width: min(94vw, 540px);
+  margin: 24px auto 8px;
+  padding: 14px 22px 14px;
+  background: radial-gradient(120% 90% at 50% 0%, rgba(42, 26, 70, 0.75), rgba(18, 10, 32, 0.92) 65%, rgba(8, 4, 16, 0.98));
+  border: 1.5px solid rgba(255, 176, 74, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 24px rgba(255, 122, 26, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.5);
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  animation: spookyLevitate 4s ease-in-out infinite alternate;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  z-index: 5;
+}
+
+@keyframes spookyLevitate {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.spooky-timer-altar.tense {
+  border-color: var(--pumpkin);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 122, 26, 0.45), inset 0 0 25px rgba(255, 122, 26, 0.2);
+}
+
+.spooky-timer-altar.panic {
+  border-color: var(--blood);
+  background: radial-gradient(120% 90% at 50% 0%, rgba(70, 14, 28, 0.85), rgba(28, 6, 12, 0.96) 65%, rgba(12, 2, 6, 0.98));
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.85), 0 0 50px rgba(224, 51, 74, 0.75), inset 0 0 30px rgba(224, 51, 74, 0.35);
+  animation: altarTerrorShake 0.18s infinite alternate;
+}
+
+@keyframes altarTerrorShake {
+  0% { transform: translate(-2px, 0) scale(1.02); }
+  50% { transform: translate(2px, -1px) scale(1.025); }
+  100% { transform: translate(-1px, 2px) scale(1.02); }
+}
+
+.spooky-timer-topline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--f-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.spooky-timer-topline .status-phrase {
+  color: var(--ember);
+  transition: color 0.3s;
+}
+
+.spooky-timer-altar.tense .status-phrase {
+  color: var(--pumpkin);
+  font-weight: bold;
+}
+
+.spooky-timer-altar.panic .status-phrase {
+  color: #ff8594;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+.spooky-timer-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 4vw, 32px);
+}
+
+.spooky-timer-digits {
+  font-family: var(--f-display);
+  font-size: clamp(2.8rem, 8vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+  color: var(--bone);
+  text-shadow: 0 0 20px rgba(255, 176, 74, 0.6), 0 4px 8px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 0 12px rgba(255, 122, 26, 0.4));
+  animation: digitsGlow 2.5s ease-in-out infinite alternate;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.spooky-timer-digits .colon {
+  animation: colonBlink 1s steps(1) infinite;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+@keyframes colonBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+
+@keyframes digitsGlow {
+  from { filter: drop-shadow(0 0 10px rgba(255, 122, 26, 0.4)); }
+  to { filter: drop-shadow(0 0 22px rgba(255, 176, 74, 0.8)); }
+}
+
+.spooky-timer-altar.tense .spooky-timer-digits {
+  color: var(--pumpkin);
+  text-shadow: 0 0 24px rgba(255, 122, 26, 0.8), 0 4px 10px rgba(0, 0, 0, 0.9);
+  animation: digitsTensePulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes digitsTensePulse {
+  from { transform: scale(1); filter: drop-shadow(0 0 16px rgba(255, 122, 26, 0.6)); }
+  to { transform: scale(1.04); filter: drop-shadow(0 0 28px rgba(255, 176, 74, 0.95)); }
+}
+
+.spooky-timer-altar.panic .spooky-timer-digits {
+  color: #ff9ca8;
+  text-shadow: 0 0 30px rgba(224, 51, 74, 0.95), 0 0 60px rgba(255, 0, 45, 0.8);
+  animation: digitsPanicSpasm 0.15s infinite alternate;
+}
+
+@keyframes digitsPanicSpasm {
+  0% { transform: translate(-3px, 1px) scale(1.05); }
+  50% { transform: translate(3px, -2px) scale(1.08); }
+  100% { transform: translate(-1px, 2px) scale(1.06); }
+}
+
+.spooky-totem {
+  width: clamp(28px, 6vw, 42px);
+  height: clamp(28px, 6vw, 42px);
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.spooky-totem.left {
+  animation: totemBobL 2.4s ease-in-out infinite alternate;
+}
+
+.spooky-totem.right {
+  animation: totemBobR 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes totemBobL {
+  0% { transform: rotate(-8deg) translateY(0); }
+  100% { transform: rotate(8deg) translateY(-4px); }
+}
+
+@keyframes totemBobR {
+  0% { transform: rotate(8deg) translateY(0); }
+  100% { transform: rotate(-8deg) translateY(-4px); }
+}
+
+.spooky-timer-altar.panic .spooky-totem {
+  filter: drop-shadow(0 0 14px rgba(224, 51, 74, 0.95));
+  animation: totemPanic 0.18s infinite alternate;
+}
+
+@keyframes totemPanic {
+  0% { transform: scale(1.1) rotate(-12deg); }
+  100% { transform: scale(1.2) rotate(12deg); }
+}
+
+/* Altar Burning Fuse Bar */
+.altar-fuse {
+  width: 100%;
+  height: 6px;
+  background: rgba(12, 6, 20, 0.9);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.9), 0 1px 0 rgba(255, 255, 255, 0.05);
+  margin-top: 2px;
+}
+
+.altar-fuse-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 1s linear;
+  background: linear-gradient(90deg, var(--blood), var(--pumpkin), var(--slime));
+  box-shadow: 0 0 12px rgba(255, 122, 26, 0.85);
+}
+
+.spooky-timer-altar.panic .altar-fuse-fill {
+  background: var(--blood);
+  box-shadow: 0 0 18px rgba(224, 51, 74, 1);
+  animation: fuseFlash 0.25s infinite alternate;
+}
+
+/* Screen Panic Vignette (throbbing red heartbeat around edges) */
+.panic-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 18;
+  box-shadow: inset 0 0 70px rgba(224, 51, 74, 0.35);
+  animation: vignetteThrob 1s ease-in-out infinite alternate;
+}
+.panic-vignette.critical {
+  box-shadow: inset 0 0 120px rgba(224, 51, 74, 0.75), inset 0 0 45px rgba(255, 0, 45, 0.85);
+  animation: vignetteThrob 0.45s ease-in-out infinite alternate;
+}
+@keyframes vignetteThrob {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.85; }
+  100% { opacity: 0.4; }
 }
 

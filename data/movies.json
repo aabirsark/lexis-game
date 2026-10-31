@@ -1,102 +1,302 @@
 [
   {
     "w": "HALLOWEEN",
-    "t": "Horror",
-    "c": "A masked killer comes home to Haddonfield on the one night everyone is already in costume."
+    "t": "Poetry",
+    "c": "A six-note piano cadence chill, / The Shape stands on the autumn hill;\nBehind the pale William Shatner mask, / He finishes his butchering task."
   },
   {
     "w": "PSYCHO",
-    "t": "Horror",
-    "c": "A roadside motel, a mother who never leaves the house, and the most famous shower in cinema."
+    "t": "Dialogue",
+    "c": "“A boy’s best friend is his mother.” Forty thousand stolen dollars vanish into the fruit cellar, accompanied by screeching violins in a shower stall."
   },
   {
     "w": "THE EXORCIST",
-    "t": "Horror",
-    "c": "A twelve-year-old, a spinning head, and two priests armed with holy water."
+    "t": "Who Am I?",
+    "c": "Who am I? — Unearthed from Nineveh ruins, my demonic presence manifests in a Georgetown child with spinning head, levitating mattress, and foul vomit, mocking the rites of two Jesuit priests."
   },
   {
     "w": "SCREAM",
-    "t": "Horror",
-    "c": "A ghost-faced caller on the phone wants to know your favourite scary movie."
+    "t": "Dialogue",
+    "c": "“What’s your favorite scary movie?” A ghost-faced caller weaponizes slasher cliches over a cellular phone, hunting teenagers who break the cardinal rules of horror."
   },
   {
     "w": "POLTERGEIST",
-    "t": "Horror",
-    "c": "They are here, and the television is the doorway."
+    "t": "Poetry",
+    "c": "They only moved the granite stones, / Leaving the subterranean bones;\nThrough static television snow, / The hungry closet demons glow."
   },
   {
     "w": "THE SHINING",
-    "t": "Horror",
-    "c": "Writer’s block, an empty mountain hotel in winter, and an axe through the bathroom door."
+    "t": "Dialogue",
+    "c": "“Here’s Johnny!” An isolated winter caretaker’s writer's block erupts into manic axe swings, elevator torrents of crimson, and frozen hedge maze footprints."
   },
   {
     "w": "GET OUT",
-    "t": "Horror",
-    "c": "A weekend at his girlfriend’s family estate ends in the sunken place."
+    "t": "Who Am I?",
+    "c": "Who am I? — Paralyzed by a silver spoon tapping porcelain china, I fall helpless into the black Sunken Place while an affluent upstate family auctions my body for neurosurgical theft."
   },
   {
     "w": "THE RING",
-    "t": "Horror",
-    "c": "Watch the cursed tape, take the phone call, and you have seven days."
+    "t": "Poetry",
+    "c": "A static tape of wells and trees, / A telephone chime on the breeze;\nSeven days the clock shall run, / Till water crawls into the sun."
   },
   {
     "w": "NOSFERATU",
-    "t": "Horror",
-    "c": "A 1922 silent film with the most unsettling vampire ever put on screen."
+    "t": "Who Am I?",
+    "c": "Who am I? — In a 1922 silent masterwork, my clawed, rodent-like shadow ascends the whitewashed stair of Bremen, sailing upon a ghost ship laden with plague-bearing vermin."
   },
   {
     "w": "THE BIRDS",
-    "t": "Horror",
-    "c": "Hitchcock sends ordinary gulls and crows after a seaside town."
+    "t": "Dialogue",
+    "c": "“Why are they doing this? Why are they gathering?” Innocently purchased caged lovebirds trigger an unexplained avian apocalypse, turning telephone wires into perches of death."
   },
   {
     "w": "INTERSTELLAR",
-    "t": "Sci-Fi",
-    "c": "Farmers, a wormhole near Saturn, and a bookshelf that sends messages across time."
+    "t": "Poetry",
+    "c": "Near Gargantua’s titanic ring, / One hour will seven winters bring;\nThrough gravitational morse he speaks, / Behind the bookshelf that she seeks."
   },
   {
     "w": "THE MATRIX",
-    "t": "Sci-Fi",
-    "c": "Pick the red pill and learn that the world is made of code."
+    "t": "Dialogue",
+    "c": "“You take the blue pill, the story ends. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.”"
   },
   {
     "w": "BLADE RUNNER",
-    "t": "Sci-Fi",
-    "c": "A detective hunts replicants through a rainy, neon-lit Los Angeles."
+    "t": "Poetry",
+    "c": "Neon rain on Los Angeles street, / Where rogue synthetic humans meet;\n“All those moments lost in pain, / Like tears dissolved inside the rain.”"
   },
   {
     "w": "INCEPTION",
-    "t": "Sci-Fi",
-    "c": "A team plants an idea inside a dream, inside a dream, inside a dream."
+    "t": "Who Am I?",
+    "c": "Who am I? — In zero-gravity hotel hallways and snowbound mountain vaults, I stage corporate espionage within dreams, relying on a perpetual brass spinning top to know if I am awake."
   },
   {
     "w": "ARRIVAL",
-    "t": "Sci-Fi",
-    "c": "A linguist learns the language of visitors and starts to see time differently."
+    "t": "Dialogue",
+    "c": "“If you could see your whole life from start to finish, would you change things?” Circular inky glyphs unlock a palindromic timeline, uniting a daughter’s birth with her future demise."
   },
   {
     "w": "ALIEN",
-    "t": "Sci-Fi",
-    "c": "A crew wakes from hypersleep and brings an unwelcome passenger aboard."
+    "t": "Who Am I?",
+    "c": "Who am I? — Gestating inside a commercial towing crewman after an eggsack breach, my acid-blooded biomechanical perfection erupts through the chest to hunt in steam vents where no one can hear you scream."
   },
   {
     "w": "THE TERMINATOR",
-    "t": "Sci-Fi",
-    "c": "A cyborg from 2029 hunts Sarah Connor and promises to come back."
+    "t": "Dialogue",
+    "c": "“I’ll be back.” A hyperalloy cybernetic assassin wrapped in living human tissue storms a police station to exterminate the mother of the future resistance."
   },
   {
     "w": "JURASSIC PARK",
-    "t": "Sci-Fi",
-    "c": "Cloned dinosaurs break out of their island zoo."
+    "t": "Poetry",
+    "c": "Prehistoric amber preserved the flea, / To patch the gaps with amphibian spree;\nWhen stormy winds cut electric strand, / Colossal reptiles rule the land."
   },
   {
     "w": "METROPOLIS",
-    "t": "Sci-Fi",
-    "c": "Fritz Lang’s 1927 silent epic of a towering city and a robot named Maria."
+    "t": "Who Am I?",
+    "c": "Who am I? — In Fritz Lang’s 1927 silent dystopia, I am the metallic robot built in the likeness of Maria, inciting subterranean workers to drown their own machinery in catastrophic revolt."
   },
   {
     "w": "EX MACHINA",
-    "t": "Sci-Fi",
-    "c": "A programmer is asked to judge whether a robot named Ava is truly conscious."
+    "t": "Dialogue",
+    "c": "“Isn’t it strange, to create something that hates you?” A translucent silicone android manipulates power blackouts and an insecure coder to escape her creator's glass prison."
+  },
+  {
+    "w": "HEREDITARY",
+    "t": "Poetry",
+    "c": "A clucking tongue, a severed head, / A miniature diorama of the dead;\nIn candlelit attics bowing prone, / King Paimon mounts his fleshy throne."
+  },
+  {
+    "w": "MIDSOMMAR",
+    "t": "Who Am I?",
+    "c": "Who am I? — Crowned in an enormous pyramid of meadow blossoms after psychedelic dancing in perpetual Swedish sunlight, I smile as an unfaithful lover burns inside a hollowed-out bear carcass."
+  },
+  {
+    "w": "THE LIGHTHOUSE",
+    "t": "Dialogue",
+    "c": "“Why’d ya spill yer beans, Tommy?” Two wickies trapped on a storm-lashed New England spit drink kerosene, murder seagulls, and lust after the blinding lantern light."
+  },
+  {
+    "w": "THE WITCH",
+    "t": "Dialogue",
+    "c": "“Wouldst thou like the taste of butter? A pretty dress? Wouldst thou like to live deliciously?” whispers Black Phillip in the moonlit New England woods."
+  },
+  {
+    "w": "A QUIET PLACE",
+    "t": "Poetry",
+    "c": "Upon the white sand path tread light, / Speak not a syllable in the night;\nFor blind monstrosities attend, / To every whisper silence would end."
+  },
+  {
+    "w": "SILENCE OF THE LAMBS",
+    "t": "Dialogue",
+    "c": "“Well, Clarice… have the lambs stopped screaming?” An imprisoned cannibal psychiatrist trades psychological profiling for traumatic childhood memories."
+  },
+  {
+    "w": "SEVEN",
+    "t": "Dialogue",
+    "c": "“What’s in the box?!” screams a distraught detective in the arid desert power lines, discovering how a serial preacher orchestrated the final mortal sin of wrath."
+  },
+  {
+    "w": "SHUTTER ISLAND",
+    "t": "Who Am I?",
+    "c": "Who am I? — Searching for a vanished inmate at an offshore fortress for the criminally insane, my migraine hallucinations and lighthouse dreams force me to realize I am the sixtieth patient."
+  },
+  {
+    "w": "PAN LABYRINTH",
+    "t": "Poetry",
+    "c": "In fascist Spain the faun awaits, / Beyond the mossy stone-hewn gates;\nBeware the Pale Man's banquet hall, / Whose eyes upon his fingers crawl."
+  },
+  {
+    "w": "TWELVE MONKEYS",
+    "t": "Who Am I?",
+    "c": "Who am I? — Sent backward from an underground post-apocalyptic future to intercept an army releasing a fatal virus, I realize the recurring airport nightmare of my childhood was my own death."
+  },
+  {
+    "w": "DONNIE DARKO",
+    "t": "Poetry",
+    "c": "A jet turbine falls from cloudless skies, / A monstrous rabbit with silver eyes;\nTwenty-eight days the clock shall chime, / To close the tangent seam of time."
+  },
+  {
+    "w": "THE TRUMAN SHOW",
+    "t": "Dialogue",
+    "c": "“Good morning, and in case I don't see ya: good afternoon, good evening, and good night!” A cheerful insurance clerk discovers his entire world is an ocean under a domed television set."
+  },
+  {
+    "w": "CHILDREN OF MEN",
+    "t": "Who Am I?",
+    "c": "Who am I? — In a bleak 2027 where two decades of global infertility have doomed humanity to despair, I am the miraculous young immigrant carrying the first unborn child in eighteen years."
+  },
+  {
+    "w": "ETERNAL SUNSHINE OF THE SPOTLESS MIND",
+    "t": "Dialogue",
+    "c": "“Meet me in Montauk…” Desperate to erase the memories of a turbulent tangerine-haired romance, a subconscious lover flees through collapsing rooms and childhood sandbars."
+  },
+  {
+    "w": "THE FLY",
+    "t": "Poetry",
+    "c": "Two telepods in clean array, / A buzzing pest that went astray;\nFlesh fused with chitin, genes defiled, / A Brundle-monster fierce and wild."
+  },
+  {
+    "w": "THE THING",
+    "t": "Who Am I?",
+    "c": "Who am I? — An extraterrestrial cellular imitator buried a hundred thousand years in polar ice, I assimilate sled dogs and Antarctic scientists, betraying my presence only when hot copper touches blood."
+  },
+  {
+    "w": "JAWS",
+    "t": "Dialogue",
+    "c": "“You’re gonna need a bigger boat.” A twenty-five-foot rogue carcharodon terrorizes the Fourth of July beaches of Amity Island, luring the Orca into an offshore duel."
+  },
+  {
+    "w": "MEMENTO",
+    "t": "Who Am I?",
+    "c": "Who am I? — Stricken with anterograde memory loss since the assault that killed my wife, I navigate a reverse investigation through tattooed facts, labeled Polaroids, and self-delusion."
+  },
+  {
+    "w": "FIGHT CLUB",
+    "t": "Dialogue",
+    "c": "“The first rule of Fight Club is: you do not talk about Fight Club.” A nameless insomniac discovers his charismatic soap-peddling anarchic companion is his own nocturnal hallucination."
+  },
+  {
+    "w": "THE SIXTH SENSE",
+    "t": "Dialogue",
+    "c": "“I see dead people. Walking around like regular people. They don't see each other. They only see what they want to see. They don't know they're dead.”"
+  },
+  {
+    "w": "BLACK SWAN",
+    "t": "Poetry",
+    "c": "In mirrors shattered, visions gleam, / To dance Tchaikovsky's royal dream;\nFrom porcelain white to feathers black, / Her sanity will not come back."
+  },
+  {
+    "w": "MISERY",
+    "t": "Dialogue",
+    "c": "“I’m your number one fan!” A bedridden novelist crippled in a Colorado snowstorm is kept prisoner by a nurse whose devotion turns to sledgehammer amputations when her heroine dies."
+  },
+  {
+    "w": "A NIGHTMARE ON ELM STREET",
+    "t": "Poetry",
+    "c": "Keep awake and guard the light, / Do not sleep into the night;\nFour sharpened blades upon his hand, / He rules the screaming slumber land."
+  },
+  {
+    "w": "PARASITE",
+    "t": "Who Am I?",
+    "c": "Who am I? — A semi-basement Seoul family who falsified credentials to infiltrate an affluent architect's villa as tutors, chauffeurs, and housekeepers, unaware of the secret bunker beneath the pantry."
+  },
+  {
+    "w": "SINISTER",
+    "t": "Who Am I?",
+    "c": "Who am I? — A pagan Babylonian deity known as Baghuul, I harvest children's souls through eight-millimeter snuff films discovered in an author's attic."
+  },
+  {
+    "w": "THE CABIN IN THE WOODS",
+    "t": "Dialogue",
+    "c": "“The virgin survives—or she dies last! That’s all that matters!” Underground corporate technicians manipulate college archetypes into slaughter to placate ancient deities sleeping beneath the earth."
+  },
+  {
+    "w": "VERTIGO",
+    "t": "Poetry",
+    "c": "Spiraling stair and dizzy heights, / San Francisco's foggy nights;\nHe dyes her hair and buys the dress, / To resurrect a ghost's caress."
+  },
+  {
+    "w": "REAR WINDOW",
+    "t": "Who Am I?",
+    "c": "Who am I? — Confined to a wheelchair with a broken leg during a Greenwich Village heatwave, I peer through a telephoto lens to deduce my courtyard neighbor chopped his wife into luggage."
+  },
+  {
+    "w": "BLUE VELVET",
+    "t": "Dialogue",
+    "c": "“Now it’s dark,” whispers Frank Booth, inhaling amyl nitrite from a mask. An innocent young man finds a severed human ear in an idyllic meadow, plummeting into neon subterranean rot."
+  },
+  {
+    "w": "THE STRANGERS",
+    "t": "Dialogue",
+    "c": "“Why are you doing this to us?” weeping victims ask the sack-masked intruders outside their secluded vacation cabin. The chilling reply: “Because you were home.”"
+  },
+  {
+    "w": "US",
+    "t": "Poetry",
+    "c": "Red boiler suits and golden shears, / Underground echoes of our fears;\nAcross the continent they stand, / The Tethered shadows take the land."
+  },
+  {
+    "w": "EVENT HORIZON",
+    "t": "Dialogue",
+    "c": "“Where we’re going, we won’t need eyes to see.” An experimental gravity-drive vessel orbits Neptune, returning from an alternate dimension of pure, screaming infernal chaos."
+  },
+  {
+    "w": "BLAIR WITCH PROJECT",
+    "t": "Poetry",
+    "c": "In Black Hills woods the branches crack, / Small stick-bundle talismans on the track;\nNo compass turns the hunters right, / And someone stands in the corner's sight."
+  },
+  {
+    "w": "THE BABADOOK",
+    "t": "Poetry",
+    "c": "If it's in a word, or it's in a look, / You can't get rid of the Babadook;\nA rumbling growl, three taps on the door, / A mother's grief upon the floor."
+  },
+  {
+    "w": "NO COUNTRY FOR OLD MEN",
+    "t": "Dialogue",
+    "c": "“What’s the most you ever lost on a coin toss?” An emotionless hitman carrying a pneumatic cattle stunner wagers mortal souls on the call of a nickel in west Texas."
+  },
+  {
+    "w": "TOTAL RECALL",
+    "t": "Who Am I?",
+    "c": "Who am I? — A construction worker whose virtual holiday memory implant in Rekall inadvertently unmasks my true identity as an elite double-agent on a rebel-controlled Martian colony."
+  },
+  {
+    "w": "THE MIST",
+    "t": "Poetry",
+    "c": "An unearthly vapor rolls from lake, / Where tentacled behemoths wake;\nInside the market, zealots scream, / And hasty bullets end the dream."
+  },
+  {
+    "w": "SOLARIS",
+    "t": "Dialogue",
+    "c": "“We don’t want to conquer any cosmos, we want to extend the Earth to the cosmos.” Yet the sentient oceanic planet generates living physical spectres of a psychologist’s dead wife."
+  },
+  {
+    "w": "THE DESCENT",
+    "t": "Who Am I?",
+    "c": "Who am I? — Trapped in an unmapped Appalachian cavern system by a subterranean cave-in, my spelunking expedition is hunted through pitch darkness by blind, carnivorous humanoid crawlers."
+  },
+  {
+    "w": "DARK CITY",
+    "t": "Poetry",
+    "c": "When midnight strikes the mortals sleep, / While Strangers in their trench coats creep;\nThey bend the stone and swap the mind, / Till one awake leaves night behind."
   }
 ]
