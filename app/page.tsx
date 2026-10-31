@@ -28,6 +28,7 @@ const META: Record<string, { label: string; theme: string }> = {
 
 const ORDER = ["books", "characters", "movies"];
 const MAX = 6;
+const ROUND_TIME = 90; // 1 min 30 sec
 const PARTS = ["p-head", "p-body", "p-armL", "p-armR", "p-legL", "p-legR"];
 const ROWS = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
@@ -120,8 +121,8 @@ export default function LexisGamePage() {
   const [isLocked, setIsLocked] = useState(true);
   const [shatteredKeys, setShatteredKeys] = useState<Record<string, boolean>>({});
 
-  // 60-Second Timer state
-  const [timeLeft, setTimeLeft] = useState(60);
+  // 90-Second (1 min 30 sec) Timer state
+  const [timeLeft, setTimeLeft] = useState(ROUND_TIME);
 
   // Reward Wheel state
   const [rewardWheelRot, setRewardWheelRot] = useState(0);
@@ -382,7 +383,7 @@ export default function LexisGamePage() {
       setIsLocked(false);
       setPlayed((p) => p + 1);
       setEndCardVisible(false);
-      setTimeLeft(60);
+      setTimeLeft(ROUND_TIME);
       setRewardWon(null);
       setRewardMessage("");
       setIsRewardSpinning(false);
@@ -562,7 +563,7 @@ export default function LexisGamePage() {
     }, dur * 1000 + 150);
   }, [isRewardSpinning, actx, rewardWheelRot, later, say]);
 
-  // 60-Second Countdown timer with tension
+  // 90-Second (1 min 30 sec) Countdown timer with tension
   useEffect(() => {
     if (screen !== "game" || isLocked || endCardVisible || jumpscareActive || !currentEntry) {
       return;
@@ -1217,7 +1218,7 @@ export default function LexisGamePage() {
               <div className="altar-fuse">
                 <div
                   className="altar-fuse-fill"
-                  style={{ width: `${(timeLeft / 60) * 100}%` }}
+                  style={{ width: `${(timeLeft / ROUND_TIME) * 100}%` }}
                 />
               </div>
             </div>
@@ -1236,7 +1237,7 @@ export default function LexisGamePage() {
                   ? wrongLetters.length
                     ? `You cut the rope with ${MAX - wrongLetters.length} ${
                         MAX - wrongLetters.length === 1 ? "life" : "lives"
-                      } to spare in ${60 - timeLeft}s.`
+                      } to spare in ${ROUND_TIME - timeLeft}s.`
                     : "Not a single wrong step. The graveyard is impressed."
                   : `${name}, the word was:`}
               </p>
